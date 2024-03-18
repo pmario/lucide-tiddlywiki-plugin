@@ -1,14 +1,14 @@
 {
 	"name": "lucide-to-tid",
 	"version": "0.0.1",
-	"description": "convert licide svgs to .tid usable by TiddlyWiki5",
+	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
 	"main": "./scripts/optimizeSvgsForTw.mjs",
 	"scripts": {
 		"start": "node ./scripts/optimizeSvgsForTw.mjs",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [
-		"licide",
+		"Lucide",
 		"tiddlywiki",
 		"svgs",
 		"tid"
