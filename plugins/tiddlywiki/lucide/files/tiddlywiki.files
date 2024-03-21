@@ -1,0 +1,20 @@
+{
+	"tiddlers": [
+		{
+			"file": "lucide.min.v2.6.1.js",
+			"fields": {
+				"type": "application/javascript",
+				"title": "$:/plugins/tiddlywiki/lucide/lucide.js",
+				"module-type": "library"
+			},
+			"prefix": "",
+			"suffix": ""
+		},{
+			"file": "license",
+			"fields": {
+				"type": "text/plain",
+				"title": "$:/plugins/tiddlywiki/lucide/license"
+			}
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "pmario"
+  ],
+  "tags": [
+    "letter",
+    "text",
+    "formatting"
+  ],
+  "categories": [
+    "tiddlywiki",
+    "text",
+    "design"
+  ]
+}

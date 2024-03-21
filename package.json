@@ -2,9 +2,10 @@
 	"name": "lucide-to-tid",
 	"version": "0.0.1",
 	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
-	"main": "./scripts/optimizeSvgsForTw.mjs",
+	"main": "",
 	"scripts": {
-		"start": "node ./scripts/optimizeSvgsForTw.mjs",
+		"outlined": "node ./scripts/optimizeOutlinedForTw.mjs",
+		"build": "node ./scripts/createSvgsForTw.mjs",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [
@@ -17,6 +18,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"svgo": "^3.2.0",
-		"svgson": "^5.3.1"
+		"svgson": "^5.3.1",
+		"prettier": "3.2.4"
 	}
 }

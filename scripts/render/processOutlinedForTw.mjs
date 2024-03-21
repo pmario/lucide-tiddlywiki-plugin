@@ -1,13 +1,13 @@
 import { optimize } from 'svgo';
 import { parseSync, stringify } from 'svgson';
-import DEFAULT_ATTRS from './tiddlywiki-attrs.json' assert { type: 'json' };
+import DEFAULT_ATTRS from '../config/tiddlywiki-attrs.json' assert { type: 'json' };
 
 /**
  * Optimize SVG with `svgo`.
  * @param {string} svg - An SVG string.
  * @returns {Promise<string>} An optimized svg
  */
-async function optimizeSvgTw(svg, path) {
+async function convertSvgToTw(svg, path) {
 	const result = optimize(svg, {
 		path,
 		plugins: [
@@ -56,13 +56,13 @@ function setAttrs(svg) {
  * @param {string} svg An SVG string.
  * @returns {Promise<string>} An optimized svg
  */
-function processSvgForTw(svg, path) {
+function processOutlinedForTw(svg, path) {
 	return (
-		optimizeSvgTw(svg, path)
+		convertSvgToTw(svg, path)
 			.then(setAttrs)
 			// special handling for TW \parameters
 			.then((svg) => svg.replace(/\"🗚\"/g, '<<size>>'))
 	);
 }
 
-export default processSvgForTw;
+export default processOutlinedForTw;

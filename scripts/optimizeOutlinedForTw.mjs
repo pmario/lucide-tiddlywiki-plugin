@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import processSvgForTw from './render/processSvgForTw.mjs';
+import processOutlinedForTw from './render/processOutlinedForTw.mjs';
 import { readSvgDirectory, writeSvgFile } from './helpers.mjs';
 
 const ICONS_DIR = path.resolve(process.cwd(), 'outlined');
@@ -26,7 +26,7 @@ function addPrefix(content, svgFile) {
 
 svgFiles.forEach((svgFile) => {
 	const content = fs.readFileSync(path.join(ICONS_DIR, svgFile));
-	processSvgForTw(content, svgFile)
+	processOutlinedForTw(content, svgFile)
 		.then((svg) => addPrefix(svg, svgFile))
 		.then((svg) => writeSvgFile(svgFile + ".tid", IMAGES_DIR, svg));
 });
