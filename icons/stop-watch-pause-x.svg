@@ -1,86 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="24"
-   height="24"
-   viewBox="0 0 24 24"
-   fill="none"
-   stroke="currentColor"
-   stroke-width="2"
-   stroke-linecap="round"
-   stroke-linejoin="round"
-   version="1.1"
-   id="svg21971"
-   sodipodi:docname="stop-watch-pause-x.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   xml:space="preserve"
-   inkscape:export-filename="svg\stop-watch-pause-x.svg"
-   inkscape:export-xdpi="95"
-   inkscape:export-ydpi="95"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs21975" /><sodipodi:namedview
-     id="namedview21973"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="true"
-     inkscape:zoom="32"
-     inkscape:cx="10.515625"
-     inkscape:cy="9.78125"
-     inkscape:window-width="1751"
-     inkscape:window-height="1099"
-     inkscape:window-x="1104"
-     inkscape:window-y="125"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg21971"><inkscape:grid
-       type="xygrid"
-       id="grid24272"
-       empspacing="12"
-       spacingx="0.5"
-       spacingy="0.5" /></sodipodi:namedview><g
-     id="g49471"
-     style="display:inline;fill:none;stroke:#f0f0f0;stroke-opacity:1"
-     inkscape:label="backdrop"
-     sodipodi:insensitive="true"><circle
-       cx="12"
-       cy="12"
-       r="10"
-       id="circle48356"
-       style="fill:none;stroke:#f0f0f0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       inkscape:label="circle" /><rect
-       width="18"
-       height="18"
-       x="3"
-       y="3"
-       rx="2"
-       id="rect49093"
-       ry="2"
-       style="display:inline;fill:none;stroke:#f0f0f0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       inkscape:label="sqare" /></g><circle
-     cx="12"
-     cy="14"
-     r="8"
-     id="circle2351"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" /><path
-     d="m 10,10.750003 v 6.499994"
-     id="path2353"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
-     sodipodi:nodetypes="cc" /><path
-     d="M 14.038868,2 H 9.9611319"
-     id="path2479"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" /><path
-     d="m 14,10.750003 v 6.499994"
-     id="path2544"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
-     sodipodi:nodetypes="cc" /><circle
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="path4796"
-     cx="12"
-     cy="13.999999"
-     r="6.5" /></svg>
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <g style="display:inlinefill:nonestroke:#f0f0f0stroke-opacity:1">
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+      style="fill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
+    />
+    <rect
+      width="18"
+      height="18"
+      x="3"
+      y="3"
+      rx="2"
+      ry="2"
+      style="display:inlinefill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
+    />
+  </g>
+  <circle
+    cx="12"
+    cy="14"
+    r="8"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
+  />
+  <path
+    d="M10 10.75v6.5"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
+  />
+  <path
+    d="M14.039 2H9.96"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
+  />
+  <path
+    d="M14 10.75v6.5"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
+  />
+  <circle
+    cx="12"
+    cy="14"
+    r="6.5"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
+  />
+</svg>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   stroke="currentColor"
+   stroke-width="2"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   version="1.1"
+   id="svg21971"
+   sodipodi:docname="line-double-chevron-up-big.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:export-filename="svg/line-double-chevron-up-big.svg"
+   inkscape:export-xdpi="95"
+   inkscape:export-ydpi="95"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs21975" />
+  <sodipodi:namedview
+     id="namedview21973"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="42.791666"
+     inkscape:cx="11.030185"
+     inkscape:cy="13.787731"
+     inkscape:window-width="1662"
+     inkscape:window-height="1401"
+     inkscape:window-x="1575"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg21971">
+    <inkscape:grid
+       type="xygrid"
+       id="grid24272"
+       empspacing="6" />
+  </sodipodi:namedview>
+  <path
+     d="M 21,19 11.999999,13.030169 3,19"
+     id="path21969"
+     style="stroke-width:2" />
+  <path
+     d="M 21,2.969811 3,3"
+     id="path26458"
+     style="stroke-width:2"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 21,6.969811 3,7"
+     id="path26458-2"
+     style="stroke-width:2"
+     sodipodi:nodetypes="cc" />
+</svg>

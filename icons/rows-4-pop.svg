@@ -1,88 +1,54 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="24"
-   height="24"
-   viewBox="0 0 24 24"
-   fill="none"
-   stroke="currentColor"
-   stroke-width="2"
-   stroke-linecap="round"
-   stroke-linejoin="round"
-   version="1.1"
-   id="svg21971"
-   sodipodi:docname="rows-4-pop.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   xml:space="preserve"
-   inkscape:export-filename="svg\rows-4-pop.svg"
-   inkscape:export-xdpi="95"
-   inkscape:export-ydpi="95"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs21975" /><sodipodi:namedview
-     id="namedview21973"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="true"
-     inkscape:zoom="32"
-     inkscape:cx="12.890625"
-     inkscape:cy="14.15625"
-     inkscape:window-width="1751"
-     inkscape:window-height="1099"
-     inkscape:window-x="1218"
-     inkscape:window-y="128"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg21971"><inkscape:grid
-       type="xygrid"
-       id="grid24272"
-       empspacing="6"
-       spacingx="1"
-       spacingy="1" /></sodipodi:namedview><g
-     id="g49471"
-     style="display:inline;fill:none;stroke:#f0f0f0;stroke-opacity:1"
-     inkscape:label="backdrop"
-     sodipodi:insensitive="true"><circle
-       cx="12"
-       cy="12"
-       r="10"
-       id="circle48356"
-       style="fill:none;stroke:#f0f0f0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       inkscape:label="circle" /><rect
-       width="18"
-       height="18"
-       x="3"
-       y="3"
-       rx="2"
-       id="rect49093"
-       ry="2"
-       style="display:inline;fill:none;stroke:#f0f0f0;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       inkscape:label="sqare" /></g><rect
-     width="18"
-     height="19.902649"
-     x="3"
-     y="2.0486753"
-     rx="1.9999999"
-     id="rect77000"
-     ry="2"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" /><path
-     d="M 21,10 H 3"
-     id="path77002"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
-     sodipodi:nodetypes="cc" /><path
-     d="M 21,18 H 3"
-     id="path77004"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
-     sodipodi:nodetypes="cc" /><path
-     d="M 17.024142,14 H 6.9758583"
-     id="path77020"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" /><path
-     d="M 21,6 H 3"
-     id="path79211"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
-     sodipodi:nodetypes="cc" /></svg>
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <g style="display:inlinefill:nonestroke:#f0f0f0stroke-opacity:1">
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+      style="fill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
+    />
+    <rect
+      width="18"
+      height="18"
+      x="3"
+      y="3"
+      rx="2"
+      ry="2"
+      style="display:inlinefill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
+    />
+  </g>
+  <rect
+    width="18"
+    height="19.903"
+    x="3"
+    y="2.049"
+    rx="2"
+    ry="2"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
+  />
+  <path
+    d="M21 10H3"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
+  />
+  <path
+    d="M21 18H3"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
+  />
+  <path
+    d="M17.024 14H6.976"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
+  />
+  <path
+    d="M21 6H3"
+    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
+  />
+</svg>
