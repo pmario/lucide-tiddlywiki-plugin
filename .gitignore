@@ -12,6 +12,8 @@ stash
 coverage
 stats
 *.log
-outlined
-core/images
+outlined**
+core**
+lucide**
 output
+icons

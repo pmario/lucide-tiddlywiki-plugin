@@ -56,7 +56,7 @@ function setAttrs(svg) {
  * @param {string} svg An SVG string.
  * @returns {Promise<string>} An optimized svg
  */
-function processOutlinedForTw(svg, path) {
+function processLucideOutlined(svg, path) {
 	return (
 		convertSvgToTw(svg, path)
 			.then(setAttrs)
@@ -65,4 +65,4 @@ function processOutlinedForTw(svg, path) {
 	);
 }
 
-export default processOutlinedForTw;
+export default processLucideOutlined;

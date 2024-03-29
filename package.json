@@ -4,8 +4,10 @@
 	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
 	"main": "",
 	"scripts": {
-		"outlined": "node ./scripts/optimizeOutlinedForTw.mjs",
-		"build": "node ./scripts/createSvgsForTw.mjs",
+		"optimize:outlined": "node ./scripts/optimizeLucideOutlined.mjs",
+		"optimize:outlined-tw": "node ./scripts/optimizeTwOutlined.mjs",
+		"build:outlined": "node ./scripts/buildTwOutlined.mjs",
+		"build:icons": "node ./scripts/createTwIcons.mjs",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [

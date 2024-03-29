@@ -9,29 +9,7 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <g style="display:inlinefill:nonestroke:#f0f0f0stroke-opacity:1">
-    <circle
-      cx="12"
-      cy="12"
-      r="10"
-      style="fill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-    <rect
-      width="18"
-      height="18"
-      x="3"
-      y="3"
-      rx="2"
-      ry="2"
-      style="display:inlinefill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-  </g>
   <path d="m17 19-5-5-5 5" />
-  <g style="display:inlinefill:nonestroke:currentColorstroke-width:2stroke-linecap:roundstroke-linejoin:round">
-    <path d="M19 8.98H5" />
-    <path
-      d="M19 4.961H5"
-      style="display:inlinefill:nonestroke:currentColorstroke-width:2stroke-linecap:roundstroke-linejoin:round"
-    />
-  </g>
+  <path d="M19 8.98H5" />
+  <path d="M19 4.961H5" />
 </svg>

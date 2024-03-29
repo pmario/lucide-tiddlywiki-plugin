@@ -16,37 +16,28 @@ async function optimizeSvg(svg, path) {
         name: 'preset-default',
         params: {
           overrides: {
-            convertShapeToPath: false,
+            // convertShapeToPath: false,
             mergePaths: false,
           },
         },
       },
       {
+        name: "convertShapeToPath",
+        params: {
+          convertArcs: false,
+          floatPrecision: null
+        }
+      },
+      {
         name: 'removeAttrs',
         params: {
-          attrs: '(fill|stroke.*|style)',
+          attrs: '(fill|stroke.*)',
         },
       },
     ],
   });
   return result.data;
 }
-
-/**
- * Remove the template backdrop.
- * @param {string} svg - An SVG string.
- * @returns {string} An SVG string without the "backdrop" elements.
- */
-function removeBackdrop(svg) {
-  const contents = parseSync(svg);
-  for ( let i=0; i < contents.children.length; i++) {
-      if (contents.children[i].attributes["inkscape:label"] === "backdrop") {
-        delete contents.children[i];
-        break;
-      }
-    }
-    return stringify(contents);
-  }
 
 /**
  * Set default attibutes on SVG.
@@ -65,7 +56,6 @@ function setAttrs(svg) {
  * @returns {Promise<string>} An optimized svg
  */
 function processSvg(svg, path) {
-  svg = removeBackdrop(svg);
   return (
     optimizeSvg(svg, path)
     .then(setAttrs)

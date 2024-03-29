@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
-import processOutlinedForTw from './render/processOutlinedForTw.mjs';
+import processLucideOutlined from './render/processLucideOutlined.mjs';
 import { readSvgDirectory, writeSvgFile } from './helpers.mjs';
 
-const ICONS_DIR = path.resolve(process.cwd(), 'outlined');
+const ICONS_DIR = path.resolve(process.cwd(), 'outlined-tw');
 const IMAGES_DIR = path.resolve(process.cwd(), './core/images');
 
-console.log(`Optimizing SVGs...`);
+console.log(`Optimizing TiddlyWiki SVGs...`);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
@@ -26,7 +26,7 @@ function addPrefix(content, svgFile) {
 
 svgFiles.forEach((svgFile) => {
 	const content = fs.readFileSync(path.join(ICONS_DIR, svgFile));
-	processOutlinedForTw(content, svgFile)
+	processLucideOutlined(content, svgFile)
 		.then((svg) => addPrefix(svg, svgFile))
 		.then((svg) => writeSvgFile(svgFile + ".tid", IMAGES_DIR, svg));
 });

@@ -9,49 +9,10 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <g style="display:inlinefill:nonestroke:#f0f0f0stroke-opacity:1">
-    <circle
-      cx="12"
-      cy="12"
-      r="10"
-      style="fill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-    <rect
-      width="18"
-      height="18"
-      x="3"
-      y="3"
-      rx="2"
-      ry="2"
-      style="display:inlinefill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-  </g>
-  <g style="stroke-width:2.66667">
-    <path
-      d="M21.348-.247v4"
-      style="fill:nonestroke:#000stroke-width:2.66667stroke-linecap:roundstroke-linejoin:round"
-      transform="matrix(.75 0 0 .75 -4.011 10.74)"
-    />
-    <path
-      d="M23.348 1.753h-4"
-      style="fill:nonestroke:#000stroke-width:2.66667stroke-linecap:roundstroke-linejoin:round"
-      transform="matrix(.75 0 0 .75 -4.011 10.74)"
-    />
-  </g>
-  <path
-    d="M5.986 3h-1a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M18.028 21h1a2 2 0 0 0 2-2v-5c0-1.1.886-2 1.986-2a1.99 1.99 0 0 1-1.986-2V5a2 2 0 0 0-2-2h-1"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M9.485 6h-.7a1.4 1.333 0 0 0-1.4 1.333v3.333A1.4 1.333 0 0 1 5.987 12a1.4 1.333 0 0 1 1.4 1.333v3.334c0 .733.63 1.333 1.4 1.333h.699"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M14.515 18h.7a1.4 1.333 0 0 0 1.4-1.333v-3.334c0-.733.63-1.333 1.399-1.333a1.4 1.333 0 0 1-1.4-1.333V7.333A1.4 1.333 0 0 0 15.214 6h-.699"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
+  <path d="M12 10.555v3" />
+  <path d="M13.5 12.055h-3" />
+  <path d="M5.986 3h-1a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1" />
+  <path d="M18.028 21h1a2 2 0 0 0 2-2v-5c0-1.1.886-2 1.986-2a1.99 1.99 0 0 1-1.986-2V5a2 2 0 0 0-2-2h-1" />
+  <path d="M9.485 6h-.7a1.4 1.333 0 0 0-1.4 1.333v3.333A1.4 1.333 0 0 1 5.987 12a1.4 1.333 0 0 1 1.4 1.333v3.334c0 .733.63 1.333 1.4 1.333h.699" />
+  <path d="M14.515 18h.7a1.4 1.333 0 0 0 1.4-1.333v-3.334c0-.733.63-1.333 1.399-1.333a1.4 1.333 0 0 1-1.4-1.333V7.333A1.4 1.333 0 0 0 15.214 6h-.699" />
 </svg>

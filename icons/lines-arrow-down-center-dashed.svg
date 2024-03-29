@@ -9,53 +9,12 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <g style="display:inlinefill:nonestroke:#f0f0f0stroke-opacity:1">
-    <circle
-      cx="12"
-      cy="12"
-      r="10"
-      style="fill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-    <rect
-      width="18"
-      height="18"
-      x="3"
-      y="3"
-      rx="2"
-      ry="2"
-      style="display:inlinefill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-  </g>
-  <path
-    d="M12 17.983V6"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="m6 15 6 5 6-5"
-    style="fill:nonestroke:#000stroke-width:2.00001stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M20.939 22H3.006"
-    style="fill:nonestroke:#000stroke-width:1.99999stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M20.995 2H3.005"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M3.05 11H4"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:nonestroke-opacity:1"
-  />
-  <path
-    d="M7.05 11H8"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:nonestroke-opacity:1"
-  />
-  <path
-    d="M16 11h.95"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:nonestroke-opacity:1"
-  />
-  <path
-    d="M20.05 11H21"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:nonestroke-opacity:1"
-  />
+  <path d="M12 17.983V6" />
+  <path d="m6 15 6 5 6-5" />
+  <path d="M20.939 22H3.006" />
+  <path d="M20.995 2H3.005" />
+  <path d="M3.05 11H4" />
+  <path d="M7.05 11H8" />
+  <path d="M16 11h.95" />
+  <path d="M20.05 11H21" />
 </svg>

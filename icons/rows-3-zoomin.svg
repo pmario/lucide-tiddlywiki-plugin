@@ -9,95 +9,12 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <defs>
-    <linearGradient id="a">
-      <stop offset="0" style="stop-color:#000stop-opacity:1" />
-      <stop offset="1" style="stop-color:#000stop-opacity:0" />
-    </linearGradient>
-    <linearGradient
-      xlink:href="#a"
-      id="b"
-      x1="18.875"
-      x2="18.969"
-      y1="12.375"
-      y2="11.594"
-      gradientUnits="userSpaceOnUse"
-    />
-    <linearGradient
-      xlink:href="#a"
-      id="c"
-      x1="18.875"
-      x2="18.969"
-      y1="12.375"
-      y2="11.594"
-      gradientUnits="userSpaceOnUse"
-    />
-    <linearGradient
-      xlink:href="#a"
-      id="d"
-      x1="18.875"
-      x2="18.969"
-      y1="12.375"
-      y2="11.594"
-      gradientUnits="userSpaceOnUse"
-    />
-    <linearGradient
-      xlink:href="#a"
-      id="e"
-      x1="18.875"
-      x2="18.969"
-      y1="12.375"
-      y2="11.594"
-      gradientUnits="userSpaceOnUse"
-    />
-  </defs>
-  <g style="display:inlinefill:nonestroke:#f0f0f0stroke-opacity:1">
-    <circle
-      cx="12"
-      cy="12"
-      r="10"
-      style="fill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-    <rect
-      width="18"
-      height="18"
-      x="3"
-      y="3"
-      rx="2"
-      ry="2"
-      style="display:inlinefill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-  </g>
-  <path
-    d="M21 6H3.048"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
-  />
-  <path
-    d="M20.999 18.042V20a2 2 0 0 1-2.005 1.999H5.006A2 2 0 0 1 3.002 20v-1.958"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
-  />
-  <path
-    d="M21.018 7.039V3.975c0-1.088-.897-1.97-2.004-1.97H5.034c-1.106 0-2.003.882-2.003 1.97v3.064"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
-  />
-  <path
-    d="M21 18H3"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M21.996 10.518H2.081"
-    style="fill:url(#b)fill-opacity:1stroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
-  />
-  <path
-    d="M21.978 14.482H2.081"
-    style="fill:url(#c)fill-opacity:1stroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
-  />
-  <path
-    d="M2.05 14.36V10.65"
-    style="fill:url(#d)fill-opacity:1stroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
-  />
-  <path
-    d="M22 14.28v-3.61"
-    style="fill:url(#e)fill-opacity:1stroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-dasharray:none"
-  />
+  <path d="M21 6H3.048" />
+  <path d="M20.999 18.042V20a2 2 0 0 1-2.005 1.999H5.006A2 2 0 0 1 3.002 20v-1.958" />
+  <path d="M21.018 7.039V3.975c0-1.088-.897-1.97-2.004-1.97H5.034c-1.106 0-2.003.882-2.003 1.97v3.064" />
+  <path d="M21 18H3" />
+  <path d="M21.996 10.518H2.081" />
+  <path d="M21.978 14.482H2.081" />
+  <path d="M2.05 14.36V10.65" />
+  <path d="M22 14.28v-3.61" />
 </svg>

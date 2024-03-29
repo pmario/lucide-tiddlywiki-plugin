@@ -9,45 +9,9 @@
   stroke-linecap="round"
   stroke-linejoin="round"
 >
-  <g style="display:inlinefill:nonestroke:#f0f0f0stroke-opacity:1">
-    <circle
-      cx="12"
-      cy="12"
-      r="10"
-      style="fill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-    <rect
-      width="18"
-      height="18"
-      x="3"
-      y="3"
-      rx="2"
-      ry="2"
-      style="display:inlinefill:nonestroke:#f0f0f0stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-    />
-  </g>
-  <circle
-    cx="12"
-    cy="14"
-    r="8"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M10 10.75v6.5"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M14.039 2H9.96"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <path
-    d="M14 10.75v6.5"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:round"
-  />
-  <circle
-    cx="12"
-    cy="14"
-    r="6.5"
-    style="fill:nonestroke:#000stroke-width:2stroke-linecap:roundstroke-linejoin:roundstroke-opacity:1"
-  />
+  <circle cx="12" cy="14" r="8" />
+  <path d="M10 10.75v6.5" />
+  <path d="M14.039 2H9.96" />
+  <path d="M14 10.75v6.5" />
+  <circle cx="12" cy="14" r="6.5" />
 </svg>
