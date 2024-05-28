@@ -12,6 +12,15 @@
 				"<node_internals>/**"
 			],
 			"program": "${workspaceFolder}\\scripts\\createSvg.mjs"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Prepare Icons for Plugin",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/scripts/processFiles.mjs"
 		}
 	]
 }

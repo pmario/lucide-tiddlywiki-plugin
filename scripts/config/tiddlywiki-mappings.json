@@ -1,477 +1,477 @@
 {
 	"$:/core/icon": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/add-comment": {
-		"lucide": "message-circle-plus.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "message-circle-plus.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/advanced-search-button": {
-		"lucide": "search-advanced.svg",
+		"lucide": "search-advanced.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/auto-height": {
-		"lucide": "line-arrow-down-center-dashed.svg",
+		"lucide": "lines-arrow-down-center-dashed.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/blank": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/bold": {
-		"lucide": "bold.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "bold.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/cancel-button": {
-		"lucide": "circle-x.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "circle-x.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-down": {
-		"lucide": "chevron-down.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "chevron-down.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-left": {
-		"lucide": "chevron-left.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "chevron-left.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-right": {
-		"lucide": "chevron-right.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "chevron-right.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-up": {
-		"lucide": "chevron-up.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "chevron-up.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/clone-button": {
-		"lucide": "copy-plus.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "copy-plus.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/close-all-button": {
-		"lucide": "x-multi.svg",
+		"lucide": "x-multi.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/close-button": {
-		"lucide": "x.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "x.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/close-others-button": {
-		"lucide": "circle-circle.svg",
+		"lucide": "circle-circle.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/copy-clipboard": {
-		"lucide": "cipboard-plus.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "clipboard-plus.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/delete-button": {
-		"lucide": "trash-2.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "trash-2.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/done-button": {
-		"lucide": "check.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "check.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/down-arrow": {
-		"lucide": "chevron-down-big.svg",
+		"lucide": "chevron-down-big.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/download-button": {
-		"lucide": "download.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "download.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/edit-button": {
-		"lucide": "pencil-line.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "pencil-line.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/erase": {
-		"lucide": "eraser.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "eraser.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/excise": {
-		"lucide": "lines-move-up-excise",
+		"lucide": "lines-move-up-excise.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/export-button": {
-		"lucide": "upload.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "upload.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/file": {
-		"lucide": "file.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "file.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/fixed-height": {
-		"lucide": "gallery-vertical.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "gallery-vertical.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/fold-all-button": {
-		"lucide": "line-chevron-up-line-chevron-up.svg",
+		"lucide": "line-chevron-up-line-chevron-up.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/fold-button": {
-		"lucide": "line-chevron-up.svg",
+		"lucide": "line-chevron-up.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/fold-others-button": {
-		"lucide": "line-chevron-up-down",
+		"lucide": "line-chevron-up-down.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/folder": {
-		"lucide": "folder-open.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "folder-open.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/full-screen-button": {
-		"lucide": "scan.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "scan.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/github": {
-		"lucide": "github.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "github.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/gitter": {
-		"lucide": "",
+		"lucide": "gitter.sfg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/globe": {
-		"lucide": "globe.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "globe.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/heading-1": {
-		"lucide": "heading-1.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "heading-1.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/heading-2": {
-		"lucide": "heading-2.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "heading-2.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/heading-3": {
-		"lucide": "heading-3.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "heading-3.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/heading-4": {
-		"lucide": "heading-4.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "heading-4.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/heading-5": {
-		"lucide": "heading-5.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "heading-5.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/heading-6": {
-		"lucide": "heading-6.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "heading-6.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/help": {
-		"lucide": "circle-help.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "circle-help.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/home-button": {
-		"lucide": "home.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "home.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/import-button": {
-		"lucide": "paperclip.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "paperclip.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/info-button": {
-		"lucide": "info.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "info.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/italic": {
-		"lucide": "italic.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "italic.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/layout-button": {
-		"lucide": "layout-panel-left.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "layout-panel-left.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/left-arrow": {
-		"lucide": "chevron-left.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "chevron-left.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/line-width": {
-		"lucide": "line-width.svg",
+		"lucide": "line-width.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/link": {
-		"lucide": "link.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "link.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/linkify": {
-		"lucide": "brackets-star.svg",
+		"lucide": "brackets-star.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/list": {
-		"lucide": "file-text.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "file-text.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/list-bullet": {
-		"lucide": "list.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "list.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/list-number": {
-		"lucide": "list-ordered.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "list-ordered.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/locked-padlock": {
-		"lucide": "lock-keyhole.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "lock-keyhole.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/mail": {
-		"lucide": "mail.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "mail.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/mastodon": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/menu-button": {
-		"lucide": "menu.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "menu.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/minus-button": {
-		"lucide": "circle-minus.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "circle-minus.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/mono-block": {
-		"lucide": "a-b-b-d.svg",
+		"lucide": "abcd.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/mono-line": {
-		"lucide": "a-b.svg",
+		"lucide": "ab.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/network-activity": {
-		"lucide": "radio-tower.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "radio-tower.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-button": {
-		"lucide": "plus.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "plus.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-here-button": {
-		"lucide": "tag-plus.svg",
+		"lucide": "tag-plus.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-image-button": {
-		"lucide": "image-plus.svg",
+		"lucide": "image-plus.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-journal-button": {
-		"lucide": "calendar-plus.svg",
+		"lucide": "calendar-plus.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/opacity": {
-		"lucide": "blend.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "blend.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/open-window": {
-		"lucide": "external-link.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "external-link.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/options-button": {
-		"lucide": "settings.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "settings.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/paint": {
-		"lucide": "paintbrush.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "paintbrush.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/permalink-button": {
-		"lucide": "hash.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "hash.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/permaview-button": {
-		"lucide": "hash.multi.svg",
+		"lucide": "hash-multi.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/picture": {
-		"lucide": "image.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "image.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-language": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-plugin": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-theme": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plus-button": {
-		"lucide": "circle-plus.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "circle-plus.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/preview-closed": {
-		"lucide": "eye-off.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "eye-off.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/preview-open": {
-		"lucide": "eye.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "eye.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/print-button": {
-		"lucide": "printer.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "printer.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/quote": {
-		"lucide": "quote.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "quote.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/refresh-button": {
-		"lucide": "refresh-ccw.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "refresh-ccw.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/right-arrow": {
-		"lucide": "chevron-right.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "chevron-right.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/rotate-left": {
-		"lucide": "rotate-ccw-square.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "rotate-ccw-square.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/save-button": {
-		"lucide": "import.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "import.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/save-button-dynamic": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/size": {
-		"lucide": "scaling.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "scaling.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/spiral": {
-		"lucide": "shell.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "shell.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/stamp": {
 		"lucide": "stamp",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/star-filled": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/storyview-classic": {
-		"lucide": "rows-4.svg",
+		"lucide": "rows-4.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/storyview-pop": {
-		"lucide": "rows-4-pop.svg",
+		"lucide": "rows-4-pop.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/storyview-zoomin": {
-		"lucide": "rows-3-zoomin.svg",
+		"lucide": "rows-3-zoomin.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/strikethrough": {
-		"lucide": "strikethrough.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "strikethrough.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/subscript": {
-		"lucide": "subscript.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "subscript.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/superscript": {
-		"lucide": "superscript.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "superscript.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/tag-button": {
-		"lucide": "tag.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "tag.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/theme-button": {
-		"lucide": "sliders-vertical.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "sliders-vertical.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/timestamp-off": {
-		"lucide": "stop-watch-pause.svg",
+		"lucide": "stop-watch-pause.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/timestamp-on": {
-		"lucide": "stop-watch.svg",
+		"lucide": "stop-watch.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/tip": {
-		"lucide": "lightbulb.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "lightbulb.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/transcludify": {
-		"lucide": "braces-star.svg",
+		"lucide": "braces-star.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/twitter": {
-		"lucide": "",
+		"lucide": "TODO",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/underline": {
-		"lucide": "underline.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "underline.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/unfold-all-button": {
-		"lucide": "line-chevron-down-line-chevron-down.svg",
+		"lucide": "line-chevron-down-line-chevron-down.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/unfold-button": {
-		"lucide": "line-chevron.down.svg",
+		"lucide": "line-chevron-down.svg.tid",
 		"customDir": "custom",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/unlocked-padlock": {
-		"lucide": "lock-keyhole-open.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "lock-keyhole-open.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/up-arrow": {
-		"lucide": "chevron-up.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "chevron-up.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/video": {
-		"lucide": "youtube.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "youtube.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/warning": {
-		"lucide": "triangle-alert.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "triangle-alert.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/plugins/tiddlywiki/qrcode/icon": {
-		"lucide": "qu-code.svg",
-		"classes": ["tc-$(title$)","tc-image-button"]
+		"lucide": "qr-code.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
 	}
 }

@@ -4,6 +4,7 @@
 	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
 	"main": "",
 	"scripts": {
+		"prepare:plugin": "node ./scripts/processFiles.mjs",
 		"optimize:outlined": "node ./scripts/optimizeLucideOutlined.mjs",
 		"optimize:outlined-tw": "node ./scripts/optimizeTwOutlined.mjs",
 		"build:outlined": "node ./scripts/buildTwOutlined.mjs",
