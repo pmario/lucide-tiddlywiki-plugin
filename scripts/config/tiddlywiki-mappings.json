@@ -139,7 +139,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/gitter": {
-		"lucide": "gitter.sfg.tid",
+		"lucide": "gitter.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
