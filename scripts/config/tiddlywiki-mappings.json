@@ -271,12 +271,10 @@
 	},
 	"$:/core/images/new-image-button": {
 		"lucide": "image-plus.svg.tid",
-		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-journal-button": {
 		"lucide": "calendar-plus.svg.tid",
-		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/opacity": {
@@ -373,7 +371,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/stamp": {
-		"lucide": "stamp",
+		"lucide": "stamp.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/star-filled": {
@@ -382,7 +380,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/storyview-classic": {
-		"lucide": "rows-4.svg.tid",
+		"lucide": "rows-4-pop.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},

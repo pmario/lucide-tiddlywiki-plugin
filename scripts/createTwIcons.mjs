@@ -10,6 +10,11 @@ console.log(`Create TW icons...`);
 
 const svgFiles = readSvgDirectory(ORIGIN_DIR);
 
+// Ensure the target directory exists
+if (!fs.existsSync(ICONS_DIR)) {
+	fs.mkdirSync(ICONS_DIR, { recursive: true });
+}
+
 svgFiles.forEach((svgFile) => {
   const content = fs.readFileSync(path.join(ORIGIN_DIR, svgFile));
   processSvg(content, svgFile).then((svg) => writeSvgFile(svgFile, ICONS_DIR, svg));

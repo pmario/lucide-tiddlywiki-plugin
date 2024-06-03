@@ -5,7 +5,7 @@ import path from "path";
 const __dirname = path.resolve();
 const lucideDir = path.join(__dirname, "lucide", "images");
 const coreImagesDir = path.join(__dirname, "core", "images");
-const targetDir = path.join(__dirname, "target");
+const targetDir = path.join(__dirname, "plugins", "tiddlywiki", "lucide-core", "tiddlers", "images");
 const configDir = path.join(__dirname, "scripts", "config");
 
 // Ensure the target directory exists
@@ -14,8 +14,8 @@ if (!fs.existsSync(targetDir)) {
 }
 
 // Read the JSON configuration file from the scripts/config directory
-const configPath = path.join(configDir, "tiddlywiki-mappings.json");
-const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+const configFile = path.join(configDir, "tiddlywiki-mappings.json");
+const config = JSON.parse(fs.readFileSync(configFile, "utf8"));
 
 /**
  * Extracts and formats the title from the configuration key.
@@ -63,7 +63,7 @@ const processFiles = (config) => {
 
 			// Write the manipulated content to the target directory
 			fs.writeFileSync(targetPath, content, "utf8");
-			console.log(`Processed and saved ${sourcePath} to ${targetPath}`);
+			console.log(`Saved ${sourcePath} to ${targetPath}`);
 		} else {
 			console.error(`Source file not found: ${sourcePath}`);
 		}

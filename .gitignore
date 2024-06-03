@@ -13,8 +13,8 @@ coverage
 stats
 *.log
 outlined**
-core**
-lucide**
+core
+lucide
 output
 icons
 target

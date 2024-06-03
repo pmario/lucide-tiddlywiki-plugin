@@ -14,6 +14,11 @@ const PREFIX = "tags: $:/tags/Image/Lucide " +
 	"\n\n" +
 	'\\parameters (size:"22pt")\n';
 
+// Ensure the target directory exists
+if (!fs.existsSync(IMAGES_DIR)) {
+	fs.mkdirSync(IMAGES_DIR, { recursive: true });
+}
+
 /**
  * Set default attibutes on SVG.
  * @param {string} svg - An SVG string.
