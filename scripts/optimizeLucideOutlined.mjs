@@ -1,18 +1,18 @@
-import fs from 'fs';
-import path from 'path';
-import processLucideOutlined from './render/processLucideOutlined.mjs';
-import { readSvgDirectory, writeSvgFile } from './helpers.mjs';
+import fs from "fs";
+import path from "path";
+import processLucideOutlined from "./render/processLucideOutlined.mjs";
+import { readSvgDirectory, writeSvgFile } from "./helpers.mjs";
 
-const ICONS_DIR = path.resolve(process.cwd(), 'outlined');
-const IMAGES_DIR = path.resolve(process.cwd(), './lucide/images');
+const ICONS_DIR = path.resolve(process.cwd(), "outlined");
+const IMAGES_DIR = path.resolve(process.cwd(), "build", "lucide", "images");
 
-console.log(`Optimizing Lucide SVGs...`);
+console.log(`Optimizing Lucide SVGs. Save at: ${IMAGES_DIR}`);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
 const PREFIX = "tags: $:/tags/Image/Lucide " + 
 	"\n\n" +
-	'\\parameters (size:"22pt")\n';
+	"\\parameters (size:\"22pt\")\n";
 
 // Ensure the target directory exists
 if (!fs.existsSync(IMAGES_DIR)) {

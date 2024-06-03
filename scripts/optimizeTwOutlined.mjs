@@ -1,18 +1,18 @@
-import fs from 'fs';
-import path from 'path';
-import processLucideOutlined from './render/processLucideOutlined.mjs';
-import { readSvgDirectory, writeSvgFile } from './helpers.mjs';
+import fs from "fs";
+import path from "path";
+import processLucideOutlined from "./render/processLucideOutlined.mjs";
+import { readSvgDirectory, writeSvgFile } from "./helpers.mjs";
 
-const ICONS_DIR = path.resolve(process.cwd(), 'outlined-tw');
-const IMAGES_DIR = path.resolve(process.cwd(), './core/images');
+const ICONS_DIR = path.resolve(process.cwd(), "build", "outlined-tw");
+const IMAGES_DIR = path.resolve(process.cwd(), "build", "core", "images");
 
-console.log(`Optimizing TiddlyWiki SVGs...`);
+console.log(`Optimizing TiddlyWiki SVGs. Save at: ${IMAGES_DIR}`);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
 const PREFIX = "tags: $:/tags/Image/Lucide " + 
 	"\n\n" +
-	'\\parameters (size:"22pt")\n';
+	"\\parameters (size:\"22pt\")\n";
 
 // Ensure the target directory exists
 if (!fs.existsSync(IMAGES_DIR)) {
