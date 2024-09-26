@@ -11,7 +11,7 @@
    version="1.1"
    id="svg21971"
    sodipodi:docname="line-double-chevron-down-big.svg"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    inkscape:export-filename="svg/line-double-chevron-down-big.svg"
    inkscape:export-xdpi="95"
    inkscape:export-ydpi="95"
@@ -31,31 +31,37 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
-     inkscape:zoom="42.791666"
-     inkscape:cx="11.170399"
-     inkscape:cy="12.151899"
+     inkscape:zoom="30.258277"
+     inkscape:cx="8.1630556"
+     inkscape:cy="13.16995"
      inkscape:window-width="1718"
      inkscape:window-height="1401"
-     inkscape:window-x="1491"
-     inkscape:window-y="0"
+     inkscape:window-x="23"
+     inkscape:window-y="30"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg21971">
     <inkscape:grid
        type="xygrid"
        id="grid24272"
-       empspacing="6" />
+       empspacing="6"
+       originx="0"
+       originy="0"
+       spacingy="1"
+       spacingx="1"
+       units="px"
+       visible="true" />
   </sodipodi:namedview>
   <path
-     d="M 3,13.030189 12.000001,19.00002 21,13.030189"
+     d="M 3,14.015094 12.000001,19.984925 21,14.015094"
      id="path21969"
      style="stroke-width:2" />
   <path
-     d="M 21,2.969811 3,3"
+     d="M 21,3.9547165 3,3.9849055"
      id="path26458"
      style="stroke-width:2"
      sodipodi:nodetypes="cc" />
   <path
-     d="M 21,6.969811 3,7"
+     d="M 21,7.9547165 3,7.9849055"
      id="path26458-2"
      style="stroke-width:2"
      sodipodi:nodetypes="cc" />
