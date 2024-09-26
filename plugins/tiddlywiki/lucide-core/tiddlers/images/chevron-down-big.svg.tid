@@ -2,4 +2,4 @@ title: $:/core/images/down-arrow
 tags: $:/tags/Image/Lucide $:/tags/Image
 
 \parameters (size:"22pt")
-<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-down-arrow tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="m3 8 9 8 9-8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-down-arrow tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path fill-rule="evenodd" d="M2.81 7.02c-.18.03-.42.17-.55.31a.8.8 0 0 0-.24.6q-.03.44.22.71a637 637 0 0 0 9.33 8.25c.17.09.22.1.43.1s.26-.01.43-.1c.16-.08 1.22-1.01 4.75-4.15 2.5-2.23 4.59-4.1 4.63-4.17a1 1 0 0 0 .17-.65.9.9 0 0 0-.55-.81A1 1 0 0 0 21 7a1 1 0 0 0-.7.28l-4.2 3.73c-2.23 1.98-4.08 3.6-4.1 3.6s-1.87-1.62-4.1-3.6L3.7 7.3a1 1 0 0 0-.89-.27"/></svg>
