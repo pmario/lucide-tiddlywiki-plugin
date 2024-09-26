@@ -4,11 +4,11 @@
 	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
 	"main": "",
 	"scripts": {
-		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run optimize:outlined-tw && npm run optimize:outlined && npm run prepare:plugin",
+		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run optimize:outlined-tw && npm run prepare:plugin",
 		"build:icons": "node ./scripts/createTwIcons.mjs",
 		"build:outlined": "node ./scripts/buildTwOutlined.mjs",
 		"optimize:outlined-tw": "node ./scripts/optimizeTwOutlined.mjs",
-		"prepare:plugin": "node ./scripts/makeCoreIcons.mjs",
+		"prepare:plugin": "node ./scripts/makeLucideCorePlugin.mjs",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"optimize:outlined": "node ./scripts/optimizeLucideOutlined.mjs"
 	},

@@ -326,11 +326,11 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/preview-closed": {
-		"lucide": "eye-off.svg.tid",
+		"lucide": "eye.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/preview-open": {
-		"lucide": "eye.svg.tid",
+		"lucide": "eye-off.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/print-button": {

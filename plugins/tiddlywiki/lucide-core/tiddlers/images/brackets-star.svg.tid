@@ -1,0 +1,5 @@
+title: $:/core/images/linkify
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-linkify tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="M16 6h2v12h-2"/><path d="M4 21H2V3h2"/><path d="M20 3h2v18h-2"/><path d="M8 18H6V6h2"/><path d="M12 10v4"/><path d="M14 12h-4"/></svg>

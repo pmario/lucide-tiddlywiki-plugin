@@ -1,0 +1,5 @@
+title: $:/core/images/storyview-zoomin
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-storyview-zoomin tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="M21 6H3.05"/><path d="M21 18.04V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1.96"/><path d="M21.02 7.04V3.98c0-1.1-.9-1.97-2-1.97H5.02c-1.1 0-2 .88-2 1.97v3.06"/><path d="M21 18H3"/><path d="M22 10.52H2.08"/><path d="M21.98 14.48H2.08"/><path d="M2.05 14.36v-3.71"/><path d="M22 14.28v-3.61"/></svg>

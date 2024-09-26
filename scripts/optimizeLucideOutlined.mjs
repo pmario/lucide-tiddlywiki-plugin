@@ -10,7 +10,7 @@ console.log(`Optimizing Lucide SVGs. Save at: ${IMAGES_DIR}`);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-const PREFIX = "tags: $:/tags/Image/Lucide " + 
+const PREFIX = "tags: $:/tags/Image/Lucide" +
 	"\n\n" +
 	"\\parameters (size:\"22pt\")\n";
 

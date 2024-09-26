@@ -1,0 +1,5 @@
+title: $:/core/images/unfold-all-button
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-unfold-all-button tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="m7 7 5 2.94L17 7"/><path d="M19 14H5"/><path d="M19 3H5"/><path d="M7 18.06 12 21l5-2.94"/></svg>

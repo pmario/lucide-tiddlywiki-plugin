@@ -5,6 +5,7 @@ import { readSvgDirectory, writeSvgFile } from "./helpers.mjs";
 
 const ORIGIN_DIR = path.resolve(process.cwd(), "build", "icons");
 const ICONS_DIR = path.resolve(process.cwd(), "build", "outlined-tw");
+// const ICONS_DIR = path.resolve(process.cwd(), "build", "core", "images");
 
 console.log(`Convert Stroke to Path and save at: ${ICONS_DIR}`);
 

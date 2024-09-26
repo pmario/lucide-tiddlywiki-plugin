@@ -1,0 +1,5 @@
+title: $:/core/images/new-here-button
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-new-here-button tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="M10 13h6"/><path d="M13 10v6"/><path d="M12.6 2.6A2 2 0 0 0 11.18 2H4.01a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.511" cy="7.511" r=".5"/></svg>

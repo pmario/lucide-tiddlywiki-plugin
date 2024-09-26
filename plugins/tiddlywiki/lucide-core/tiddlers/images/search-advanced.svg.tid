@@ -1,0 +1,5 @@
+title: $:/core/images/advanced-search-button
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-advanced-search-button tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="m22 21-4-5"/><rect width="18" height="13" x="3" y="3" rx="2" ry="2"/><path d="M7 10.41 9 8.3"/><path d="m9 8.3 2 2.11 2-2.12"/><path d="m13 8.3 2 2.11 2-2.12"/></svg>

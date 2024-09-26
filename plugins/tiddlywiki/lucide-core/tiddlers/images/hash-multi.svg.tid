@@ -1,0 +1,5 @@
+title: $:/core/images/permaview-button
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-permaview-button tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="M3 7h18"/><path d="M3 12h18"/><path d="m14 2-4 20"/><path d="M3 17h18"/><path d="m19 2-4 20"/><path d="M9 2 5 22"/></svg>

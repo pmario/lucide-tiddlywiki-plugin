@@ -1,0 +1,5 @@
+title: $:/core/images/transcludify
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-transcludify tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="M12 10.56v3"/><path d="M13.5 12.06h-3"/><path d="M5.99 3h-1a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M18.03 21h1a2 2 0 0 0 2-2v-5A2 2 0 0 1 23 12a2 2 0 0 1-1.98-2V5a2 2 0 0 0-2-2h-1"/><path d="M9.49 6h-.7a1.4 1.33 0 0 0-1.4 1.33v3.34A1.4 1.33 0 0 1 5.99 12a1.4 1.33 0 0 1 1.4 1.33v3.34c0 .73.63 1.33 1.4 1.33h.7"/><path d="M14.52 18h.7a1.4 1.33 0 0 0 1.4-1.33v-3.34c0-.73.62-1.33 1.4-1.33a1.4 1.33 0 0 1-1.4-1.33V7.33A1.4 1.33 0 0 0 15.21 6h-.7"/></svg>

@@ -3,7 +3,7 @@
 	"plugins": [
 		"tiddlywiki/browser-sniff",
 		"tiddlywiki/internals",
-		"tiddlywiki/lucide"
+		"tiddlywiki/lucide-core"
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
@@ -14,10 +14,12 @@
 	],
 	"build": {
 		"index": [
-			"--render","$:/core/save/all","index.html","text/plain"]
+			"--render","$:/core/save/all","index.html","text/plain"
+		],
 		"favicon": [
 			"--savetiddler","$:/favicon.ico","favicon.ico",
-			"--savetiddler","$:/green_favicon.ico","static/favicon.ico"],
+			"--savetiddler","$:/green_favicon.ico","static/favicon.ico"
+		],
 		"static": [
 			"--render","$:/core/templates/static.template.html","static.html","text/plain",
 			"--render","$:/core/templates/alltiddlers.template.html","alltiddlers.html","text/plain",

@@ -1,0 +1,7 @@
+{
+	"title": "$:/plugins/tiddlywiki/lucide-core",
+	"name": "Lucide Core",
+	"description": "Lucide Icon Library",
+	"author": "pmario",
+	"list": "readme license"
+}

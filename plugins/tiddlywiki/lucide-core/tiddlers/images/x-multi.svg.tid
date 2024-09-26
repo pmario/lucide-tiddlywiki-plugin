@@ -1,0 +1,5 @@
+title: $:/core/images/close-all-button
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-close-all-button tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="m10 3-7 7"/><path d="m3 3 7 7"/><path d="m21 3-7 7"/><path d="m14 3 7 7"/><path d="m21 14-7 7"/><path d="m14 14 7 7"/><path d="m10 14-7 7"/><path d="m3 14 7 7"/></svg>

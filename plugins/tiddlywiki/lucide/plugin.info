@@ -1,7 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/lucide",
-	"name": "Lucide",
-	"description": "Lucide library",
-	"author": "pmario",
-	"list": "readme docs examples license"
-}

@@ -1,0 +1,5 @@
+title: $:/core/images/auto-height
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-auto-height tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="M12 17.98V6"/><path d="m6 15 6 5 6-5"/><path d="M20.94 22H3"/><path d="M21 2H3"/><path d="M3.05 11H4"/><path d="M7.05 11H8"/><path d="M16 11h.95"/><path d="M20.05 11H21"/></svg>

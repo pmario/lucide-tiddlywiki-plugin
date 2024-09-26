@@ -1,0 +1,5 @@
+title: $:/core/images/excise
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-excise tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="M12 9V1.9"/><path d="m8 18 4-4 4 4"/><path d="M12 15v7"/><path d="M17 14V7"/><path d="M21 14V7"/><path d="M3 14V7"/><path d="M7 14V7"/></svg>

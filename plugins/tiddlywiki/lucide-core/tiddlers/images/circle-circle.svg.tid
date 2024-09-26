@@ -1,0 +1,5 @@
+title: $:/core/images/close-others-button
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-close-others-button tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/></svg>

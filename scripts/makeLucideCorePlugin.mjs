@@ -3,8 +3,8 @@ import path from "path";
 
 // Define the directories
 const __dirname = path.resolve();
-const lucideDir = path.join(__dirname, "lucide", "images");
-const coreImagesDir = path.join(__dirname, "core", "images");
+const lucideDir = path.join(__dirname, "build", "lucide", "images");
+const coreImagesDir = path.join(__dirname, "build", "core", "images");
 const targetDir = path.join(__dirname, "plugins", "tiddlywiki", "lucide-core", "tiddlers", "images");
 const configDir = path.join(__dirname, "scripts", "config");
 
@@ -56,6 +56,7 @@ const processFiles = (config) => {
 
 			// Replace title in the content
 			content = content.replace(/title:\s*.*\n/, `title: ${title}\n`);
+			content = content.replace(/tags:\s*.*\n/, `tags: $:/tags/Image/Lucide $:/tags/Image\n`);
 
 			// Extend class attribute in the content
 			const classList = value.classes.map(cls => cls.replace("$(title)$", tcClass)).join(" ");

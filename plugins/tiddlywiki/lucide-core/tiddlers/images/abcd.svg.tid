@@ -1,0 +1,5 @@
+title: $:/core/images/mono-block
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-mono-block tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path d="m3 10 3-8 3 8"/><path d="M8 9H4"/><path d="M15 10.02V2"/><path d="M15 6.01 17 6c3.03-.01 3-4 0-4h-2"/><path d="m15 10.02 2-.02c3.97.03 4.02-4 0-4l-2 .01"/><path d="M9 22H6.5c-4.7 0-4.71-8 0-8H9"/><path d="M18 22c4 0 4-8 0-8h-3v8z"/></svg>

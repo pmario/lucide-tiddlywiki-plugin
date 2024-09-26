@@ -1,0 +1,5 @@
+title: $:/core/images/timestamp-on
+tags: $:/tags/Image/Lucide $:/tags/Image
+
+\parameters (size:"22pt")
+<svg xmlns="http://www.w3.org/2000/svg" width=<<size>> height=<<size>> class="tc-image-timestamp-on tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><circle cx="12" cy="14" r="8"/><path d="M12 10v4"/><path d="M5 4 2 7"/><path d="m22 7-3-3"/><path d="M14.04 2H9.96"/></svg>
