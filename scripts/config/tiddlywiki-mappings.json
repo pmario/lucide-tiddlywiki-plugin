@@ -9,8 +9,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/advanced-search-button": {
-		"lucide": "search-advanced.svg.tid",
-		"customDir": "custom",
+		"lucide": "search-code.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/auto-height": {
@@ -32,19 +31,23 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-down": {
-		"lucide": "chevron-down.svg.tid",
+		"lucide": "chevrons-down-big.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-left": {
-		"lucide": "chevron-left.svg.tid",
+		"lucide": "chevrons-left-big.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-right": {
-		"lucide": "chevron-right.svg.tid",
+		"lucide": "chevrons-right-big.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/chevron-up": {
-		"lucide": "chevron-up.svg.tid",
+		"lucide": "chevrons-up-big.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/clone-button": {
@@ -57,7 +60,8 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/close-button": {
-		"lucide": "x.svg.tid",
+		"lucide": "x-big.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/close-others-button": {
@@ -83,7 +87,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/download-button": {
-		"lucide": "download.svg.tid",
+		"lucide": "hard-drive-download.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/edit-button": {
@@ -187,12 +191,21 @@
 		"lucide": "info.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/core/images/input-button": {
+		"lucide": "download.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
 	"$:/core/images/italic": {
 		"lucide": "italic.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/layout-button": {
-		"lucide": "layout-panel-left.svg.tid",
+		"lucide": "layout-dashboard.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/standard-layout": {
+		"lucide": "layout-panel-right.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/left-arrow": {
@@ -200,7 +213,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/line-width": {
-		"lucide": "line-width.svg.tid",
+		"lucide": "line-width-3.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -256,8 +269,17 @@
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
-	"$:/core/images/network-activity": {
+	"$:/core/images/palette": {
+		"lucide": "palette.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/radio-tower": {
 		"lucide": "radio-tower.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/radio-tower-off": {
+		"lucide": "tower.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-button": {
@@ -266,6 +288,11 @@
 	},
 	"$:/core/images/new-here-button": {
 		"lucide": "tag-plus.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/new-here-button-2": {
+		"lucide": "tag-plus-2.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -354,7 +381,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/save-button": {
-		"lucide": "import.svg.tid",
+		"lucide": "circle-check-big.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/save-button-dynamic": {
@@ -380,17 +407,17 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/storyview-classic": {
-		"lucide": "rows-4-pop.svg.tid",
+		"lucide": "rows-3-classic.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/storyview-pop": {
-		"lucide": "rows-4-pop.svg.tid",
+		"lucide": "rows-3-pop.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/storyview-zoomin": {
-		"lucide": "rows-3-zoomin.svg.tid",
+		"lucide": "rows-3-zoomin-2.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -434,8 +461,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/twitter": {
-		"lucide": "TODO",
-		"customDir": "custom",
+		"lucide": "twitter.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/underline": {
