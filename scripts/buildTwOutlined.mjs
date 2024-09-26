@@ -1,22 +1,28 @@
-import fs from "fs";
-import path from "path";
-import processSvg from "./render/convertStrokeToPath.mjs";
-import { readSvgDirectory, writeSvgFile } from "./helpers.mjs";
+import { promises as fs } from 'fs';
+import SVGFixer from 'oslllo-svg-fixer';
+import path from 'path';
 
 const ORIGIN_DIR = path.resolve(process.cwd(), "build", "icons");
 const ICONS_DIR = path.resolve(process.cwd(), "build", "outlined-tw");
-// const ICONS_DIR = path.resolve(process.cwd(), "build", "core", "images");
 
-console.log(`Convert Stroke to Path and save at: ${ICONS_DIR}`);
+console.log(`Convert Stroke to Path and save at: ${ICONS_DIR}\n`);
 
-const svgFiles = readSvgDirectory(ORIGIN_DIR);
+async function init() {
+  console.time('icon outliner');
+  try {
+    try {
+      await fs.mkdir(ICONS_DIR);
+    } catch (error) {} // eslint-disable-line no-empty
 
-// Ensure the target directory exists
-if (!fs.existsSync(ICONS_DIR)) {
-	fs.mkdirSync(ICONS_DIR, { recursive: true });
+    await SVGFixer(ORIGIN_DIR, ICONS_DIR, {
+      showProgressBar: true,
+      traceResolution: 800,
+    }).fix();
+
+    console.timeEnd('icon outliner');
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-svgFiles.forEach((svgFile) => {
-  const content = fs.readFileSync(path.join(ORIGIN_DIR, svgFile));
-  processSvg(content, svgFile).then((svg) => writeSvgFile(svgFile, ICONS_DIR, svg));
-});
+init();
