@@ -301,7 +301,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-journal-button": {
-		"lucide": "new-journal.svg.tid",
+		"lucide": "new-journal-TODO.svg.tid",
 		"customDir": "custom-SPECIAL",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
