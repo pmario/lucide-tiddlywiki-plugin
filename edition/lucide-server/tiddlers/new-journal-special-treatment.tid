@@ -1,0 +1,22 @@
+created: 20240927100957970
+modified: 20240927101431726
+tags: 
+title: new-journal-special-treatment
+type: text/vnd.tiddlywiki
+
+The new-jounal button needs some hand crafting, to allow us to show the actual day of the month.
+
+The SVG needs to be covered within a `<$parameter>` block, to allow us to define the `day` variable.
+
+```
+<$parameters size="22pt" day=<<now "DD">>>
+<svg>...</svg>
+</$parameters>
+```
+
+Once the PATHs are created we need to add the custom text element, directly above the /SVG.
+
+```
+<text style="font-family:Arial;font-size:12px;font-weight:bold;line-height:1.25;stroke-width:0" xml:space="preserve"><tspan x="4.6" y="17.4" style="stroke-width:0"><$text text=<<day>>/></tspan></text>
+</svg></$parameters>
+```
