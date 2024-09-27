@@ -1,5 +1,8 @@
-modified: 20240318181759000
 created: 20240318181759000
+modified: 20240927102736020
 title: GettingStarted
+type: text/vnd.tiddlywiki
 
-TODO
+You can ''drag & drop'' import the "''Lucide Core''" plugin as a "drop in replacement" for the core icons.
+
+{{$:/core/ui/ControlPanel/Plugins}}
