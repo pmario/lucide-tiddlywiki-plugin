@@ -5,7 +5,7 @@
 	"main": "",
 	"scripts": {
 		"build": "npm run build-tw-plugin && npm run build-edition",
-		"build-edition": "tiddlywiki ./edition/lucide --output ./edition/lucide/docs --build index",
+		"build-edition": "tiddlywiki ./edition/lucide --output docs --build index",
 		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run optimize:outlined-tw && npm run make:plugin",
 
 		"build:icons": "node ./scripts/build-icons-from-origin.mjs",
