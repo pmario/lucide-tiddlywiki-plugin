@@ -3,5 +3,6 @@
 	"name": "Lucide Core",
 	"description": "Lucide Icon Library",
 	"author": "pmario",
-	"list": "readme license"
+	"list": "readme license",
+	"stability": "STABILITY_1_EXPERIMENTAL"
 }
