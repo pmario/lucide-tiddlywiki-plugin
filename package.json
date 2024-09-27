@@ -1,6 +1,6 @@
 {
 	"name": "lucide-to-tid",
-	"version": "0.1.0",
+	"version": "0.5.0",
 	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
 	"main": "",
 	"scripts": {
@@ -11,7 +11,7 @@
 		"make:plugin": "node ./scripts/make-tw-plugin.mjs",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"optimize:outlined-lucide": "node ./scripts/optimize-lucide-outlined.mjs",
-		"make:plugin-lucide": "node ./scripts/make-lucide-plugin.mjs",
+		"make:plugin-lucide": "node ./scripts/make-lucide-plugin.mjs"
 	},
 	"keywords": [
 		"Lucide",
