@@ -60,7 +60,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/close-button": {
-		"lucide": "x-big.svg.tid",
+		"lucide": "x-big-2.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
