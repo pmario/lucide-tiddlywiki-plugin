@@ -2,4 +2,4 @@ title: $:/core/images/right-arrow
 tags: $:/tags/Image/Lucide $:/tags/Image
 
 \parameters (size:"22pt")
-<svg width=<<size>> height=<<size>> class="tc-image-right-arrow tc-image-button" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0"><path fill-rule="evenodd" d="M8.73 5.04a1.1 1.1 0 0 0-.63.53c-.06.12-.07.19-.07.43s0 .3.07.44c.06.11.65.72 2.77 2.85l2.7 2.71-2.7 2.7a46 46 0 0 0-2.77 2.87c-.06.12-.07.19-.07.43 0 .33.05.48.27.7s.37.28.7.28c.24 0 .3-.02.44-.08.22-.1 6.35-6.24 6.46-6.46.06-.13.08-.2.08-.44s-.02-.3-.08-.43c-.06-.12-.72-.8-3.18-3.26-3.46-3.47-3.24-3.27-3.68-3.29z"/></svg>
+<svg width=<<size>> height=<<size>> class="tc-image-right-arrow tc-image-button" viewBox="0 0 24 24" stroke="none" stroke-width="0"><path fill-rule="evenodd" d="M8.73 5.04a1.1 1.1 0 0 0-.63.53c-.06.12-.07.19-.07.43s0 .3.07.44c.06.11.65.72 2.77 2.85l2.7 2.71-2.7 2.7a46 46 0 0 0-2.77 2.87c-.06.12-.07.19-.07.43 0 .33.05.48.27.7s.37.28.7.28c.24 0 .3-.02.44-.08.22-.1 6.35-6.24 6.46-6.46.06-.13.08-.2.08-.44s-.02-.3-.08-.43c-.06-.12-.72-.8-3.18-3.26-3.46-3.47-3.24-3.27-3.68-3.29z"/></svg>
