@@ -1,17 +1,19 @@
 created: 20240930101750847
-modified: 20240930102544586
+modified: 20240930111224930
 tags: 
 title: test-different-parameters
 type: text/vnd.tiddlywiki
 
 <$transclude $tiddler="test-close-button-params" color=red width=0/> 
+<$transclude $tiddler="test-close-button-params" color=red width=0.5/> 
 <$transclude $tiddler="test-close-button-params" color=red width=1/> 
+<$transclude $tiddler="test-close-button-params" color=red width=1.5/> 
 <$transclude $tiddler="test-close-button-params" color=red width=2/> 
-<$transclude $tiddler="test-close-button-params" color=red width=3/>
 
 ------
 
+<$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=0/> 
+<$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=0.5/> 
 <$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=1/> 
-<$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=2/> 
-<$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=2.5/>
+<$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=1.5/> 
 
