@@ -1,0 +1,14 @@
+code-body: yes
+created: 20240930095114044
+modified: 20240930095500152
+tags: $:/tags/Global
+title: test-global-color-function
+type: text/vnd.tiddlywiki
+
+\define colorRegexp() <<colou?r .*>>
+
+\define removeRegex() <<colou?r |"|'|>>
+
+\function getColor(c) [{$:/palette}getindex<c>!is[blank]] ~[[$:/palettes/Vanilla]getindex<c>!is[blank]] ~[[$:/config/DefaultColourMappings/]addsuffix<c>get[text]] :map[function[recolor],<currentTiddler>]
+
+\function recolor(c) [<c>regexp<colorRegexp>] :then[<c>search-replace:g:regexp<removeRegex>,[]split[ ]!is[blank]first[]] :map[function[getColor],<currentTiddler>] :else[<c>]

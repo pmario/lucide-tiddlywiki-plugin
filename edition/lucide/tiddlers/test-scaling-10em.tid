@@ -1,0 +1,7 @@
+created: 20240930092910727
+modified: 20240930102611211
+tags: 
+title: test-scaling-10em
+type: text/vnd.tiddlywiki
+
+{{$:/core/images/done-button|10em}}{{$:/core/images/close-button|10em}}{{$:/core/images/close-all-button|10em}}
