@@ -248,7 +248,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/mastodon": {
-		"lucide": "TODO",
+		"lucide": "brand-mastodon.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
