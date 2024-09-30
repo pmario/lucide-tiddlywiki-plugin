@@ -472,6 +472,11 @@
 		"lucide": "twitter.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/core/images/twitter-x": {
+		"lucide": "brand-x.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
 	"$:/core/images/underline": {
 		"lucide": "underline.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
