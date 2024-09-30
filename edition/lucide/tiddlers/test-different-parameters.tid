@@ -1,8 +1,10 @@
 created: 20240930101750847
-modified: 20240930111224930
+modified: 20240930112101761
 tags: 
 title: test-different-parameters
 type: text/vnd.tiddlywiki
+
+Make icons thinner
 
 <$transclude $tiddler="test-close-button-params" color=red width=0/> 
 <$transclude $tiddler="test-close-button-params" color=red width=0.5/> 
@@ -12,8 +14,19 @@ type: text/vnd.tiddlywiki
 
 ------
 
+Make icons thinner
+
 <$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=0/> 
 <$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=0.5/> 
 <$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=1/> 
 <$transclude $tiddler="test-close-button-params" color=<<getColor background>> width=1.5/> 
+
+----
+
+Make icons thicker
+
+<$transclude $tiddler="test-close-button-params" color=<<getColor foreground>> width=0/> 
+<$transclude $tiddler="test-close-button-params" color=<<getColor foreground>> width=1/> 
+<$transclude $tiddler="test-close-button-params" color=<<getColor foreground>> width=2/> 
+<$transclude $tiddler="test-close-button-params" color=<<getColor foreground>> width=3/> 
 
