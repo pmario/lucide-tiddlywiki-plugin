@@ -1,6 +1,8 @@
+// Convert Inkscape icons into Lucide-like icons
+
 import fs from "fs";
 import path from "path";
-import processSvg from "./render/processSvg.mjs";
+import processSvg from "./render/processOrigin.mjs";
 import { readSvgDirectory, writeSvgFile } from "./helpers.mjs";
 
 const ORIGIN_DIR = path.resolve(process.cwd(), "origin");

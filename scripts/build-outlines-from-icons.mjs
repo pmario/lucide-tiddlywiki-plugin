@@ -1,3 +1,5 @@
+// Convert "strok" icons into "outlined" icons
+
 import { promises as fs } from 'fs';
 import SVGFixer from 'oslllo-svg-fixer';
 import path from 'path';
