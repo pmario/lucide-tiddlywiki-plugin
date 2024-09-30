@@ -78,7 +78,8 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/done-button": {
-		"lucide": "check.svg.tid",
+		"lucide": "check-big.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/down-arrow": {
