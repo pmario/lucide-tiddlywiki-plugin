@@ -401,7 +401,8 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/spiral": {
-		"lucide": "shell.svg.tid",
+		"lucide": "spiral.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/stamp": {
