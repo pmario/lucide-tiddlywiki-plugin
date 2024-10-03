@@ -1,12 +1,11 @@
 {
 	"name": "lucide-to-tid",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
 	"main": "",
 	"scripts": {
-		"build": "npm run build-tw-plugin && npm run build-edition",
-		"build-edition": "tiddlywiki ./edition/lucide --output docs --build index",
-		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run optimize:outlined-tw && npm run optimize:outlined-lucide && npm run make:plugin",
+		"build": "npm run build-tw-plugin && npm run build:edition-lucide-all && npm run make-docs",
+		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run optimize:outlined-tw && npm run optimize:outlined-lucide && npm run build:plugin",
 
 		"build:icons": "node ./scripts/build-icons-from-origin.mjs",
 		"build:outlined": "node ./scripts/build-outlines-from-icons.mjs",
@@ -14,8 +13,11 @@
 		"optimize:outlined-tw": "node ./scripts/optimize-tw-outlined.mjs",
 		"optimize:outlined-lucide": "node ./scripts/optimize-lucide-outlined.mjs",
 
-		"make:plugin": "node ./scripts/make-tw-plugin.mjs",
-		"make:plugin-lucide": "node ./scripts/make-lucide-plugin.mjs",
+		"build:plugin": "node ./scripts/make-tw-plugin.mjs",
+
+		"build:edition-lucide-all": "node ./scripts/make-lucide-all-edition.mjs",
+
+		"make-docs": "tiddlywiki ./edition/lucide --output docs --build index && tiddlywiki ./edition/lucide-all --output docs --build lucide-all",
 
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
