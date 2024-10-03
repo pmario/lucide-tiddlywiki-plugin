@@ -1,14 +1,14 @@
 created: 20241003141511249
-modified: 20241003143000524
+modified: 20241003182716761
 tags: 
 title: Lucide Gallery
 type: text/vnd.tiddlywiki
 
 \define copyActions() <$action-sendmessage $message="tm-copy-to-clipboard" $param=<<imageTitle>>/>
 
-<<.tip "Click an icon to copy the title to the clipboard">>
+All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}}/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]]
 
-{{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}} Icons
+''Tip:'' Click an icon to copy the title to the clipboard
 
 <div class="tc-image-chooser">
 <$macrocall $name="image-picker-list" filter="[all[shadows+tiddlers]tag[$:/tags/Image/Lucide]]" actions=<<copyActions>> />

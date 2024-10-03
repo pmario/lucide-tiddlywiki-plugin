@@ -1,8 +1,22 @@
 created: 20240318181759000
-modified: 20240927102736020
+modified: 20241003181256939
 title: GettingStarted
 type: text/vnd.tiddlywiki
 
-You can ''drag & drop'' import the "''Lucide Core''" plugin as a "drop in replacement" for the core icons.
+! TiddlyWiki Core Icon Replacement
+
+!! Installation
+
+You can ''drag & drop this'' <big><big>[[Lucide Core Plugin|$:/plugins/tiddlywiki/lucide-core]] link</big></big> into your own wiki. ''No restart required''. So you can easily test it at https://tiddlywiki.com
+
+!! All 1500++ Lucide Icons
+
+An overview of all icons can be found at: 
+
+*<big>https://pmario.github.io/lucide-tiddlywiki-plugin/lucide-all.html</big>
+
+
+
+---
 
 {{$:/core/ui/ControlPanel/Plugins}}

@@ -1,6 +1,7 @@
 title: $:/plugins/tiddlywiki/lucide-core/readme
 
-This plugin is a drop-in replacement for the core icons using https://lucide.dev/ icons as a base. 
-Lucide Version: v0.446.0 -- [[Lucide License|$:/plugins/tiddlywiki/lucide-core/license]]
+This plugin is a drop-in replacement for the core icons using https://lucide.dev/ icons as a base.
 
-Some icons are TW specific, because they could not be found in the Lucide icon set
+Lucide Version: v0.446.0 -- [[License Info|$:/plugins/tiddlywiki/lucide-core/license]]
+
+Some icons are TiddlyWiki specific, because they could not be found in the Lucide icon set
