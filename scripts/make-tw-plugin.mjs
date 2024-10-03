@@ -56,7 +56,7 @@ const processFiles = (config) => {
 
 			// Replace title in the content
 			content = content.replace(/title:\s*.*\n/, `title: ${title}\n`);
-			content = content.replace(/tags:\s*.*\n/, `tags: $:/tags/Image/Lucide $:/tags/Image\n`);
+			content = content.replace(/tags:\s*.*\n/, `tags: $:/tags/Image\n`);
 
 			// Extend class attribute in the content
 			const classList = value.classes.map(cls => cls.replace("$(title)$", tcClass)).join(" ");

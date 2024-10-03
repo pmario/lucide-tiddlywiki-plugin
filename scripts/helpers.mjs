@@ -9,9 +9,9 @@ import { fileURLToPath } from 'url';
  * @returns {string} A camelized string
  */
 export const toCamelCase = (string) =>
-  string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
-    p2 ? p2.toUpperCase() : p1.toLowerCase(),
-  );
+	string.replace(/^([A-Z])|[\s-_]+(\w)/g, (match, p1, p2) =>
+		p2 ? p2.toUpperCase() : p1.toLowerCase(),
+	);
 
 /**
  * Converts string to PascalCase
@@ -20,9 +20,9 @@ export const toCamelCase = (string) =>
  * @returns {string} A pascalized string
  */
 export const toPascalCase = (string) => {
-  const camelCase = toCamelCase(string);
+	const camelCase = toCamelCase(string);
 
-  return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
+	return camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
 };
 
 /**
@@ -40,7 +40,7 @@ export const toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, '$1-
  * @param {string} outputDirectory
  */
 export const resetFile = (fileName, outputDirectory) =>
-  fs.writeFileSync(path.join(outputDirectory, fileName), '', 'utf-8');
+	fs.writeFileSync(path.join(outputDirectory, fileName), '', 'utf-8');
 
 /**
  * Reads the file contents.
@@ -58,7 +58,7 @@ export const readFile = (path) => fs.readFileSync(path.resolve(__dirname, '../',
  * @param {string} outputDirectory
  */
 export const appendFile = (content, fileName, outputDirectory) =>
-  fs.appendFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
+	fs.appendFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
 
 /**
  * writes content to a file
@@ -68,7 +68,7 @@ export const appendFile = (content, fileName, outputDirectory) =>
  * @param {string} outputDirectory
  */
 export const writeFile = (content, fileName, outputDirectory) =>
-  fs.writeFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
+	fs.writeFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
 
 /**
  * writes content to a file if it does not exist
@@ -78,9 +78,9 @@ export const writeFile = (content, fileName, outputDirectory) =>
  * @param {string} outputDirectory
  */
 export const writeFileIfNotExists = (content, fileName, outputDirectory) => {
-  if (!fs.existsSync(path.join(outputDirectory, fileName))) {
-    writeFile(content, fileName, outputDirectory);
-  }
+	if (!fs.existsSync(path.join(outputDirectory, fileName))) {
+		writeFile(content, fileName, outputDirectory);
+	}
 };
 
 /**
@@ -90,13 +90,13 @@ export const writeFileIfNotExists = (content, fileName, outputDirectory) => {
  * @returns {object} A map of icon or category metadata
  */
 export const readAllMetadata = (directory) =>
-  fs
-    .readdirSync(directory)
-    .filter((file) => path.extname(file) === '.json')
-    .reduce((acc, fileName) => {
-      acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
-      return acc;
-    }, {});
+	fs
+		.readdirSync(directory)
+		.filter((file) => path.extname(file) === '.json')
+		.reduce((acc, fileName) => {
+			acc[path.basename(fileName, '.json')] = readMetadata(fileName, directory);
+			return acc;
+		}, {});
 
 /**
  * Reads metadata for an icon or category
@@ -106,7 +106,7 @@ export const readAllMetadata = (directory) =>
  * @returns {object} The metadata for the icon or category
  */
 export const readMetadata = (fileName, directory) =>
-  JSON.parse(fs.readFileSync(path.join(directory, fileName), 'utf-8'));
+	JSON.parse(fs.readFileSync(path.join(directory, fileName), 'utf-8'));
 
 /**
  * reads the icon directory
@@ -116,7 +116,7 @@ export const readMetadata = (fileName, directory) =>
  * @returns {array} An array of file paths containing svgs
  */
 export const readSvgDirectory = (directory, fileExtension = '.svg') =>
-  fs.readdirSync(directory).filter((file) => path.extname(file) === fileExtension);
+	fs.readdirSync(directory).filter((file) => path.extname(file) === fileExtension);
 
 /**
  * Read svg from directory
@@ -125,7 +125,7 @@ export const readSvgDirectory = (directory, fileExtension = '.svg') =>
  * @param {string} directory
  */
 export const readSvg = (fileName, directory) =>
-  fs.readFileSync(path.join(directory, fileName), 'utf-8');
+	fs.readFileSync(path.join(directory, fileName), 'utf-8');
 
 /**
  * writes content to a file
@@ -135,7 +135,7 @@ export const readSvg = (fileName, directory) =>
  * @param {string} content
  */
 export const writeSvgFile = (fileName, outputDirectory, content) =>
-  fs.writeFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
+	fs.writeFileSync(path.join(outputDirectory, fileName), content, 'utf-8');
 
 /**
  * djb2 hashing function
@@ -145,15 +145,15 @@ export const writeSvgFile = (fileName, outputDirectory, content) =>
  * @returns {string} A hashed string of 6 characters
  */
 export const hash = (string, seed = 5381) => {
-  let i = string.length;
+	let i = string.length;
 
-  while (i) {
-    // eslint-disable-next-line no-bitwise, no-plusplus
-    seed = (seed * 33) ^ string.charCodeAt(--i);
-  }
+	while (i) {
+		// eslint-disable-next-line no-bitwise, no-plusplus
+		seed = (seed * 33) ^ string.charCodeAt(--i);
+	}
 
-  // eslint-disable-next-line no-bitwise
-  return (seed >>> 0).toString(36).substr(0, 6);
+	// eslint-disable-next-line no-bitwise
+	return (seed >>> 0).toString(36).substr(0, 6);
 };
 
 /**
@@ -173,11 +173,11 @@ export const generateHashedKey = ({ name, attributes }) => hash(JSON.stringify([
  * @returns {Boolean} if items contains duplicated items.
  */
 export const hasDuplicatedChildren = (children) => {
-  const hashedKeys = children.map(generateHashedKey);
+	const hashedKeys = children.map(generateHashedKey);
 
-  return !hashedKeys.every(
-    (key, index) => index === hashedKeys.findIndex((childKey) => childKey === key),
-  );
+	return !hashedKeys.every(
+		(key, index) => index === hashedKeys.findIndex((childKey) => childKey === key),
+	);
 };
 
 /**
@@ -186,9 +186,9 @@ export const hasDuplicatedChildren = (children) => {
  * @returns {array}
  */
 export const mergeArrays = (a, b) => {
-  a = a.concat(b);
-  a = a.filter((i, p) => a.indexOf(i) === p);
-  return a;
+	a = a.concat(b);
+	a = a.filter((i, p) => a.indexOf(i) === p);
+	return a;
 };
 
 /**
@@ -202,12 +202,12 @@ export const getCurrentDirPath = (currentPath) => path.dirname(fileURLToPath(cur
  * @returns {array}
  */
 export const shuffle = (array) => {
-  // eslint-disable-next-line no-plusplus
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+	// eslint-disable-next-line no-plusplus
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[array[i], array[j]] = [array[j], array[i]];
+	}
+	return array;
 };
 
 /**
@@ -217,10 +217,48 @@ export const shuffle = (array) => {
  * @returns string
  */
 export function minifySvg(string) {
-  return string
-    ? string
-        .replace(/>[\r\n ]+</g, '><')
-        .replace(/(<.*?>)|\s+/g, (m, $1) => $1 || ' ')
-        .trim()
-    : '';
+	return string
+		? string
+				.replace(/>[\r\n ]+</g, '><')
+				.replace(/(<.*?>)|\s+/g, (m, $1) => $1 || ' ')
+				.trim()
+		: '';
+}
+
+
+/**
+ * Copy all files from sourceDir to destDir
+ *
+ * @param {sourceDir} string
+ * @param {destDir} string
+ * @param {extension} string
+ */
+
+export function copyFilesWithExtension(sourceDir, destDir, extension) {
+	if (!fs.existsSync(destDir)) {
+		fs.mkdirSync(destDir, { recursive: true });
+	}
+
+	fs.readdir(sourceDir, (err, files) => {
+		if (err) {
+			console.error(`Error reading source directory:`, err);
+			return;
+		}
+
+		files.forEach(file => {
+			if (path.extname(file) === extension) {
+				const sourceFile = path.join(sourceDir, file);
+				const destFile = path.join(destDir, file);
+
+				fs.copyFile(sourceFile, destFile, (err) => {
+					if (err) {
+						console.error(`Error copying ${file}:`, err);
+					} else {
+						// console.log(`${file} copied successfully to: ${destDir}`);
+					}
+				});
+			}
+		});
+		console.log(`All files with extension '${extension}' copied to: ${destDir}`);
+	});
 }

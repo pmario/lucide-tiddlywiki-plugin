@@ -25,7 +25,15 @@ if (!fs.existsSync(IMAGES_DIR)) {
  * @returns {string} An SVG string, included the TW .tid header
 */
 function addPrefix(content, svgFile) {
-	return "title: $:/core/images/" + svgFile.slice(0,-4) + "\n" +
+	// Add lucide-<title> class to icons that come from the lucide edition
+	const classes = ["lucide","lucide-$(title)$","tc-image-button"];
+	const title = svgFile.slice(0,-4);
+
+	// Extend class attribute in the content
+	const classList = classes.map(cls => cls.replace("$(title)$", title)).join(" ");
+	content = content.replace(/tc-image-button/, `${classList}`);
+
+	return "title: $:/lucide/images/" + title + "\n" +
 			PREFIX + content;
 }
 

@@ -10,7 +10,7 @@ console.log(`Optimizing TiddlyWiki SVGs. Save at: ${IMAGES_DIR}`);
 
 const svgFiles = readSvgDirectory(ICONS_DIR);
 
-const PREFIX = "tags: $:/tags/Image/Lucide $:/tags/Image" +
+const PREFIX = "tags: $:/tags/Image" +
 	"\n\n" +
 	"\\parameters (size:\"22pt\")\n";
 
