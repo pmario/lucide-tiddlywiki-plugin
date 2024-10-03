@@ -1,0 +1,30 @@
+{
+	"description": "Lucide All Icons",
+	"plugins": [
+		"tiddlywiki/lucide-core"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite",
+		"tiddlywiki/readonly"
+	],
+	"languages": [
+	],
+	"build": {
+		"lucide-all": [
+			"--render","$:/core/save/all","lucide-all.html","text/plain"
+		],
+		"favicon": [
+			"--savetiddler","$:/favicon.ico","favicon.ico",
+			"--savetiddler","$:/green_favicon.ico","static/favicon.ico"
+		],
+		"static": [
+			"--render","$:/core/templates/static.template.html","static.html","text/plain",
+			"--render","$:/core/templates/alltiddlers.template.html","alltiddlers.html","text/plain",
+			"--render","[!is[system]]","[encodeuricomponent[]addprefix[static/]addsuffix[.html]]","text/plain","$:/core/templates/static.tiddler.html",
+			"--render","$:/core/templates/static.template.css","static/static.css","text/plain"]
+	},
+	"config": {
+		"retain-original-tiddler-path": true
+	}
+}
