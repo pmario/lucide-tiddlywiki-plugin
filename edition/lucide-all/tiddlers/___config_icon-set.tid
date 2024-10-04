@@ -2,7 +2,7 @@ caption: Icon Set
 created: 20241003193238857
 description: Some description text
 list: $:/lucide/images/badge-info $:/lucide/images/alarm-clock-minus $:/lucide/images/alarm-clock-plus $:/lucide/images/clipboard-plus $:/lucide/images/clipboard-type $:/lucide/images/cloud-cog $:/lucide/images/cloud-fog $:/lucide/images/cloud-lightning $:/lucide/images/cloud-hail $:/lucide/images/clock-1 $:/lucide/images/cloud-moon $:/lucide/images/circle-chevron-right $:/lucide/images/circle-chevron-up $:/lucide/images/air-vent $:/lucide/images/circle-arrow-up $:/lucide/images/circle-arrow-down $:/lucide/images/circle-arrow-left $:/lucide/images/align-horizontal-space-around $:/lucide/images/circle-chevron-left $:/lucide/images/beaker $:/lucide/images/align-vertical-justify-center $:/lucide/images/align-vertical-distribute-end $:/lucide/images/app-window $:/lucide/images/alarm-clock $:/lucide/images/align-end-horizontal $:/lucide/images/align-start-horizontal $:/lucide/images/align-center-horizontal $:/lucide/images/alarm-clock-check $:/lucide/images/cloud $:/lucide/images/clock-arrow-up $:/lucide/images/airplay $:/lucide/images/asterisk $:/lucide/images/arrow-right-from-line $:/lucide/images/badge-minus $:/lucide/images/arrow-big-up-dash $:/lucide/images/cassette-tape $:/lucide/images/case-upper $:/lucide/images/copyleft $:/lucide/images/copyright $:/lucide/images/folder-key $:/lucide/images/folder-search-2 $:/lucide/images/folder-symlink $:/lucide/images/folder-sync $:/lucide/images/folder-tree $:/lucide/images/folder-up $:/lucide/images/folder-x $:/lucide/images/folders $:/lucide/images/alarm-clock-off $:/lucide/images/calendar-search $:/lucide/images/align-center-vertical
-modified: 20241004093500938
+modified: 20241004093935087
 name: My Icons
 standby: $:/lucide/images/at-sign $:/lucide/images/circle-arrow-out-down-left $:/lucide/images/circle-arrow-out-up-right $:/lucide/images/circle-arrow-out-up-left $:/lucide/images/circle-arrow-out-down-right
 tags: $:/tags/SideBar
@@ -82,5 +82,7 @@ version: 0.1.0
 |Plugin Size| TODO |
 
 TODO: Create Plugin Button
+
+<$button actions="""<$action-navigate $to=<<thisTiddler>>/>""">Open this configuration in the StoryRiver</$button>
 
 </div>
