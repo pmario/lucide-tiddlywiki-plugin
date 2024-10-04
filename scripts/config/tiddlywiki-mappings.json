@@ -288,11 +288,6 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-here-button": {
-		"lucide": "tag-plus.svg.tid",
-		"customDir": "custom",
-		"classes": ["tc-image-$(title)$","tc-image-button"]
-	},
-	"$:/core/images/new-here-button-2": {
 		"lucide": "tag-plus-2.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
