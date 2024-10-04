@@ -5,7 +5,6 @@
 		"tiddlywiki/filesystem",
 		"tiddlywiki/browser-sniff",
 		"tiddlywiki/internals",
-		"tiddlywiki/lucide-core",
 		"tiddlywiki/template",
 		"wikilabs/bundler"
 	],
