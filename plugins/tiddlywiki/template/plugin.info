@@ -1,0 +1,9 @@
+{
+	"title": "$:/plugins/tiddlywiki/template",
+	"name": "Plugin Template",
+	"description": "A TiddlyWiki plugin template used to build plugins",
+	"author": "pmario",
+	"list": "readme license",
+	"stability": "STABILITY_1_EXPERIMENTAL",
+	"version": "0.0.0"
+}

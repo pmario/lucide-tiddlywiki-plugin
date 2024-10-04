@@ -1,7 +1,15 @@
 title: $:/plugins/tiddlywiki/lucide-core/readme
 
-This plugin is a drop-in replacement for the core icons using https://lucide.dev/ icons as a base.
+This plugin is a drop-in replacement for the TiddlyWiki core icons based on https://lucide.dev/ icons.
 
-Lucide Version: v0.446.0 -- [[License Info|$:/plugins/tiddlywiki/lucide-core/license]]
+Lucide Version: {{$:/plugins/tiddlywiki/lucide-core!!lucide-version}} -- License Info: see tab above.
 
-Some icons are TiddlyWiki specific, because they could not be found in the Lucide icon set
+Some icons are custom made for TiddlyWiki, using Lucide's specification. The following items are custom:
+
+<<<
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/Image/custom]]">
+<$transclude /> - <<currentTiddler>><br>
+</$list>
+
+<<<
