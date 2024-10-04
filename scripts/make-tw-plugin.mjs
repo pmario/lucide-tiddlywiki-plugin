@@ -48,6 +48,8 @@ const processFiles = (config) => {
 		const sourcePath = path.join(sourceDir, fileName);
 		const targetPath = path.join(targetDir, fileName);
 
+		const tags = customDir ? "$:/tags/Image $:/tags/Image/custom" : "$:/tags/Image";
+
 		// Check if source file exists
 		if (fs.existsSync(sourcePath)) {
 			let content = fs.readFileSync(sourcePath, "utf8");
@@ -56,7 +58,7 @@ const processFiles = (config) => {
 
 			// Replace title in the content
 			content = content.replace(/title:\s*.*\n/, `title: ${title}\n`);
-			content = content.replace(/tags:\s*.*\n/, `tags: $:/tags/Image\n`);
+			content = content.replace(/tags:\s*.*\n/, `tags: ${tags}\n`);
 
 			// Extend class attribute in the content
 			const classList = value.classes.map(cls => cls.replace("$(title)$", tcClass)).join(" ");
