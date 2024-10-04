@@ -1,7 +1,8 @@
 {
 	"description": "Lucide All Icons",
 	"plugins": [
-		"tiddlywiki/lucide-core"
+		"tiddlywiki/lucide-core",
+		"tiddlywiki/lucide-all"
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
