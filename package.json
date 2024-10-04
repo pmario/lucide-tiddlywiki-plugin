@@ -15,7 +15,7 @@
 
 		"build:plugin": "node ./scripts/make-tw-plugin.mjs",
 
-		"build:edition-lucide-all": "node ./scripts/make-lucide-all-edition.mjs",
+		"build:edition-lucide-all": "node ./scripts/make-lucide-all-plugin.mjs",
 
 		"make-docs": "tiddlywiki ./edition/lucide --output docs --build index && tiddlywiki ./edition/lucide-all --output docs --build lucide-all",
 

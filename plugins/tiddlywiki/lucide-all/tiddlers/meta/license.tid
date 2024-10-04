@@ -1,0 +1,5 @@
+title: $:/plugins/tiddlywiki/lucide-all/license
+
+Lucide License: ISC License - https://lucide.dev/license | Version: v{{$:/plugins/tiddlywiki/lucide-core!!lucide-version}}
+
+TiddlyWiki License: BSD-3-Clause - https://github.com/Jermolene/TiddlyWiki5/blob/master/license

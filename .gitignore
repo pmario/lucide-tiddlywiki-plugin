@@ -19,4 +19,4 @@ icons
 target
 $__StoryList.tid
 $__Import.tid
-/edition/lucide-all/tiddlers/images/*.tid
+/plugins/tiddlywiki/lucide-all/tiddlers/images/*.tid
