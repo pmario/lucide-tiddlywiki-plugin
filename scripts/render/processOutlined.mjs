@@ -1,6 +1,7 @@
 import { optimize } from 'svgo';
 import { parseSync, stringify } from 'svgson';
 import DEFAULT_ATTRS from '../config/tiddlywiki-attrs.json' assert { type: 'json' };
+import LEGACY_ATTRS from '../config/tiddlywiki-legacy-attrs.json' assert { type: 'json' };
 
 /**
  * Optimize SVG with `svgo`.
@@ -43,11 +44,10 @@ async function convertSvgToTw(svg, path) {
  * @param {string} svg - An SVG string.
  * @returns {string} An SVG string, included with the default attributes.
  */
-function setAttrs(svg) {
-	const contents = parseSync(svg);
+function setAttrs(svg, legacy) {
+	let contents = parseSync(svg);
 
-	contents.attributes = DEFAULT_ATTRS;
-
+	contents.attributes = (legacy) ? LEGACY_ATTRS : DEFAULT_ATTRS;
 	return stringify(contents);
 }
 
@@ -56,13 +56,13 @@ function setAttrs(svg) {
  * @param {string} svg An SVG string.
  * @returns {Promise<string>} An optimized svg
  */
-function processLucideOutlined(svg, path) {
+function processOutlined(svg, path, legacy) {
 	return (
 		convertSvgToTw(svg, path)
-			.then(setAttrs)
+			.then(setAttrs(svg, legacy))
 			// special handling for TW \parameters
 			.then((svg) => svg.replace(/\"🗚\"/g, '<<size>>'))
 	);
 }
 
-export default processLucideOutlined;
+export default processOutlined;
