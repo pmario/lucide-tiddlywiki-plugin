@@ -33,7 +33,7 @@ if (!fs.existsSync(LEGACY_IMAGES_DIR)) {
  * @param {string} svg - An SVG string.
  * @returns {string} An SVG string, included the TW .tid header
 */
-function addPrefix(content, svgFile) {
+function addPrefix(content, svgFile, legacy) {
 	// Add lucide-<title> class to icons that come from the lucide edition
 	const classes = ["lucide","lucide-$(title)$","tc-image-button"];
 	const title = svgFile.slice(0,-4);
@@ -42,13 +42,21 @@ function addPrefix(content, svgFile) {
 	const classList = classes.map(cls => cls.replace("$(title)$", title)).join(" ");
 	content = content.replace(/tc-image-button/, `${classList}`);
 
+	let prefix = (legacy) ? PREFIX_LEGACY : PREFIX;
 	return "title: $:/lucide/images/" + title + "\n" +
-			PREFIX + content;
+			prefix + content;
 }
 
 svgFiles.forEach((svgFile) => {
 	const content = fs.readFileSync(path.join(ICONS_DIR, svgFile));
-	processLucideOutlined(content, svgFile)
+	let legacy = false;
+	// Process >= TW v5.3.0
+	processOutlined(content, svgFile)
 		.then((svg) => addPrefix(svg, svgFile))
 		.then((svg) => writeSvgFile(svgFile + ".tid", IMAGES_DIR, svg));
-});
+
+	// Process < TW v5.3.0
+	legacy = true;
+	processOutlined(content, svgFile, legacy)
+		.then((svg) => addPrefix(svg, svgFile, legacy))
+		.then((svg) => writeSvgFile(svgFile + ".tid", LEGACY_IMAGES_DIR, svg));});

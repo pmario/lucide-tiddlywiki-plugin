@@ -48,6 +48,7 @@ function setAttrs(svg, legacy) {
 	let contents = parseSync(svg);
 
 	contents.attributes = (legacy) ? LEGACY_ATTRS : DEFAULT_ATTRS;
+
 	return stringify(contents);
 }
 
@@ -59,9 +60,8 @@ function setAttrs(svg, legacy) {
 function processOutlined(svg, path, legacy) {
 	return (
 		convertSvgToTw(svg, path)
-			.then(setAttrs(svg, legacy))
-			// special handling for TW \parameters
-			.then((svg) => svg.replace(/\"🗚\"/g, '<<size>>'))
+		.then((svg) => setAttrs(svg, legacy))
+		.then((svg) => svg.replace(/\"🗚\"/g, '<<size>>'))
 	);
 }
 
