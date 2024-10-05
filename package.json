@@ -10,6 +10,7 @@
 		"build:icons": "node ./scripts/build-icons-from-origin.mjs",
 		"build:outlined": "node ./scripts/build-outlines-from-icons.mjs",
 
+		"prepare:outlined-tw": "npm run build:icons && npm run build:outlined",
 		"optimize:outlined-tw": "node ./scripts/optimize-tw-outlined.mjs",
 		"optimize:outlined-lucide": "node ./scripts/optimize-lucide-outlined.mjs",
 
