@@ -7,7 +7,16 @@
 		{
 			"type": "node",
 			"request": "launch",
-			"name": "Launch Program",
+			"name": "optimize-tw-outlined.mjs",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}\\scripts\\optimize-tw-outlined.mjs"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "optimize-lucide-outlined.mjs",
 			"skipFiles": [
 				"<node_internals>/**"
 			],
