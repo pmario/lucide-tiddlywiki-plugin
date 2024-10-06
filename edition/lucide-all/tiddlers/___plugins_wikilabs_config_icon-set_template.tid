@@ -1,0 +1,84 @@
+created: 20241006101101696
+modified: 20241006112835653
+tags: 
+title: _:/plugins/wikilabs/config/icon-set/template
+type: text/vnd.tiddlywiki
+
+\define copyActions()
+<%if [<modifier>match[shift]] %>
+	<$action-sendmessage $message="tm-copy-to-clipboard" $param=<<navigateTo>>/>
+<%elseif [<modifier>match[ctrl]] %>
+	<$action-listops $tiddler=<<currentTiddler>> $field="standby" $subfilter="-[<navigateTo>]"/>
+<%else%>
+	<$action-listops $tiddler=<<currentTiddler>> $field="list" $subfilter=<<navigateTo>>/>
+	<$action-listops $tiddler=<<currentTiddler>> $field="standby" $subfilter="-[<navigateTo>]"/>
+<%endif%>
+\end
+
+\define removeActions()
+<%if [<navigateTo>match[Lucide Gallery]]%>
+	<$action-navigate $to=<<navigateTo>>/>
+<%elseif [<modifier>match[shift]] %>
+	<$action-sendmessage $message="tm-copy-to-clipboard" $param=<<navigateTo>>/>
+<%else%>
+<$action-listops $tiddler=<<currentTiddler>> $field="list" $subfilter="-[<navigateTo>]"/>
+<$action-listops $tiddler=<<currentTiddler>> $field="standby" $subfilter="[<navigateTo>]"/>
+<%endif%>
+\end
+
+<style>
+.x {
+  color: <<colour foreground>>;
+  fill: <<colour foreground>>;
+}
+.icon-list {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+</style>
+<div class="x">
+
+!! Listed
+
+* If you click an icon it will go to "Standby"
+* If you SHIFT-click an icon, the title will be copied to the clipboard
+
+<div class="icon-list">
+<$linkcatcher actions=<<removeActions>>>
+	<$list filter="[list[]]" variable="itemTitle" emptyMessage="Select Icons from [[Lucide Gallery]] or form Standby">
+		<$link to=<<itemTitle>> tooltip=<<itemTitle>>>
+			<$transclude $tiddler=<<itemTitle>>/>
+		</$link>
+	</$list>
+</$linkcatcher>
+<div>
+
+!! Standby
+
+''Important:'' Icons in "standby" mode will not be exported
+
+* If you click an icon it will go to "Listed"
+* If you CTRL-click an icon it will be removed
+* If you SHIFT-click an icon, the title will be copied to the clipboard
+
+<div class="icon-list">
+<$linkcatcher actions=<<copyActions>>>
+	<$list filter="[<currentTiddler>get[standby]enlist-input[]]" variable="itemTitle" emptyMessage="No Icons in Standby">
+		<$link to=<<itemTitle>> tooltip=<<itemTitle>> ><$transclude $tiddler=<<itemTitle>>/></$link>
+	</$list>
+</$linkcatcher>
+</div>
+
+!! Plugin
+
+|tc-edit-max-width tc-max-width tc-first-col-min-width|k
+|Version |<$edit field="version" tag=input placeholder="eg: 0.1.0"/>|
+|Name |<$edit field="name" tag=input placeholder="My Icons"/>|
+|Description |<$edit field="description" tag=input placeholder="Icons for ..."/>|
+|Plugin Size| TODO |
+
+TODO: Create Plugin Button
+
+<$button actions="""<$action-navigate $to=<<currentTiddler>>/>""">Open this configuration in the StoryRiver</$button>
+
+</div>

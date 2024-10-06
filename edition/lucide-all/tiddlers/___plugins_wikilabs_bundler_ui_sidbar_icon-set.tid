@@ -1,0 +1,31 @@
+caption: Icon Sets
+created: 20241006100144854
+modified: 20241006113306841
+tags: $:/tags/SideBar
+title: _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
+type: text/vnd.tiddlywiki
+
+\define stateIconSet() $:/state/bundler/icon-set
+
+\procedure newIconSet()
+<$action-createtiddler $basetitle="_:/config/icon-set" 
+	$template="_:/plugins/wikilabs/config/icon-set/default"
+	tags="icon-set"
+>
+	<$action-setfield $tiddler=<<stateIconSet>> $field="text" $value=<<createTiddler-title>>/>
+</$action-createtiddler>
+
+\end
+
+<$select tiddler=<<stateIconSet>> field="text" default="Select an icon set">
+<option disabled>Select an icon set</option>
+<$list filter='[all[shadows+tiddlers]tag[icon-set]sort[title]]'>
+<option value=<<currentTiddler>>><$view field='name'/> - <$view field='description'/> - v<$view field='version'/></option>
+</$list>
+</$select> <$button actions=<<newIconSet>> >
+Create New Set
+</$button>
+
+<$tiddler tiddler={{{ [<stateIconSet>get[text]] }}}>
+<$transclude $tiddler="_:/plugins/wikilabs/config/icon-set/template"/>
+</$tiddler>

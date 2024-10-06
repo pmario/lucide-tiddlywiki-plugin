@@ -1,0 +1,18 @@
+created: 20241006105913290
+description: The best collection ever
+list: 
+modified: 20241006111426232
+name: My New Icon Set
+standby: 
+tags: 
+title: _:/plugins/wikilabs/config/icon-set/default
+type: text/vnd.tiddlywiki
+version: 0.0.0
+
+List: 
+
+<<list-links "[enlist{!!list}]" emptyMessage:"n/a">>
+
+Standby:
+
+<<list-links "[enlist{!!standby}]" emptyMessage:"n/a">>

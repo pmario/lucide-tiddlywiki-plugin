@@ -1,14 +1,16 @@
 created: 20241003141511249
-modified: 20241004131316052
+modified: 20241006112112370
 tags: 
 title: Lucide Gallery
 type: text/vnd.tiddlywiki
 
-\define target() _:/config/icon-set
+\define sidebar() _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
+
+\function target() [{$:/state/bundler/icon-set}]
 
 \procedure copyActions()
-<!-- <%if [[$:/StoryList]!contains<target>] %> -->
-	<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<target>> />
+<!-- <%if [[$:/StoryList]!contains<sidebar>] %> -->
+	<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
 <!-- <%endif%> -->
 <$action-listops $tiddler=<<target>> $field="list" $subfilter=<<imageTitle>>/>
 \end
