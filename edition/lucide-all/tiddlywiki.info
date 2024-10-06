@@ -2,7 +2,9 @@
 	"description": "Lucide All Icons",
 	"plugins": [
 		"tiddlywiki/lucide-core",
-		"tiddlywiki/lucide-all"
+		"tiddlywiki/lucide-all",
+		"wikilabs/bunder",
+		"wikilabs/link-to-tabs"
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
