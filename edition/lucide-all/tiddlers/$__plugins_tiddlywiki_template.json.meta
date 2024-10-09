@@ -1,0 +1,12 @@
+author: pmario
+created: 20241009121156974
+dependents: 
+description: The best collection ever
+list: readme license
+modified: 20241009121342186
+name: My New Icon Set
+plugin-type: plugin
+stability: STABILITY_1_EXPERIMENTAL
+title: $:/plugins/tiddlywiki/template
+type: application/json
+version: 0.1.0-95cd856060da4280a3a3

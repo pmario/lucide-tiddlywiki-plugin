@@ -1,10 +1,13 @@
 created: 20241006101101696
-modified: 20241006112835653
+modified: 20241009113206966
 tags: 
 title: _:/plugins/wikilabs/config/icon-set/template
 type: text/vnd.tiddlywiki
 
-\define copyActions()
+\function iconsSize() [<currentTiddler>get[list]enlist-input[]] :map[<currentTiddler>get[text]length[]] +[sum[]]
+\function calcID() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[]]
+
+\procedure copyActions()
 <%if [<modifier>match[shift]] %>
 	<$action-sendmessage $message="tm-copy-to-clipboard" $param=<<navigateTo>>/>
 <%elseif [<modifier>match[ctrl]] %>
@@ -13,9 +16,11 @@ type: text/vnd.tiddlywiki
 	<$action-listops $tiddler=<<currentTiddler>> $field="list" $subfilter=<<navigateTo>>/>
 	<$action-listops $tiddler=<<currentTiddler>> $field="standby" $subfilter="-[<navigateTo>]"/>
 <%endif%>
+
+<$action-setfield $tiddler=<<currentTiddler>> $field="id" $value=<<calcID>> />
 \end
 
-\define removeActions()
+\procedure removeActions()
 <%if [<navigateTo>match[Lucide Gallery]]%>
 	<$action-navigate $to=<<navigateTo>>/>
 <%elseif [<modifier>match[shift]] %>
@@ -24,6 +29,8 @@ type: text/vnd.tiddlywiki
 <$action-listops $tiddler=<<currentTiddler>> $field="list" $subfilter="-[<navigateTo>]"/>
 <$action-listops $tiddler=<<currentTiddler>> $field="standby" $subfilter="[<navigateTo>]"/>
 <%endif%>
+
+<$action-setfield $tiddler=<<currentTiddler>> $field="id" $value=<<calcID>> />
 \end
 
 <style>
@@ -69,16 +76,17 @@ type: text/vnd.tiddlywiki
 </$linkcatcher>
 </div>
 
-!! Plugin
+!! Plugin Meta Data
 
 |tc-edit-max-width tc-max-width tc-first-col-min-width|k
 |Version |<$edit field="version" tag=input placeholder="eg: 0.1.0"/>|
 |Name |<$edit field="name" tag=input placeholder="My Icons"/>|
 |Description |<$edit field="description" tag=input placeholder="Icons for ..."/>|
-|Plugin Size| TODO |
+|ID |{{!!id}} |
+|Estimated Size|<<iconsSize>> byte|
 
-TODO: Create Plugin Button
+{{_:/plugins/wikilabs/config/icon-set/create-plugin}}
 
-<$button actions="""<$action-navigate $to=<<currentTiddler>>/>""">Open this configuration in the StoryRiver</$button>
+<$button actions="""<$action-navigate $to={{$:/state/bundler/icon-set}}/>""">Open current configuration in the StoryRiver</$button>
 
 </div>

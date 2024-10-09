@@ -1,0 +1,19 @@
+created: 20241009100422545
+description: The best collection ever
+id: 95cd856060da4280a3a3
+list: $:/lucide/images/album $:/lucide/images/alarm-smoke $:/lucide/images/arrow-up
+modified: 20241009114703233
+name: My New Icon Set
+standby: $:/lucide/images/arrow-down-from-line $:/lucide/images/arrow-up-0-1
+tags: icon-set
+title: _:/config/icon-set 1
+type: text/vnd.tiddlywiki
+version: 0.1.0
+
+List: 
+
+<<list-links "[enlist{!!list}]" emptyMessage:"n/a">>
+
+Standby:
+
+<<list-links "[enlist{!!standby}]" emptyMessage:"n/a">>

@@ -1,0 +1,48 @@
+created: 20241008121941949
+modified: 20241009123341033
+tags: 
+title: _:/plugins/wikilabs/config/icon-set/create-plugin
+type: text/vnd.tiddlywiki
+
+\define logVerify() bundle-plugin-verify
+\define template() $:/plugins/tiddlywiki/template
+\define plugin() $:/plugins/wikilabs/lucide-custom
+
+\function state() [{$:/state/bundler/icon-set}]
+
+\function included() [{$:/state/bundler/icon-set}get[list]enlist-input[]format:titlelist[]] +[join[ ]]
+\function excluded() [{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]] +[join[ ]]
+
+\function getVersion() [<state>get[version]] [<state>get[id]] +[join[-]]
+
+\procedure bundlePluginActions()
+	<$action-setfield $tiddler=<<plugin>> $field="version" $value=<<getVersion>> />
+	<$action-setfield $tiddler=<<plugin>> $field="name" $value={{{ [<state>get[name]] }}} />
+	<$action-setfield $tiddler=<<plugin>> $field="description" $value={{{ [<state>get[description]] }}} />
+
+	<$action-bundleplugin $plugin=<<plugin>> $include=<<included>> $mode=<<mode>> $config=<<state>> $removePrefix=<<plugin>> $addPrefix="$:/plugins/bundler/test"/>
+
+	<%if [<mode>match[dangerous]] %>
+		<$action-deletetiddler $tiddler=<<logVerify>>/>
+	<%endif%>
+\end
+
+\procedure cancelPluginActions()
+<$action-deletetiddler $tiddler=<<logVerify>>/>
+\end
+
+<%if [<logVerify>!is[tiddler]] %>
+	<$button actions=<<bundlePluginActions>> >
+		<$action-createtiddler $basetitle=<<plugin>> $template=<<template>> $overwrite="yes"/>
+		Show Plugin bundler actions!
+	</$button>
+<%elseif [<logVerify>is[tiddler]]%>
+	<$let mode="dangerous">
+		<$button actions=<<bundlePluginActions>> >
+			Create Plugin
+		</$button>
+		<$button actions=<<cancelPluginActions>> >
+			Undo
+		</$button>
+	</$let>
+<%endif%>
