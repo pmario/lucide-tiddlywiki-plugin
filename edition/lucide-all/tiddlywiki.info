@@ -1,9 +1,10 @@
 {
 	"description": "Lucide All Icons",
 	"plugins": [
+		"tiddlywiki/browser-storage",
 		"tiddlywiki/lucide-core",
 		"tiddlywiki/lucide-all",
-		"wikilabs/bunder",
+		"wikilabs/bundler",
 		"wikilabs/link-to-tabs"
 	],
 	"themes": [
