@@ -2,4 +2,4 @@ title: $:/plugins/tiddlywiki/lucide-all/readme
 
 This plugin contains all available icons from https://lucide.dev/.
 
-Lucide Version: {{$:/plugins/tiddlywiki/lucide-core!!lucide-version}} -- License Info: see tab above.
+Lucide Version: {{$:/plugins/tiddlywiki/lucide-all!!lucide-version}} -- License Info: see tab above.
