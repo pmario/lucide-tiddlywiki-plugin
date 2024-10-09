@@ -1,5 +1,5 @@
 created: 20241003141511249
-modified: 20241006112112370
+modified: 20241009113214153
 tags: 
 title: Lucide Gallery
 type: text/vnd.tiddlywiki
@@ -8,11 +8,16 @@ type: text/vnd.tiddlywiki
 
 \function target() [{$:/state/bundler/icon-set}]
 
+\function calcID() [<target>get[list]enlist-input[]sort[]join[]sha256[]]
+
 \procedure copyActions()
 <!-- <%if [[$:/StoryList]!contains<sidebar>] %> -->
 	<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
 <!-- <%endif%> -->
 <$action-listops $tiddler=<<target>> $field="list" $subfilter=<<imageTitle>>/>
+
+<$action-setfield $tiddler=<<target>> $field="id" $value=<<calcID>> />
+
 \end
 
 All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}}/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]]
