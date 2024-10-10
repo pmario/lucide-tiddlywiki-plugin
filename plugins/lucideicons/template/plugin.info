@@ -1,6 +1,6 @@
 {
 	"title": "$:/plugins/lucideicons/template",
-	"name": "Plugin Template",
+	"name": "Lucide Icons Plugin Template",
 	"description": "A TiddlyWiki plugin template used to build plugins",
 	"author": "pmario",
 	"list": "readme license",

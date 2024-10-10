@@ -4,6 +4,7 @@
 		"tiddlywiki/browser-storage",
 		"tiddlywiki/lucide-core",
 		"tiddlywiki/lucide-all",
+		"lucideicons/template",
 		"wikilabs/bundler",
 		"wikilabs/link-to-tabs"
 	],
