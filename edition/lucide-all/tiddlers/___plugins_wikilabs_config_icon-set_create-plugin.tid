@@ -1,16 +1,22 @@
 created: 20241008121941949
-modified: 20241009123341033
-tags: 
+modified: 20241009141844029
 title: _:/plugins/wikilabs/config/icon-set/create-plugin
 type: text/vnd.tiddlywiki
 
 \define logVerify() bundle-plugin-verify
-\define template() $:/plugins/tiddlywiki/template
-\define plugin() $:/plugins/wikilabs/lucide-custom
+\define template() $:/plugins/lucideicons/template
+
+\function plugin() [[$:/plugins/lucideicons]] [<state>get[name]] +[join[/]]
 
 \function state() [{$:/state/bundler/icon-set}]
 
-\function included() [{$:/state/bundler/icon-set}get[list]enlist-input[]format:titlelist[]] +[join[ ]]
+\function included()
+	[{$:/state/bundler/icon-set}get[list]enlist-input[]format:titlelist[]]
+	[<plugin>addsuffix[/readme]]
+	[<plugin>addsuffix[/license]]
+	+[join[ ]]
+\end
+
 \function excluded() [{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]] +[join[ ]]
 
 \function getVersion() [<state>get[version]] [<state>get[id]] +[join[-]]
@@ -20,7 +26,12 @@ type: text/vnd.tiddlywiki
 	<$action-setfield $tiddler=<<plugin>> $field="name" $value={{{ [<state>get[name]] }}} />
 	<$action-setfield $tiddler=<<plugin>> $field="description" $value={{{ [<state>get[description]] }}} />
 
-	<$action-bundleplugin $plugin=<<plugin>> $include=<<included>> $mode=<<mode>> $config=<<state>> $removePrefix=<<plugin>> $addPrefix="$:/plugins/bundler/test"/>
+	<$action-bundleplugin $plugin=<<plugin>>
+		$include=<<included>>
+		$remove={{{ [<template>addsuffix[/readme]] [<template>addsuffix[/license]] +[join[ ]] }}}
+		$config=<<state>>
+		$mode=<<mode>>
+	/>
 
 	<%if [<mode>match[dangerous]] %>
 		<$action-deletetiddler $tiddler=<<logVerify>>/>
@@ -31,11 +42,28 @@ type: text/vnd.tiddlywiki
 <$action-deletetiddler $tiddler=<<logVerify>>/>
 \end
 
+\function getPluginName() [<pluginPrefix>addsuffix<randomname>]
+
 <%if [<logVerify>!is[tiddler]] %>
-	<$button actions=<<bundlePluginActions>> >
-		<$action-createtiddler $basetitle=<<plugin>> $template=<<template>> $overwrite="yes"/>
-		Show Plugin bundler actions!
-	</$button>
+	<%if [<plugin>is[tiddler]] %>
+		<$button actions=<<bundlePluginActions>> >
+			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]]  }}}/>
+			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]]  }}}/>
+
+			<$action-setfield $tiddler=<<state>> $field="version" $value={{{ [<plugin>get[version]split[-]first[]] }}} />
+
+			Verify Settings
+		</$button>
+	<%else%>
+		<$button actions=<<bundlePluginActions>> >
+			<$action-createtiddler $basetitle=<<plugin>> $template=<<template>> $overwrite="yes"/>
+
+			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]]  }}}/>
+			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]]  }}}/>
+
+			Verify Settings
+		</$button>
+	<%endif%>
 <%elseif [<logVerify>is[tiddler]]%>
 	<$let mode="dangerous">
 		<$button actions=<<bundlePluginActions>> >

@@ -1,31 +1,38 @@
 caption: Icon Sets
 created: 20241006100144854
-modified: 20241006113306841
+modified: 20241009133710123
 tags: $:/tags/SideBar
 title: _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
 type: text/vnd.tiddlywiki
 
+\whitespace tirm
+
 \define stateIconSet() $:/state/bundler/icon-set
 
-\procedure newIconSet()
-<$action-createtiddler $basetitle="_:/config/icon-set" 
-	$template="_:/plugins/wikilabs/config/icon-set/default"
-	tags="icon-set"
->
-	<$action-setfield $tiddler=<<stateIconSet>> $field="text" $value=<<createTiddler-title>>/>
-</$action-createtiddler>
+\function createSetName() [[_:/config/icon-set]] [<random>] +[join[/]]
 
+\procedure newIconSet()
+<$let random=<<randomname>> >
+	<$action-createtiddler $basetitle=<<createSetName>>
+		$template="_:/plugins/wikilabs/config/icon-set/default"
+		tags="icon-set"
+		name=<<random>>
+	>
+		<$action-setfield $tiddler=<<stateIconSet>> $field="text" $value=<<createTiddler-title>>/>
+		<$action-navigate $to="Lucide Gallery"/>
+	</$action-createtiddler>
+</$let>
 \end
 
 <$select tiddler=<<stateIconSet>> field="text" default="Select an icon set">
-<option disabled>Select an icon set</option>
-<$list filter='[all[shadows+tiddlers]tag[icon-set]sort[title]]'>
-<option value=<<currentTiddler>>><$view field='name'/> - <$view field='description'/> - v<$view field='version'/></option>
-</$list>
+	<option disabled>Select an icon set</option>
+	<$list filter='[all[shadows+tiddlers]tag[icon-set]sort[title]]'>
+		<option value=<<currentTiddler>>><$view field='name'/> - <$view field='description'/> - v<$view field='version'/></option>
+	</$list>
 </$select> <$button actions=<<newIconSet>> >
 Create New Set
 </$button>
 
 <$tiddler tiddler={{{ [<stateIconSet>get[text]] }}}>
-<$transclude $tiddler="_:/plugins/wikilabs/config/icon-set/template"/>
+	<$transclude $tiddler="_:/plugins/wikilabs/config/icon-set/template"/>
 </$tiddler>
