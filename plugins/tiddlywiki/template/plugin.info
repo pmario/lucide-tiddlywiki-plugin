@@ -1,5 +1,5 @@
 {
-	"title": "$:/plugins/tiddlywiki/template",
+	"title": "$:/plugins/lucideicons/template",
 	"name": "Plugin Template",
 	"description": "A TiddlyWiki plugin template used to build plugins",
 	"author": "pmario",
