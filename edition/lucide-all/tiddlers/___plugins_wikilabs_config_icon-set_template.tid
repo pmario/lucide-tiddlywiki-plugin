@@ -4,6 +4,8 @@ tags:
 title: _:/plugins/wikilabs/config/icon-set/template
 type: text/vnd.tiddlywiki
 
+\import [[_:/plugins/wikilabs/config/icon-set/create-plugin]]
+
 \function iconsSize() [<currentTiddler>get[list]enlist-input[]] :map[<currentTiddler>get[text]length[]] +[sum[]]
 \function calcID() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[]]
 
@@ -79,14 +81,18 @@ type: text/vnd.tiddlywiki
 !! Plugin Meta Data
 
 |tc-edit-max-width tc-max-width tc-first-col-min-width|k
-|Version |<$edit field="version" tag=input placeholder="eg: 0.1.0"/>|
-|Name |<$edit field="name" tag=input placeholder="My Icons"/>|
-|Description |<$edit field="description" tag=input placeholder="Icons for ..."/>|
+|Version |<%if [<logVerify>is[tiddler]]%><$edit field="version" tag=input placeholder="eg: 0.1.0"/><%else%>{{!!version}}<%endif%>|
+|Name |<%if [<logVerify>is[tiddler]]%><$edit field="name" tag=input placeholder="My Icons"  /><%else%>{{!!name}}<%endif%>|
+|Description |<%if [<logVerify>is[tiddler]]%><$edit field="description" tag=input placeholder="Icons for ..." /><%else%>{{!!description}}<%endif%>|
 |ID |{{!!id}} |
 |Estimated Size|<<iconsSize>> byte|
 
 {{_:/plugins/wikilabs/config/icon-set/create-plugin}}
 
-<$button actions="""<$action-navigate $to={{$:/state/bundler/icon-set}}/>""">Open current configuration in the StoryRiver</$button>
+<$button actions="""<$action-navigate $to={{$:/state/bundler/icon-set}} />"""
+	disabled={{{ [<f.active-set>!is[tiddler]then[yes]] }}}
+>
+Open Current Configuration
+</$button>
 
 </div>

@@ -3,41 +3,50 @@ modified: 20241009141844029
 title: _:/plugins/wikilabs/config/icon-set/create-plugin
 type: text/vnd.tiddlywiki
 
-\define logVerify() bundle-plugin-verify
+\define logVerify() _:/temp/bundle-plugin-verify
 \define template() $:/plugins/lucideicons/template
 
-\function plugin() [[$:/plugins/lucideicons]] [<state>get[name]] +[join[/]]
+\function f.plugin-name() [[$:/plugins/lucideicons]] [<f.active-set>get[name]] +[join[/]]
+\function f.plugin-name-prefix() [<f.plugin-name>addsuffix[/]]
 
-\function state() [{$:/state/bundler/icon-set}]
+\function f.auto-increment-patch() [{$:/state/bundler/auto-increment-patch}trim[]] :else[[no]]
 
-\function included()
+\function f.active-set() [{$:/state/bundler/icon-set}]
+
+\function f.included()
 	[{$:/state/bundler/icon-set}get[list]enlist-input[]format:titlelist[]]
-	[<plugin>addsuffix[/readme]]
-	[<plugin>addsuffix[/license]]
+	[prefix<f.plugin-name-prefix>]
+	+[join[ ]]
+\end
+
+\function f.remove()
+	[{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]]
+	[<template>addsuffix[/readme]] [<template>addsuffix[/license]]
 	+[join[ ]]
 \end
 
 \function excluded() [{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]] +[join[ ]]
 
-\function getVersion() [<state>get[version]] [<state>get[id]] +[join[-]]
+\function getVersion() [<f.active-set>get[version]] [<f.active-set>get[id]] +[join[-]]
 
 \procedure bundlePluginActions()
-	<%if [<plugin>!is[tiddler]] %>
-		<$action-createtiddler $basetitle=<<plugin>> $template=<<template>> $overwrite="yes"/>
+	<%if [<f.plugin-name>!is[tiddler]] %>
+		<$action-createtiddler $basetitle=<<f.plugin-name>> $template=<<template>> $overwrite="yes"/>
 
-		<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]] }}} $overwrite="yes"/>
-		<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]] }}} $overwrite="yes"/>
+		<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]] }}} $overwrite="yes"/>
+		<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]] }}} $overwrite="yes"/>
 	<%endif%>
 
-	<$action-setfield $tiddler=<<plugin>> $field="version" $value=<<getVersion>> />
-	<$action-setfield $tiddler=<<plugin>> $field="name" $value={{{ [<state>get[name]] }}} />
-	<$action-setfield $tiddler=<<plugin>> $field="description" $value={{{ [<state>get[description]] }}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="version" $value=<<getVersion>> />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="name" $value={{{ [<f.active-set>get[name]] }}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="description" $value={{{ [<f.active-set>get[description]] }}} />
 
-	<$action-bundleplugin $plugin=<<plugin>>
-		$include=<<included>>
-		$remove={{{ [<template>addsuffix[/readme]] [<template>addsuffix[/license]] +[join[ ]] }}}
-		$config=<<state>>
+	<$action-bundleplugin $plugin=<<f.plugin-name>>
+		$include=<<f.included>>
+		$remove=<<f.remove>>
+		$config=<<f.active-set>>
 		$mode=<<mode>>
+		$incrementPatch=<<f.auto-increment-patch>>
 	/>
 
 	<%if [<mode>match[dangerous]] %>
@@ -52,12 +61,9 @@ type: text/vnd.tiddlywiki
 \function getPluginName() [<pluginPrefix>addsuffix<randomname>]
 
 <%if [<logVerify>!is[tiddler]] %>
-	<%if [<plugin>is[tiddler]] %>
-		<$button actions=<<bundlePluginActions>> >
-			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]]  }}}/>
-			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]]  }}}/>
-
-			<$action-setfield $tiddler=<<state>> $field="version" $value={{{ [<plugin>get[version]split[-]first[]] }}} />
+	<%if [<f.plugin-name>is[tiddler]] %>
+		<$button actions=<<bundlePluginActions>> disabled={{{ [<f.active-set>!is[tiddler]then[yes]] }}}>
+			<$action-setfield $tiddler=<<f.active-set>> $field="version" $value={{{ [<f.plugin-name>get[version]split[-]first[]] }}} />
 
 			Verify Settings
 		</$button>
@@ -72,7 +78,7 @@ type: text/vnd.tiddlywiki
 			Create Plugin
 		</$button>
 		<$button actions=<<cancelPluginActions>> >
-			Undo
+			Not yet
 		</$button>
 	</$let>
 <%endif%>

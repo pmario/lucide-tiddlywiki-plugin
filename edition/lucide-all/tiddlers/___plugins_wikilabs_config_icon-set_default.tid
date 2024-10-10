@@ -16,3 +16,11 @@ List:
 Standby:
 
 <<list-links "[enlist{!!standby}]" emptyMessage:"n/a">>
+
+Fields:
+
+<table class="tc-view-field-table">
+<tbody>
+<$list filter="[all[current]fields[]sort[title]] -text -title -bag -created -creator -modified -modifier -list -standby -tags -type -revision" template="$:/core/ui/TiddlerFieldTemplate" variable="listItem"/>
+</tbody>
+</table>
