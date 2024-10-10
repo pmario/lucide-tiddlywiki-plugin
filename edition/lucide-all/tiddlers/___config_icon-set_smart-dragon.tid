@@ -1,0 +1,26 @@
+created: 20241010151803190
+description: Your description comes here
+list: 
+modified: 20241010151803190
+name: smart-dragon
+standby: 
+tags: icon-set
+title: _:/config/icon-set/smart-dragon
+type: text/vnd.tiddlywiki
+version: 0.0.0
+
+List: 
+
+<<list-links "[enlist{!!list}]" emptyMessage:"n/a">>
+
+Standby:
+
+<<list-links "[enlist{!!standby}]" emptyMessage:"n/a">>
+
+Fields:
+
+<table class="tc-view-field-table">
+<tbody>
+<$list filter="[all[current]fields[]sort[title]] -text -title -bag -created -creator -modified -modifier -list -standby -tags -type -revision" template="$:/core/ui/TiddlerFieldTemplate" variable="listItem"/>
+</tbody>
+</table>
