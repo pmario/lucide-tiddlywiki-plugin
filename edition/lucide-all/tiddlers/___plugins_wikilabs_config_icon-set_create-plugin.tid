@@ -22,6 +22,13 @@ type: text/vnd.tiddlywiki
 \function getVersion() [<state>get[version]] [<state>get[id]] +[join[-]]
 
 \procedure bundlePluginActions()
+	<%if [<plugin>!is[tiddler]] %>
+		<$action-createtiddler $basetitle=<<plugin>> $template=<<template>> $overwrite="yes"/>
+
+		<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]] }}} $overwrite="yes"/>
+		<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]] }}} $overwrite="yes"/>
+	<%endif%>
+
 	<$action-setfield $tiddler=<<plugin>> $field="version" $value=<<getVersion>> />
 	<$action-setfield $tiddler=<<plugin>> $field="name" $value={{{ [<state>get[name]] }}} />
 	<$action-setfield $tiddler=<<plugin>> $field="description" $value={{{ [<state>get[description]] }}} />
@@ -56,11 +63,6 @@ type: text/vnd.tiddlywiki
 		</$button>
 	<%else%>
 		<$button actions=<<bundlePluginActions>> >
-			<$action-createtiddler $basetitle=<<plugin>> $template=<<template>> $overwrite="yes"/>
-
-			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]]  }}}/>
-			<$action-createtiddler $basetitle={{{ [<plugin>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]]  }}}/>
-
 			Verify Settings
 		</$button>
 	<%endif%>
