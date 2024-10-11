@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 \function f.plugin-name() [[$:/plugins/lucideicons]] [<f.active-set>get[name]] +[join[/]]
 \function f.plugin-name-prefix() [<f.plugin-name>addsuffix[/]]
 
-\function f.auto-increment-patch() [{$:/state/bundler/auto-increment-patch}trim[]] :else[[no]]
+\function f.auto-increment-patch() [[$:/state/bundler/auto-increment-patch]get[text]trim[]] :else[[no]]
 
 \function f.active-set() [{$:/state/bundler/icon-set}]
 
