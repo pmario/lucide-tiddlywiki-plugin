@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 \function target() [{$:/state/bundler/icon-set}]
 
 \function calcID() [<target>get[list]enlist-input[]sort[]join[]sha256[]]
+\function calcID-full() [<target>get[list]enlist-input[]sort[]join[]sha256[64]]
 
 \procedure copyActions()
 <!-- <%if [[$:/StoryList]!contains<sidebar>] %> -->
@@ -17,6 +18,7 @@ type: text/vnd.tiddlywiki
 <$action-listops $tiddler=<<target>> $field="list" $subfilter=<<imageTitle>>/>
 
 <$action-setfield $tiddler=<<target>> $field="id" $value=<<calcID>> />
+<$action-setfield $tiddler=<<target>> $field="id-full" $value=<<calcID-full>> />
 
 \end
 
