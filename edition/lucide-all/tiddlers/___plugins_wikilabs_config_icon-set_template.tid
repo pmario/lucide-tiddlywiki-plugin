@@ -40,12 +40,12 @@ type: text/vnd.tiddlywiki
 
 <style>
 .x {
-  color: <<colour foreground>>;
-  fill: <<colour foreground>>;
+	color: <<colour foreground>>;
+	fill: <<colour foreground>>;
 }
 .icon-list {
-  margin-top: 1em;
-  margin-bottom: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 </style>
 <div class="x">
