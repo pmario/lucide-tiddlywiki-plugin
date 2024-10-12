@@ -1,6 +1,6 @@
 created: 20240927140125907
-modified: 20241006095735206
+modified: 20241012132617306
 title: $:/SiteSubtitle
 type: text/vnd.tiddlywiki
 
-Based on Lucide v0.446.0
+Based on Lucide v{{$:/plugins/tiddlywiki/lucide-all!!lucide-version}}
