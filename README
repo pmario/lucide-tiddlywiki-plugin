@@ -1,7 +1,0 @@
-This plugin provides an alternative TiddlyWiki icons set using the [[Lucide icons|https://lucide.dev/]] as a basis.
-
-- To get it going you need to clone the lucide-repo along with this repository
-- You need to install all the dependencies in the lucide-repo
-- Then you need to run `pnpm --filter outline-svg start` to build the lucide outlined icons
-- Then "link" the "outlined" directory from lucide to the "outlined" directory here into this repo. The scripts expect it that way. 
-- Then run the local scripts
