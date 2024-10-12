@@ -3,7 +3,7 @@ modified: 20241009141844029
 title: _:/plugins/wikilabs/config/icon-set/create-plugin
 type: text/vnd.tiddlywiki
 
-\define logVerify() _:/temp/bundle-plugin-verify
+\define logVerify() $:/temp/bundle-plugin-verify
 \define template() $:/plugins/lucideicons/template
 
 \function f.plugin-name() [[$:/plugins/lucideicons]] [<f.active-set>get[name]] +[join[/]]
