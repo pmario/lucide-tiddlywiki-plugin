@@ -1,0 +1,6 @@
+created: 20241009100458568
+modified: 20241009100517501
+title: $:/config/BrowserStorage/SaveFilter
+type: text/vnd.tiddlywiki
+
+[prefix[_:/config/icon-set]] [prefix[$:/state/]] -[prefix[$:/state/popup/]]

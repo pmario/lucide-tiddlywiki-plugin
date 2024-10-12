@@ -1,0 +1,8 @@
+created: 20241012142855420
+modified: 20241012143803990
+tags: 
+title: $:/config/FileSystemPaths
+type: text/vnd.tiddlywiki
+
+[is[system]!has[draft.of]removeprefix[$:/plugins/]addprefix[_custom/plugins/]]
+[prefix[_:/config/icon-set/]!has[draft.of]removeprefix[_:/]addprefix[_custom/]]
