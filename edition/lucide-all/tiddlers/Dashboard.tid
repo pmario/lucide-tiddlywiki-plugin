@@ -1,5 +1,5 @@
 created: 20241011150018876
-modified: 20241012141308590
+modified: 20241012155553985
 tags: 
 title: Dashboard
 type: text/vnd.tiddlywiki
@@ -21,12 +21,9 @@ Activate
 </$button>
 \end
 
-!! Info
+!! Getting Started
 
-The "Bundler" tab in the right sidebar contains an "icon-set.bundle"
-
-!! Open: [[Lucide Gallery]]
-
+Open the [[Lucide Gallery]] and add icons to your icon set
 
 
 !! Custom Plugins
@@ -46,3 +43,7 @@ The "Bundler" tab in the right sidebar contains an "icon-set.bundle"
 </$list>
 </ul>
 </$let>
+
+!! Info
+
+The "Bundler" tab in the right sidebar contains an "icon-set.bundle"
