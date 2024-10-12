@@ -1,0 +1,8 @@
+code-body: yes
+created: 20241012132054403
+modified: 20241012132839516
+tags: 
+title: _:/config/icon-set/itemTemplate
+type: text/vnd.tiddlywiki
+
+{{!!title}} <$transclude />

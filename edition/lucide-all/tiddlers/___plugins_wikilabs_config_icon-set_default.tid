@@ -1,5 +1,5 @@
 created: 20241006105913290
-description: Your description comes here
+description: A Custom Lucide Icon Set
 list: 
 modified: 20241009133621725
 name: 
@@ -11,11 +11,15 @@ version: 0.0.0
 
 List: 
 
-<<list-links "[enlist{!!list}]" emptyMessage:"n/a">>
+<$let tv-enable-drag-and-drop="no">
+	<$macrocall $name="list-links-draggable" tiddler=<<currentTiddler>> emptyMessage="n/a" itemTemplate="_:/config/icon-set/itemTemplate" />
+</$let>
 
 Standby:
 
-<<list-links "[enlist{!!standby}]" emptyMessage:"n/a">>
+<$let tv-enable-drag-and-drop="no">
+	<$macrocall $name="list-links-draggable" tiddler=<<currentTiddler>> field="standby" emptyMessage="n/a" itemTemplate="_:/config/icon-set/itemTemplate" />
+</$let>
 
 Fields:
 
