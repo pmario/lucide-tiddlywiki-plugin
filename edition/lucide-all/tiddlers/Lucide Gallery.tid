@@ -1,8 +1,10 @@
 created: 20241003141511249
-modified: 20241009113214153
+modified: 20241012160832664
 tags: 
 title: Lucide Gallery
 type: text/vnd.tiddlywiki
+
+\import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
 
 \define sidebar() _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
 
@@ -12,9 +14,12 @@ type: text/vnd.tiddlywiki
 \function calcID-full() [<target>get[list]enlist-input[]sort[]join[]sha256[64]]
 
 \procedure copyActions()
-<!-- <%if [[$:/StoryList]!contains<sidebar>] %> -->
-	<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
-<!-- <%endif%> -->
+
+<%if [<target>!is[tiddler]then[go on]] %>
+	<<newIconSet>>
+<%endif%>
+
+<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
 <$action-listops $tiddler=<<target>> $field="list" $subfilter=<<imageTitle>>/>
 
 <$action-setfield $tiddler=<<target>> $field="id" $value=<<calcID>> />
