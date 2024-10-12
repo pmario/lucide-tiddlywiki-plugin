@@ -6,8 +6,11 @@ type: text/vnd.tiddlywiki
 
 \import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
 
+\define sidebar() _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
+
 \procedure actions()
 <$action-setfield $tiddler=<<stateIconSet>> $field="text" $value=<<currentTiddler>>/>
+<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
 \end
 
 \procedure activateSet()
@@ -43,5 +46,3 @@ The "Bundler" tab in the right sidebar contains an "icon-set.bundle"
 </$list>
 </ul>
 </$let>
-
-
