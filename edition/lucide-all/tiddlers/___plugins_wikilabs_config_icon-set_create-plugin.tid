@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 \function f.plugin-name() [[$:/plugins/lucideicons]] [<f.active-set>get[name]] +[join[/]]
 \function f.plugin-name-prefix() [<f.plugin-name>addsuffix[/]]
 
-\function f.auto-increment-patch() [[$:/state/bundler/auto-increment-patch]get[text]trim[]] :else[[no]]
+\function f.auto-increment-patch() [[$:/state/bundler/auto-increment-patch]get[text]trim[]] :else[[yes]]
 
 \function f.active-set() [{$:/state/bundler/icon-set}]
 
@@ -40,6 +40,7 @@ type: text/vnd.tiddlywiki
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="version" $value=<<getVersion>> />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="name" $value={{{ [<f.active-set>get[name]] }}} />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="description" $value={{{ [<f.active-set>get[description]] }}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="lucide-version" $value={{$:/plugins/tiddlywiki/lucide-all!!lucide-version}} />
 
 	<$action-bundleplugin $plugin=<<f.plugin-name>>
 		$include=<<f.included>>
