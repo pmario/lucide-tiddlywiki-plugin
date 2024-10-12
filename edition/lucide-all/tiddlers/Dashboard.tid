@@ -1,0 +1,47 @@
+created: 20241011150018876
+modified: 20241012141308590
+tags: 
+title: Dashboard
+type: text/vnd.tiddlywiki
+
+\import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
+
+\procedure actions()
+<$action-setfield $tiddler=<<stateIconSet>> $field="text" $value=<<currentTiddler>>/>
+\end
+
+\procedure activateSet()
+<$button actions=<<actions>>
+	disabled={{{ [<stateIconSet>get[text]match<currentTiddler>then[yes]] }}}
+>
+Activate
+</$button>
+\end
+
+!! Info
+
+The "Bundler" tab in the right sidebar contains an "icon-set.bundle"
+
+!! Open: [[Lucide Gallery]]
+
+
+
+!! Custom Plugins
+
+<$list filter="[!has[draft.of]plugin-type[plugin]prefix[$:/plugins/lucideicons/]!prefix[$:/plugins/lucideicons/template]sort[name]]"
+	template="$:/core/ui/Components/plugin-info"
+	emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}
+/>
+
+
+!! Current Available Configurations
+
+<$let tv-enable-drag-and-drop="no">
+<ul>
+<$list filter="[tag[icon-set]]">
+<li><$link >{{!!name}} -- {{!!description}}</$link> <<activateSet>></li>
+</$list>
+</ul>
+</$let>
+
+
