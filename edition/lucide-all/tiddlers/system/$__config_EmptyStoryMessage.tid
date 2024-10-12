@@ -1,6 +1,6 @@
 created: 20241003215340528
-modified: 20241003215356752
+modified: 20241012140605963
 title: $:/config/EmptyStoryMessage
 type: text/vnd.tiddlywiki
 
-{{Lucide Gallery||$:/core/ui/ViewTemplate}}
+{{Dashboard||$:/core/ui/ViewTemplate}}
