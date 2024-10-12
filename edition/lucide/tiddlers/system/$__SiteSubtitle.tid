@@ -3,4 +3,4 @@ modified: 20240927140158872
 title: $:/SiteSubtitle
 type: text/vnd.tiddlywiki
 
-Lucide v0.446.0
+Lucide v{{$:/plugins/tiddlywiki/lucide-core!!lucide-version}}
