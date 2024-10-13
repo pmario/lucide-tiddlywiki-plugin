@@ -25,6 +25,19 @@ Activate
 
 Open the [[Lucide Gallery]] and add icons to your icon set
 
+!! Store my Settings
+
+You can store your settings locally. ''No'' data will leave your computer.
+
+<$checkbox tiddler="$:/config/BrowserStorage/Enabled"
+	field="text"
+	checked="yes"
+	unchecked="no" 
+	default="no"
+	class="tc-small-gap-right"
+>
+Use browser local storage
+</$checkbox>
 
 !! Custom Plugins
 
