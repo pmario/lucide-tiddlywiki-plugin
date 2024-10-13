@@ -44,6 +44,20 @@ Open the [[Lucide Gallery]] and add icons to your icon set
 </ul>
 </$let>
 
-!! Info
+!! Bundler
 
-The "Bundler" tab in the right sidebar contains an "icon-set.bundle"
+The "Bundler" tab in the right sidebar contains the full UI
+
+{{$:/plugins/wikilabs/bundler/ui/BundlesFiltered}}
+
+!! Browser Storage
+
+The following list shows all tiddlers loaded from the browser storage:
+
+<$macrocall $name="list-links" filter="[enlist{$:/temp/BrowserStorage/Log}sort[]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}/>
+
+!! State Tiddlers
+
+<$let tv-wikilinks="no">
+<$button actions="""<$action-deletetiddler $filter="[prefix[$:/state]]"/>""">Clear all tiddlers prefixed: ''$:/state/''</$button> -- Reload needed, to see the result
+</$let>
