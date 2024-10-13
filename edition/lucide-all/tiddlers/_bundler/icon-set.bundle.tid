@@ -1,9 +1,9 @@
 created: 20241011150127646
 description: A list of all icon sets in this wiki
-filter: [tag[icon-set]]
-modified: 20241012145159161
+filter: [tag[icon-set]] [<currentTiddler>]
+modified: 20241013014658355
 tags: $:/tags/Filter
 title: icon-set.bundle
 type: text/vnd.tiddlywiki
 
-<pre>{{!!filter}}</pre>
+<pre><$view field="filter" mode=inline/></pre>
