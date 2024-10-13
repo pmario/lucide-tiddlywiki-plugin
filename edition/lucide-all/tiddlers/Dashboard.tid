@@ -33,7 +33,7 @@ You can store your settings locally. ''No'' data will leave your computer.
 	field="text"
 	checked="yes"
 	unchecked="no" 
-	default="no"
+	default="yes"
 	class="tc-small-gap-right"
 >
 Use browser local storage
