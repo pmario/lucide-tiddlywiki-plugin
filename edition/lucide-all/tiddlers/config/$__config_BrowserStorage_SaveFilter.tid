@@ -3,4 +3,4 @@ modified: 20241013022804075
 title: $:/config/BrowserStorage/SaveFilter
 type: text/vnd.tiddlywiki
 
-[prefix[_:/config/icon-set]] [prefix[$:/plugins/lucideicons/]] $:/state/bundler/icon-set
+[prefix[_:/config/icon-set]] [prefix[$:/plugins/lucideicons/]] $:/state/bundler/icon-set $:/temp/bundle.plugin.log
