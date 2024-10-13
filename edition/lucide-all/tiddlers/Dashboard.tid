@@ -38,7 +38,7 @@ Open the [[Lucide Gallery]] and add icons to your icon set
 
 <$let tv-enable-drag-and-drop="no">
 <ul>
-<$list filter="[tag[icon-set]]">
+<$list filter="[tag[icon-set]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}>
 <li><$link >{{!!name}} -- {{!!description}}</$link> <<activateSet>></li>
 </$list>
 </ul>
