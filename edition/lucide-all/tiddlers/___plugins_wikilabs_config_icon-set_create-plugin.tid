@@ -41,6 +41,7 @@ type: text/vnd.tiddlywiki
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="name" $value={{{ [<f.active-set>get[name]] }}} />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="description" $value={{{ [<f.active-set>get[description]] }}} />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="lucide-version" $value={{$:/plugins/tiddlywiki/lucide-all!!lucide-version}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="id" $value={{{ [<f.active-set>get[id-full]] }}} />
 
 	<$action-bundleplugin $plugin=<<f.plugin-name>>
 		$include=<<f.included>>
