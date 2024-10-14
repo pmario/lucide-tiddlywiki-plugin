@@ -7,6 +7,15 @@
 		{
 			"type": "node",
 			"request": "launch",
+			"name": "create-search-tiddlers.mjs",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}\\scripts\\create-search-tiddlers.mjs"
+		},
+		{
+			"type": "node",
+			"request": "launch",
 			"name": "optimize-tw-outlined.mjs",
 			"skipFiles": [
 				"<node_internals>/**"
