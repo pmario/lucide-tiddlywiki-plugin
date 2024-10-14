@@ -1,10 +1,8 @@
 created: 20241003141511249
-modified: 20241012160832664
+modified: 20241014180014164
 tags: 
 title: Lucide Gallery
 type: text/vnd.tiddlywiki
-
-\import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
 
 \define sidebar() _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
 
@@ -12,6 +10,8 @@ type: text/vnd.tiddlywiki
 
 \function calcID() [<target>get[list]enlist-input[]sort[]join[]sha256[]]
 \function calcID-full() [<target>get[list]enlist-input[]sort[]join[]sha256[64]]
+
+\function f.makeLink() [[$:/lucide/images/$(currentTiddler)$]substitute[]]
 
 \procedure copyActions()
 
@@ -27,11 +27,16 @@ type: text/vnd.tiddlywiki
 
 \end
 
+\import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
+
 All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}}/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]]
 
 ''Tip:'' Click an icon to copy it to the ''right sidebar -> Icon Set'' tab
 
-<div class="tc-image-chooser">
-<$macrocall $name="image-picker-list" filter="[all[shadows+tiddlers]tag[$:/tags/Image/Lucide]]" actions=<<copyActions>> />
-</div>
+Search: <$edit-text tag="input" tiddler="$:/temp/search/full"/>
 
+<div class="tc-image-chooser">
+<$macrocall $name="image-picker-list"
+	filter="[has[lucide]search:title,tags,categories{$:/temp/search/full}] :map[<f.makeLink>] +[sort[]]"
+	actions=<<copyActions>> />
+</div>

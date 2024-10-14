@@ -1,0 +1,54 @@
+created: 20241014165414992
+modified: 20241014175716356
+tags: 
+title: list-categories
+type: text/vnd.tiddlywiki
+
+\whitespace trim
+
+\procedure categoryActions()
+<$action-setfield $tiddler="$:/temp/search/category" $field="text" $value=<<navigateTo>>/>
+\end
+
+\import [[Lucide Gallery]]
+
+<style>
+.multi-columns {
+	display: block;
+	column-count: 6;
+	column-gap: 1em;
+	-moz-column-count: 6;
+	-moz-column-gap: 1em;
+	-webkit-column-count: 6;
+	-webkit-column-gap: 1em;
+}
+</style>
+
+''Categories''
+
+<div class="multi-columns">
+	<$linkcatcher actions=<<categoryActions>> >
+		<$list filter="[has[categories]get[categories]enlist-input[]unique[]sort[]]" >
+			<$link $to=<<currentTiddler>>><<currentTiddler>></$link><br>
+		</$list>
+	</$linkcatcher>
+</div>
+
+Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" class="tc-small-gap-left"/>
+
+<div class="flexboxX">
+	<$list filter="[has[categories]get[categories]enlist-input[]unique[]] :filter[search:title{$:/temp/search/category}] +[sort[]]" emptyMessage="No such category">
+		<div class="col">
+			<$macrocall $name="tag-pill" tag=<<currentTiddler>> />
+			<hr>
+			<div class="tc-image-chooser">
+				<$macrocall $name="image-picker-list"
+					filter="[contains:categories<currentTiddler>] :map[<f.makeLink>]"
+					actions=<<copyActions>>
+				/>
+			</div>
+		</div>
+	</$list>
+</div>
+
+
