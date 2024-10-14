@@ -26,6 +26,7 @@ async function processFiles(directory, output) {
 			const content = `title: ${path.basename(file, '.json')}\n`+
 				`tags: ${formattedTags}\n` +
 				`categories: ${categories.join(' ')}\n` +
+				`lucide: yes\n` +
 				`contributors: ${contributors.join(' ')}\n`;
 
 			// Write to .tid file
