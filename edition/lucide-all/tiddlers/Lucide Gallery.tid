@@ -1,5 +1,5 @@
 created: 20241003141511249
-modified: 20241014180014164
+modified: 20241015151907493
 tags: 
 title: Lucide Gallery
 type: text/vnd.tiddlywiki
@@ -13,7 +13,22 @@ type: text/vnd.tiddlywiki
 
 \function f.makeLink() [[$:/lucide/images/$(currentTiddler)$]substitute[]]
 
+\procedure image-picker-thumbnail()
+\whitespace trim
+<span class="image-wrapper" title=<<imageTitle>> >
+	<$transclude tiddler=<<imageTitle>>/>
+</span>
+\end
+
+\procedure image-picker-list(filter)
+\whitespace trim
+<$list filter=<<filter>> variable="imageTitle">
+	<$macrocall $name="image-picker-thumbnail"/>
+</$list>
+\end
+
 \procedure copyActions()
+<$action-log/>
 	<%if [<target>!is[tiddler]then[go on]] %>
 		<<newIconSet>>
 	<%endif%>
@@ -25,16 +40,25 @@ type: text/vnd.tiddlywiki
 	<$action-setfield $tiddler=<<target>> $field="id-full" $value=<<calcID-full>> />
 \end
 
+\procedure eventActions()
+<$let imageTitle=<<dom-title>>>
+	<<copyActions>>
+</$let>
+\end
+
 \import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
 
-All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}}/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]]
+All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}} class="tc-small-gap"/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]]
 
 ''Tip:'' Click an icon to copy it to the ''right sidebar -> Icon Set'' tab
 
-Search: <$edit-text tag="input" tiddler="$:/temp/search/full"/>
+Search: <$edit-text tag="input" tiddler="$:/temp/search/full"  class="tc-small-gap-left"/>
 
-<div class="tc-image-chooser">
-<$macrocall $name="image-picker-list"
-	filter="[has[lucide]search:title,tags,categories{$:/temp/search/full}] :map[<f.makeLink>] +[sort[]]"
-	actions=<<copyActions>> />
-</div>
+<$eventcatcher selector=".image-wrapper" $click=<<eventActions>>
+	tag="div"
+	class="tc-image-chooser"
+>
+	<$macrocall $name="image-picker-list"
+		filter="[has[lucide]search:title,tags,categories{$:/temp/search/full}] :map[<f.makeLink>] +[sort[]]"
+	/>
+</$eventcatcher>

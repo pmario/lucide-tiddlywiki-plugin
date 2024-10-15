@@ -1,5 +1,5 @@
 created: 20241014165414992
-modified: 20241014175716356
+modified: 20241015152004753
 tags: 
 title: list-categories
 type: text/vnd.tiddlywiki
@@ -10,19 +10,13 @@ type: text/vnd.tiddlywiki
 <$action-setfield $tiddler="$:/temp/search/category" $field="text" $value=<<navigateTo>>/>
 \end
 
-\import [[Lucide Gallery]]
+\procedure eventActions()
+<$let imageTitle=<<dom-title>>>
+	<<copyActions>>
+</$let>
+\end
 
-<style>
-.multi-columns {
-	display: block;
-	column-count: 6;
-	column-gap: 1em;
-	-moz-column-count: 6;
-	-moz-column-gap: 1em;
-	-webkit-column-count: 6;
-	-webkit-column-gap: 1em;
-}
-</style>
+\import [[Lucide Gallery]] [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
 
 ''Categories''
 
@@ -41,12 +35,15 @@ Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" cla
 		<div class="col">
 			<$macrocall $name="tag-pill" tag=<<currentTiddler>> />
 			<hr>
-			<div class="tc-image-chooser">
+			<$eventcatcher selector=".image-wrapper" $click=<<eventActions>>
+				tag="div"
+				class="tc-image-chooser"
+			>
 				<$macrocall $name="image-picker-list"
 					filter="[contains:categories<currentTiddler>] :map[<f.makeLink>]"
-					actions=<<copyActions>>
+					actions=<<eventActions>>
 				/>
-			</div>
+			</$eventcatcher>
 		</div>
 	</$list>
 </div>
