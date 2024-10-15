@@ -18,6 +18,7 @@
 
 		"build:edition-lucide-all": "node ./scripts/make-lucide-all-plugin.mjs",
 
+		"premake-docs": "node ./scripts/create-search-tiddlers.mjs",
 		"make-docs": "tiddlywiki ./edition/lucide --output docs --build index && tiddlywiki ./edition/lucide-all --output docs --build lucide-all",
 
 		"test": "echo \"Error: no test specified\" && exit 1"
