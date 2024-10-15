@@ -1,5 +1,5 @@
 created: 20241015142124512
-modified: 20241015155039616
+modified: 20241015160219387
 tags: $:/tags/Stylesheet
 title: _:/plugins/bundler/icon-set/styles
 type: text/vnd.tiddlywiki
@@ -49,4 +49,8 @@ type: text/vnd.tiddlywiki
 	left: 0;
 	right: 0;
 	margin: auto;
+}
+
+.category.row {
+	margin-bottom: 1.5em;
 }

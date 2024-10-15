@@ -1,5 +1,5 @@
 created: 20241014165414992
-modified: 20241015155043262
+modified: 20241015160141124
 tags: 
 title: list-categories
 type: text/vnd.tiddlywiki
@@ -34,8 +34,8 @@ Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" cla
 
 <div class="flexboxX">
 	<$list filter="[has[categories]get[categories]enlist-input[]unique[]] :filter[search:title{$:/temp/search/category}] +[sort[]]" emptyMessage="No such category">
-		<div class="col">
-			<$macrocall $name="tag-pill" tag=<<currentTiddler>> />
+		<div class="category row">
+			<$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
 			<hr>
 			<$eventcatcher selector=".image-wrapper" $click=<<eventActions>>
 				tag="div"
