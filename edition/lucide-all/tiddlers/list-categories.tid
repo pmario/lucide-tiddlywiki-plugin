@@ -1,5 +1,5 @@
 created: 20241014165414992
-modified: 20241015152004753
+modified: 20241015155043262
 tags: 
 title: list-categories
 type: text/vnd.tiddlywiki
@@ -22,9 +22,11 @@ type: text/vnd.tiddlywiki
 
 <div class="multi-columns">
 	<$linkcatcher actions=<<categoryActions>> >
+		<ol>
 		<$list filter="[has[categories]get[categories]enlist-input[]unique[]sort[]]" >
-			<$link $to=<<currentTiddler>>><<currentTiddler>></$link><br>
+			<li><$link $to=<<currentTiddler>>><<currentTiddler>></$link></li>
 		</$list>
+		</ol>
 	</$linkcatcher>
 </div>
 

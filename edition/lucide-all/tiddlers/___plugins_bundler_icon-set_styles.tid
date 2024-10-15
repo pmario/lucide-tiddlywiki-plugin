@@ -1,5 +1,5 @@
 created: 20241015142124512
-modified: 20241015142259664
+modified: 20241015155039616
 tags: $:/tags/Stylesheet
 title: _:/plugins/bundler/icon-set/styles
 type: text/vnd.tiddlywiki
@@ -12,6 +12,10 @@ type: text/vnd.tiddlywiki
 	-moz-column-gap: 1em;
 	-webkit-column-count: 6;
 	-webkit-column-gap: 1em;
+}
+
+.multi-columns ol {
+	margin: initial;
 }
 
 .tc-image-chooser .image-wrapper {
