@@ -1,0 +1,48 @@
+created: 20241015142124512
+modified: 20241015142259664
+tags: $:/tags/Stylesheet
+title: _:/plugins/bundler/icon-set/styles
+type: text/vnd.tiddlywiki
+
+.multi-columns {
+	display: block;
+	column-count: 6;
+	column-gap: 1em;
+	-moz-column-count: 6;
+	-moz-column-gap: 1em;
+	-webkit-column-count: 6;
+	-webkit-column-gap: 1em;
+}
+
+.tc-image-chooser .image-wrapper {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	position: relative;
+	border: 1px solid <<colour muted-foreground>>;
+	padding: 2px;
+	margin: 2px;
+	width: 4em;
+	height: 4em;
+}
+
+.tc-image-chooser .image-wrapper:hover {
+	background: <<colour primary>>;
+	padding: 0px;
+	border: 3px solid <<colour primary>>;
+}
+
+.tc-image-chooser .image-wrapper svg,
+.tc-image-chooser .image-wrapper img {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	max-width: 3.5em;
+	max-height: 3.5em;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
