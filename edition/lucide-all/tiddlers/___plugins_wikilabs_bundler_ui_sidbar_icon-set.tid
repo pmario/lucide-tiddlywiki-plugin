@@ -1,6 +1,6 @@
 caption: Icon Sets
 created: 20241006100144854
-modified: 20241009133710123
+modified: 20241015153841173
 tags: $:/tags/SideBar
 title: _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
 type: text/vnd.tiddlywiki
@@ -19,7 +19,6 @@ type: text/vnd.tiddlywiki
 		name=<<random>>
 	>
 		<$action-setfield $tiddler=<<stateIconSet>> $field="text" $value=<<createTiddler-title>>/>
-		<$action-navigate $to="Lucide Gallery"/>
 	</$action-createtiddler>
 </$let>
 \end

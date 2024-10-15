@@ -1,5 +1,5 @@
 created: 20241011150018876
-modified: 20241012155553985
+modified: 20241015153653414
 tags: 
 title: Dashboard
 type: text/vnd.tiddlywiki
@@ -23,7 +23,11 @@ Activate
 
 !! Getting Started
 
-Open the [[Lucide Gallery]] and add icons to your icon set
+You can use the following overviews to add icons to your icon set
+
+* [[Lucide Gallery]] ... All icons alphabetically sorted by name. Every icon is listed only once. Filter searches by title, tag and category
+* [[Categories|list-categories]] ... Icons sorted by ~50 categories. Icons can be listed multiple times. Filter searches categories
+* [[Tags|list-tags]] (slow) ... Icons sorted by ~2800 tags. Icons can be listed multiple times. Filter searches tags
 
 !! Custom Plugins
 
