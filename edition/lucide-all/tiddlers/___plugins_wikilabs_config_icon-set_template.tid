@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 \import [[_:/plugins/wikilabs/config/icon-set/create-plugin]]
 
 \function iconsSize() [<currentTiddler>get[list]enlist-input[]] :map[<currentTiddler>get[text]length[]] +[sum[]]
-\function calcID() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[]]
+\function calcID() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[7]]
 \function calcID-full() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[64]]
 
 \procedure copyActions()

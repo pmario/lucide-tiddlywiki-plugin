@@ -8,23 +8,21 @@ type: text/vnd.tiddlywiki
 
 \function target() [{$:/state/bundler/icon-set}]
 
-\function calcID() [<target>get[list]enlist-input[]sort[]join[]sha256[]]
+\function calcID() [<target>get[list]enlist-input[]sort[]join[]sha256[7]]
 \function calcID-full() [<target>get[list]enlist-input[]sort[]join[]sha256[64]]
 
 \function f.makeLink() [[$:/lucide/images/$(currentTiddler)$]substitute[]]
 
 \procedure copyActions()
+	<%if [<target>!is[tiddler]then[go on]] %>
+		<<newIconSet>>
+	<%endif%>
 
-<%if [<target>!is[tiddler]then[go on]] %>
-	<<newIconSet>>
-<%endif%>
+	<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
+	<$action-listops $tiddler=<<target>> $field="list" $subfilter=<<imageTitle>>/>
 
-<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
-<$action-listops $tiddler=<<target>> $field="list" $subfilter=<<imageTitle>>/>
-
-<$action-setfield $tiddler=<<target>> $field="id" $value=<<calcID>> />
-<$action-setfield $tiddler=<<target>> $field="id-full" $value=<<calcID-full>> />
-
+	<$action-setfield $tiddler=<<target>> $field="id" $value=<<calcID>> />
+	<$action-setfield $tiddler=<<target>> $field="id-full" $value=<<calcID-full>> />
 \end
 
 \import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]

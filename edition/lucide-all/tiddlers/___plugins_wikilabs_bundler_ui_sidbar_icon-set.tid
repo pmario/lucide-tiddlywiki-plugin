@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 
 \define stateIconSet() $:/state/bundler/icon-set
 
-\function createSetName() [[_:/config/icon-set]] [<random>] +[join[/]]
+\function createSetName() [[_:/config/icon-set]] [<random>] [<now "YYYY-0MM-0DD 0hh:0mm">] +[join[/]]
 
 \procedure newIconSet()
 <$let random=<<randomname>> >
