@@ -353,8 +353,12 @@
 		"lucide": "eye.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
-	"$:/core/images/preview-open": {
+	"$:/core/images/preview-off": {
 		"lucide": "eye-off.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/preview-open": {
+		"lucide": "eye-closed.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/print-button": {
