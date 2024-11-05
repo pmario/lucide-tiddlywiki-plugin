@@ -4,6 +4,9 @@
 	"description": "convert Lucide svgs to .tid usable by TiddlyWiki5",
 	"main": "",
 	"scripts": {
+		"start": "tiddlywiki ./edition/lucide-all-server --listen",
+		"index": "tiddlywiki ./edition/lucide-server --listen",
+
 		"build": "npm run build-tw-plugin && npm run build:edition-lucide-all && npm run make-docs",
 		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run optimize:outlined-tw && npm run optimize:outlined-lucide && npm run build:plugin",
 
