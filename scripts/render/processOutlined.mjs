@@ -1,7 +1,7 @@
 import { optimize } from 'svgo';
 import { parseSync, stringify } from 'svgson';
-import DEFAULT_ATTRS from '../config/tiddlywiki-attrs.json' assert { type: 'json' };
-import LEGACY_ATTRS from '../config/tiddlywiki-legacy-attrs.json' assert { type: 'json' };
+import DEFAULT_ATTRS from '../config/tiddlywiki-attrs.json' with { type: 'json' };
+import LEGACY_ATTRS from '../config/tiddlywiki-legacy-attrs.json' with { type: 'json' };
 
 /**
  * Optimize SVG with `svgo`.
@@ -61,7 +61,7 @@ function processOutlined(svg, path, legacy) {
 	return (
 		convertSvgToTw(svg, path)
 		.then((svg) => setAttrs(svg, legacy))
-		.then((svg) => svg.replace(/\"🗚\"/g, '<<size>>'))
+		.then((svg) => svg.replace(/\"🗚\"/g, '<<size>>').replace(/\"✎\"/g, '<<stroke>>').replace(/\"✔\"/g, '<<stroke-width>>'))
 	);
 }
 
