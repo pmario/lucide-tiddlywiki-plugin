@@ -1,5 +1,5 @@
 title: $:/core/images/left-arrow
 tags: $:/tags/Image
 
-\parameters (size:"22pt")
-<svg width=<<size>> height=<<size>> class="lucide lucide-chevron-left tc-image-left-arrow tc-image-button" viewBox="0 0 24 24" stroke="none" stroke-width="0"><path fill-rule="evenodd" d="M14.73 5.04c-.27.08-.38.2-3.45 3.26a58 58 0 0 0-3.18 3.26c-.06.13-.07.2-.07.44s0 .3.07.44c.1.22 6.25 6.35 6.47 6.46.12.06.19.08.43.08.33 0 .48-.06.7-.28s.28-.37.28-.7c0-.24-.02-.3-.08-.43-.06-.12-.65-.73-2.77-2.86L10.43 12l2.7-2.7a46 46 0 0 0 2.77-2.87c.06-.12.07-.19.07-.43 0-.33-.05-.48-.26-.7a.9.9 0 0 0-.67-.28z"/></svg>
+\parameters (size:"22pt", stroke:"none", stroke-width:"0", )
+<svg width=<<size>> height=<<size>> class="lucide lucide-chevron-left tc-image-left-arrow tc-image-button" viewBox="0 0 24 24" stroke=<<stroke>> stroke-width=<<stroke-width>>><path fill-rule="evenodd" d="M14.73 5.04c-.27.08-.38.2-3.45 3.26a58 58 0 0 0-3.18 3.26c-.06.13-.07.2-.07.44s0 .3.07.44c.1.22 6.25 6.35 6.47 6.46.12.06.19.08.43.08.33 0 .48-.06.7-.28s.28-.37.28-.7c0-.24-.02-.3-.08-.43-.06-.12-.65-.73-2.77-2.86L10.43 12l2.7-2.7a46 46 0 0 0 2.77-2.87c.06-.12.07-.19.07-.43 0-.33-.05-.48-.26-.7a.9.9 0 0 0-.67-.28z"/></svg>
