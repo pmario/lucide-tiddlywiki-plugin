@@ -449,13 +449,13 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/timestamp-off": {
-		"lucide": "stop-watch-pause.svg.tid",
-		"customDir": "custom",
+		"lucide": "timer-off.svg.tid",
+		"XXcustomDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/timestamp-on": {
-		"lucide": "stop-watch.svg.tid",
-		"customDir": "custom",
+		"lucide": "timer.svg.tid",
+		"XXcustomDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/tip": {
