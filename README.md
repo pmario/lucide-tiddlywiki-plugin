@@ -1,4 +1,4 @@
-This plugin provides an alternative TiddlyWiki icons set using the [[Lucide icons|https://lucide.dev/]] as a basis.
+This plugin provides an alternative TiddlyWiki icons set using the [Lucide icons](https://lucide.dev/) as a basis.
 
 ## To "compile" the TW plugins yourself
 
