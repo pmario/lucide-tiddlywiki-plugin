@@ -407,6 +407,10 @@
 		"lucide": "stamp.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/core/images/star": {
+		"lucide": "star.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
 	"$:/core/images/star-filled": {
 		"lucide": "TODO",
 		"customDir": "custom",
