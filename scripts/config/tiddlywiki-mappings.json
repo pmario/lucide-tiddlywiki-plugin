@@ -83,8 +83,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/down-arrow": {
-		"lucide": "chevron-down-big.svg.tid",
-		"customDir": "custom",
+		"lucide": "chevron-down.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/download-button": {
@@ -440,6 +439,16 @@
 		"lucide": "superscript.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/core/images/stop-watch": {
+		"lucide": "stop-watch.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/stop-watch-pause": {
+		"lucide": "stop-watch-pause.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
 	"$:/core/images/tag-button": {
 		"lucide": "tag.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
@@ -449,13 +458,11 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/timestamp-off": {
-		"lucide": "stop-watch-pause.svg.tid",
-		"customDir": "custom",
+		"lucide": "timer-off.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/timestamp-on": {
-		"lucide": "stop-watch.svg.tid",
-		"customDir": "custom",
+		"lucide": "timer.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/tip": {
@@ -468,10 +475,6 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/twitter": {
-		"lucide": "twitter.svg.tid",
-		"classes": ["tc-image-$(title)$","tc-image-button"]
-	},
-	"$:/core/images/twitter-x": {
 		"lucide": "brand-x.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
