@@ -1,4 +1,17 @@
-This plugin provides an alternative TiddlyWiki icons set using the [Lucide icons](https://lucide.dev/) as a basis.
+## Introduction
+
+These plugins provide an alternative TiddlyWiki icons set using the [Lucide icons](https://lucide.dev/) as a basis.
+
+## Compatibility
+
+The "lucide-core" plugin should be a 100% compatible "drop in replacement" for the TiddlyWiki core icons.
+
+With TW v5.3.0 the internal icon structure has been changed, so the initial plugins are only compatible with TW versions v5.3.0 and higher.
+
+## Demos
+
+- https://pmario.github.io/lucide-tiddlywiki-plugin ... Lucide Core plugin
+- https://pmario.github.io/lucide-tiddlywiki-plugin/lucide-all.html ... Users can create their own custom icon sets, to add project specific icons
 
 ## To "compile" the TW plugins yourself
 
