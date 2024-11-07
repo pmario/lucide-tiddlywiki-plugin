@@ -16,12 +16,14 @@ type: text/vnd.tiddlywiki
 \function f.included()
 	[{$:/state/bundler/icon-set}get[list]enlist-input[]format:titlelist[]]
 	[prefix<f.plugin-name-prefix>]
+	[<f.active-set>format:titlelist[]]
 	+[join[ ]]
 \end
 
 \function f.remove()
 	[{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]]
-	[<template>addsuffix[/readme]] [<template>addsuffix[/license]]
+	[<template>addsuffix[/readme]]
+	[<template>addsuffix[/license]]
 	+[join[ ]]
 \end
 
