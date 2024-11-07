@@ -1,5 +1,5 @@
 created: 20241011150018876
-modified: 20241107153025997
+modified: 20241107162737986
 tags: 
 title: Dashboard
 type: text/vnd.tiddlywiki
@@ -32,7 +32,7 @@ You can use the following overviews to add icons to your icon set
 !! Custom Plugins
 
 <$list filter="[!has[draft.of]plugin-type[plugin]prefix[$:/plugins/lucideicons/]!prefix[$:/plugins/lucideicons/template]sort[name]]"
-	template="$:/core/ui/Components/plugin-info"
+	template="$:/core/ui/ViewTemplate/body/plugin"
 	emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}
 />
 
@@ -41,17 +41,11 @@ You can use the following overviews to add icons to your icon set
 
 <$let tv-enable-drag-and-drop="no">
 <ul>
-<$list filter="[tag[icon-set]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}>
-<li><$link >{{!!name}} -- {{!!description}}</$link> <<activateSet>></li>
+<$list filter="[all[shadows+tiddlers]tag[icon-set]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}>
+<li><$link >{{!!name}} -- {{!!description}}</$link><%if [<stateIconSet>get[text]match<currentTiddler>] %> - is active<%endif%> <<activateSet>></li>
 </$list>
 </ul>
 </$let>
-
-!! Bundler
-
-The "Bundler" tab in the right sidebar contains the full UI. The elements below ''can be used to backu''p your icon-set configurations. By default the configuration is stored in your browser's local storage. So if this storage gets deleted, your configurations are gone.
-
-{{$:/plugins/wikilabs/bundler/ui/BundlesFiltered}}
 
 !! Browser Storage
 

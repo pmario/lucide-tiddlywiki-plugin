@@ -1,6 +1,6 @@
 created: 20241009100458568
-modified: 20241013114906023
+modified: 20241107161609948
 title: $:/config/BrowserStorage/SaveFilter
 type: text/vnd.tiddlywiki
 
-[prefix[_:/config/icon-set]] [prefix[$:/plugins/lucideicons/]] $:/state/bundler/icon-set $:/temp/bundle.plugin.log $:/config/BrowserStorage/Enabled
+[prefix[_:/config/icon-set]] [prefix[$:/plugins/lucideicons/]] $:/state/bundler/icon-set $:/config/BrowserStorage/Enabled $:/config/BrowserStorage/SaveFilter
