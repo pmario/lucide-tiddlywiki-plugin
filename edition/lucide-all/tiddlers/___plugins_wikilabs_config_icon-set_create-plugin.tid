@@ -55,12 +55,13 @@ type: text/vnd.tiddlywiki
 
 	<%if [<mode>match[dangerous]] %>
 		<$action-deletetiddler $tiddler=<<logVerify>>/>
-		<$action-navigate $to=<<f.plugin-name>> />
+		<$action-sendmessage $message="tm-close-tiddler" $param=<<logVerify>>/>
 	<%endif%>
 \end
 
 \procedure cancelPluginActions()
 <$action-deletetiddler $tiddler=<<logVerify>>/>
+<$action-sendmessage $message="tm-close-tiddler" $param=<<logVerify>>/>
 \end
 
 \function getPluginName() [<pluginPrefix>addsuffix<randomname>]
