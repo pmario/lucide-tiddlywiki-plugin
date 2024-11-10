@@ -54,6 +54,7 @@ type: text/vnd.tiddlywiki
 	/>
 
 	<%if [<mode>match[dangerous]] %>
+<!-- TODO <$action-navigate $to=<<f.plugin-name>> /> -->
 		<$action-deletetiddler $tiddler=<<logVerify>>/>
 		<$action-sendmessage $message="tm-close-tiddler" $param=<<logVerify>>/>
 	<%endif%>
