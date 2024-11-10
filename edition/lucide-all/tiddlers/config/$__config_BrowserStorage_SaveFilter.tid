@@ -3,4 +3,4 @@ modified: 20241107161609948
 title: $:/config/BrowserStorage/SaveFilter
 type: text/vnd.tiddlywiki
 
-[prefix[_:/config/icon-set]] [prefix[$:/plugins/lucideicons/]] $:/state/bundler/icon-set $:/config/BrowserStorage/Enabled $:/config/BrowserStorage/SaveFilter
+[prefix[_:/config/icon-set]] [prefix[$:/plugins/lucideicons/]] [prefix[$:/state/tab/sidebar-]] [prefix[$:/state/plugin-info-]] $:/state/bundler/icon-set $:/config/BrowserStorage/Enabled $:/config/BrowserStorage/SaveFilter

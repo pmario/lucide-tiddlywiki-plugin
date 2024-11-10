@@ -52,7 +52,7 @@ You can use the following overviews to add icons to your icon set
 The following list shows all tiddlers loaded from your local browser storage. ''No'' data left your system:
 
 <$list filter="[enlist{$:/temp/BrowserStorage/Log}sort[]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}>
-<$link/><$button class="tc-btn-invisible tc-small-gap-left" actions="""<$action-deletetiddler $tiddler=<<currentTiddler>>/>""">{{$:/core/images/delete-button}}</$button><br>
+<$link/><$button class="tc-btn-invisible tc-small-gap-left" disabled={{{ [all[current]is[missing]] }}} actions="""<$action-deletetiddler $tiddler=<<currentTiddler>>/>""">{{$:/core/images/delete-button}}</$button><br>
 </$list>
 
 !! State Tiddlers
