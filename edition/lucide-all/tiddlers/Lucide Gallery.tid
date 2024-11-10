@@ -28,8 +28,7 @@ type: text/vnd.tiddlywiki
 \end
 
 \procedure copyActions()
-<$action-log/>
-	<%if [<target>!is[tiddler]then[go on]] %>
+	<%if [<target>!is[shadow]] :filter[!is[tiddler]then[go on]] %>
 		<<newIconSet>>
 	<%endif%>
 
