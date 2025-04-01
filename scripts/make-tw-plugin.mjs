@@ -66,7 +66,7 @@ const processFiles = (config) => {
 
 			// Write the manipulated content to the target directory
 			fs.writeFileSync(targetPath, content, "utf8");
-			console.log(`Saved ${sourcePath} to ${targetPath}`);
+			// console.log(`Saved ${sourcePath} to ${targetPath}`);
 		} else {
 			console.error(`Source file not found: ${sourcePath}`);
 		}
