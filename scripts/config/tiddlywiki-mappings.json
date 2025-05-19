@@ -1,6 +1,6 @@
 {
 	"$:/core/icon": {
-		"lucide": "TODO",
+		"lucide": "TODO-icon",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -18,7 +18,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/blank": {
-		"lucide": "TODO",
+		"lucide": "TODO-blank",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -300,7 +300,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/new-journal-button": {
-		"lucide": "new-journal-TODO.svg.tid",
+		"lucide": "TODO-new-journal.svg.tid",
 		"customDir": "custom-SPECIAL",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -333,17 +333,32 @@
 		"lucide": "image.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
-	"$:/core/images/plugin-generic-language": {
-		"lucide": "blocks-a.svg.tid",
+	"$:/core/images/plugin-generic-languageX": {
+		"lucide": "hexagon-language.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
-	"$:/core/images/plugin-generic-plugin": {
+	"$:/core/images/plugin-generic-pluginX": {
+		"lucide": "hexagon-hexagon.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/plugin-generic-themeX": {
+		"lucide": "hexagon-slider.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/plugin-custom-language": {
+		"lucide": "blocks-language.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/plugin-custom-plugin": {
 		"lucide": "blocks-tw.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
-	"$:/core/images/plugin-generic-theme": {
+	"$:/core/images/plugin-custom-theme": {
 		"lucide": "blocks-slider.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
@@ -394,7 +409,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/save-button-dynamic": {
-		"lucide": "TODO",
+		"lucide": "TODO-save-button-dynamic",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -416,7 +431,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/star-filled": {
-		"lucide": "TODO",
+		"lucide": "TODO-star-filled",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
