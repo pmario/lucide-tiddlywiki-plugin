@@ -20,7 +20,7 @@ The following steps are needed:
 - Clone this repository and install dev-dependencies:
 
 ```
-cd /your/porject/path
+cd /your/project/path
 clone https://github.com/pmario/lucide-tiddlywiki-plugin.git
 cd lucide-tiddlywiki-plugin
 npm install
@@ -29,7 +29,7 @@ npm install
 - Clone the Lucide.dev repository and install dev-dependencies
 
 ```
-cd /your/porject/path
+cd /your/project/path
 clone https://github.com/lucide-icons/lucide.git
 cd lucide
 npm install
