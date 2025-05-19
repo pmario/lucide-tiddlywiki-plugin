@@ -77,6 +77,11 @@
 		"lucide": "trash-2.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/core/images/discord": {
+		"lucide": "discord-brand.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
 	"$:/core/images/done-button": {
 		"lucide": "check-big.svg.tid",
 		"customDir": "custom",
