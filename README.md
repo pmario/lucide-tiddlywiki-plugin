@@ -73,5 +73,5 @@ or, if you want to install TW globally
 npm install -g tiddlywiki
 ```
 
-have fun!
+have fun!<br>
 Mario
