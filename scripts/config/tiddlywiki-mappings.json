@@ -199,6 +199,10 @@
 		"lucide": "italic.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/core/images/language": {
+		"lucide": "languages.svg.tid",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
 	"$:/core/images/layout-button": {
 		"lucide": "layout-dashboard.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
@@ -330,17 +334,17 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-language": {
-		"lucide": "TODO",
+		"lucide": "blocks-a.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-plugin": {
-		"lucide": "TODO",
+		"lucide": "blocks-tw.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-theme": {
-		"lucide": "TODO",
+		"lucide": "blocks-slider.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
