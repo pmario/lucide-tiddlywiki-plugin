@@ -1,5 +1,5 @@
 title: $:/core/images/down-arrow
 tags: $:/tags/Image
 
-\parameters (size:"22pt", stroke:"none", stroke-width:"0", )
+\parameters (size:"22pt", stroke:"none", stroke-width:"0")
 <svg width=<<size>> height=<<size>> class="lucide lucide-chevron-down tc-image-down-arrow tc-image-button" viewBox="0 0 24 24" stroke=<<stroke>> stroke-width=<<stroke-width>>><path fill-rule="evenodd" d="M5.73 8.04a1.1 1.1 0 0 0-.63.53c-.06.12-.07.19-.07.43s0 .3.07.44c.1.22 6.25 6.35 6.47 6.46.12.06.19.08.43.08s.3-.02.44-.08c.22-.1 6.35-6.24 6.46-6.46.06-.13.08-.2.08-.44s-.02-.3-.08-.43a1 1 0 0 0-.46-.46c-.14-.07-.19-.08-.44-.08s-.3 0-.45.08c-.13.07-.69.6-2.86 2.78L12 13.57l-2.7-2.69c-3-3-2.82-2.84-3.26-2.86z"/></svg>

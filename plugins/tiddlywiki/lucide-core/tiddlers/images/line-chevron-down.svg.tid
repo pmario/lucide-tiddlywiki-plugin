@@ -1,5 +1,5 @@
 title: $:/core/images/unfold-button
 tags: $:/tags/Image $:/tags/Image/custom
 
-\parameters (size:"22pt", stroke:"none", stroke-width:"0", )
+\parameters (size:"22pt", stroke:"none", stroke-width:"0")
 <svg width=<<size>> height=<<size>> class="tc-image-unfold-button tc-image-button" viewBox="0 0 24 24" stroke=<<stroke>> stroke-width=<<stroke-width>>><path fill-rule="evenodd" d="M4.76 6.03a1 1 0 0 0-.47.27 1 1 0 0 0 .54 1.68c.22.04 14.12.04 14.34 0a1 1 0 0 0 .8-1.15l-.08-.29a1 1 0 0 0-.48-.45l-.16-.07L12.06 6c-4.13 0-7.23 0-7.3.02m2.05 4c-.68.1-1.03.95-.63 1.53.05.07 1.25 1.29 2.68 2.7 2.9 2.9 2.7 2.73 3.14 2.73s.24.17 3.15-2.72a148 148 0 0 0 2.67-2.71 1 1 0 0 0 .1-.92 1 1 0 0 0-.33-.44 1 1 0 0 0-.6-.19c-.42 0-.28-.12-2.76 2.36L12 14.6l-2.23-2.22c-1.92-1.91-2.25-2.23-2.37-2.28a1 1 0 0 0-.59-.06"/></svg>
