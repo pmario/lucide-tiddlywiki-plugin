@@ -13,7 +13,7 @@ const svgFiles = readSvgDirectory(ICONS_DIR);
 
 const PREFIX = "tags: $:/tags/Image/Lucide" +
 	"\n\n" +
-	"\\parameters (size:\"22pt\", stroke:\"none\", stroke-width:\"0\", )\n";
+	"\\parameters (size:\"22pt\", stroke:\"none\", stroke-width:\"0\")\n";
 
 const PREFIX_LEGACY = "tags: $:/tags/Image/Lucide" +
 	"\n\n";
