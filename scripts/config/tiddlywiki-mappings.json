@@ -185,7 +185,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/home-button": {
-		"lucide": "home.svg.tid",
+		"lucide": "house.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/import-button": {
@@ -339,17 +339,17 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-languageX": {
-		"lucide": "hexagon-language.svg.tid",
+		"lucide": "ONHALT-hexagon-language.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-pluginX": {
-		"lucide": "hexagon-hexagon.svg.tid",
+		"lucide": "ONHALT-hexagon-hexagon.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/plugin-generic-themeX": {
-		"lucide": "hexagon-slider.svg.tid",
+		"lucide": "ONHALT-hexagon-slider.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
