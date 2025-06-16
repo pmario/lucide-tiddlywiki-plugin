@@ -2,9 +2,10 @@
 	"title": "$:/plugins/tiddlywiki/lucide-all",
 	"name": "Lucide all Icons",
 	"description": "A plugin used to build icon sets",
+	"repo": "https://github.com/pmario/lucide-tiddlywiki-plugin",
 	"author": "pmario",
 	"list": "readme license",
 	"stability": "STABILITY_1_EXPERIMENTAL",
-	"lucide-version": "0.511.0",
-	"version": "5.3.6-lab-005"
+	"lucide-version": "0.515.0",
+	"version": "5.3.6-lab-006"
 }

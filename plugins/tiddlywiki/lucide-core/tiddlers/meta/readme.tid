@@ -4,6 +4,8 @@ This plugin is a drop-in replacement for the TiddlyWiki core icons based on http
 
 Lucide Version: {{$:/plugins/tiddlywiki/lucide-core!!lucide-version}} -- License Info: see tab above.
 
+GitHub Repository: {{$:/plugins/tiddlywiki/lucide-core!!repo}}
+
 Some icons are custom made for TiddlyWiki, using Lucide's specification. The following items are custom:
 
 <<<

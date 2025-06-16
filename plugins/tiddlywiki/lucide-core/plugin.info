@@ -2,9 +2,10 @@
 	"title": "$:/plugins/tiddlywiki/lucide-core",
 	"name": "Lucide Core",
 	"description": "Lucide Icon Library",
+	"repo": "https://github.com/pmario/lucide-tiddlywiki-plugin",
 	"author": "pmario",
 	"list": "readme license",
 	"stability": "STABILITY_1_EXPERIMENTAL",
-	"lucide-version": "0.511.0",
-	"version": "5.3.6-beta-028"
+	"lucide-version": "0.515.0",
+	"version": "5.3.6-beta-029"
 }
