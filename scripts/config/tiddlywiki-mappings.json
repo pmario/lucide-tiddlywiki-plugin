@@ -373,7 +373,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/preview-closed": {
-		"lucide": "eye.svg.tid",
+		"lucide": "eye-closed.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/preview-off": {
@@ -381,7 +381,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/preview-open": {
-		"lucide": "eye-closed.svg.tid",
+		"lucide": "eye.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/print-button": {
