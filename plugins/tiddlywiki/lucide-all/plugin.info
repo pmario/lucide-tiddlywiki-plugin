@@ -6,6 +6,6 @@
 	"author": "pmario",
 	"list": "readme license",
 	"stability": "STABILITY_1_EXPERIMENTAL",
-	"lucide-version": "0.515.0",
-	"version": "5.3.6-lab-006"
+	"lucide-version": "0.555.0",
+	"version": "5.3.8-lab-007"
 }
