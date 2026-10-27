@@ -2,19 +2,6 @@ title: $:/core/images/heading-1
 tags: $:/tags/Image
 type: text/vnd.tiddlywiki
 
-<svg
-  class="tc-image-heading-1 tc-image-button"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M4 12h8" />
-  <path d="M4 18V6" />
-  <path d="M12 18V6" />
-  <path d="m17 12 3-2v8" />
+<svg class="tc-image-heading-1 tc-image-button" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M4 12h8" /><path d="M4 18V6" /><path d="M12 18V6" /><path d="m17 12 3-2v8" />
 </svg>

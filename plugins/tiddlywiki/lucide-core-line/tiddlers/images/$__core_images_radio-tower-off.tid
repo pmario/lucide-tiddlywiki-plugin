@@ -2,18 +2,6 @@ title: $:/core/images/radio-tower-off
 tags: $:/tags/Image $:/tags/Image/custom
 type: text/vnd.tiddlywiki
 
-<svg
-  class="tc-image-radio-tower-off tc-image-button"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <ellipse cx="12.002" cy="9.358" rx="1.796" ry="1.791" />
-  <path d="M9.756 17.418h4.492" />
-  <path d="m8.41 21 3.592-9.85L15.595 21" />
+<svg class="tc-image-radio-tower-off tc-image-button" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="12.002" cy="9.358" rx="1.796" ry="1.791" /><path d="M9.756 17.418h4.492" /><path d="m8.41 21 3.592-9.85L15.595 21" />
 </svg>

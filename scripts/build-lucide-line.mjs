@@ -2,6 +2,7 @@
 
 import fs from "fs";
 import path from "path";
+import { compactSvg } from "./svg-format.mjs";
 
 const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || "../lucide");
 const TARGET_DIR = path.resolve(process.cwd(), "plugins", "tiddlywiki", "lucide-line", "tiddlers", "images");
@@ -54,8 +55,8 @@ for (const set of ICON_SETS) {
 	const svgFiles = fs.readdirSync(iconsDir).filter((file) => path.extname(file) === ".svg");
 	svgFiles.forEach((file) => {
 		const name = path.basename(file, ".svg");
-		// Inline SVG does not need the xmlns line, and a trailing newline would render as extra space
-		const svg = fs.readFileSync(path.join(iconsDir, file), "utf8").replace(/\n\s*xmlns="http:\/\/www\.w3\.org\/2000\/svg"/, "").trimEnd();
+		// The classes let vanilla size the icon in buttons, like the outline icons
+		const svg = compactSvg(fs.readFileSync(path.join(iconsDir, file), "utf8"), `lucide lucide-${name} tc-image-button`);
 		const meta = JSON.parse(fs.readFileSync(path.join(iconsDir, name + ".json"), "utf8"));
 		fs.writeFileSync(path.join(TARGET_DIR, name + ".tid"), makeTid(name, svg, meta, set), "utf8");
 	});

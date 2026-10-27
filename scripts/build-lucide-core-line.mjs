@@ -2,6 +2,7 @@
 
 import fs from "fs";
 import path from "path";
+import { compactSvg } from "./svg-format.mjs";
 
 const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || "../lucide");
 const CUSTOM_DIR = path.resolve(process.cwd(), "build", "icons");
@@ -23,16 +24,6 @@ function titleToFile(title) {
 }
 
 /**
- * Add a class attribute to the opening svg tag and drop the xmlns line, which inline SVG does not need.
- * @param {string} svg - Lucide formatted SVG
- * @param {string} classes - class attribute value
- * @returns {string} SVG with the class attribute
- */
-function addClass(svg, classes) {
-	return svg.replace(/\n\s*xmlns="http:\/\/www\.w3\.org\/2000\/svg"/, "").replace(/<svg\b/, `<svg\n  class="${classes}"`);
-}
-
-/**
  * Split a Lucide formatted SVG into its opening tag and its inner elements.
  * @param {string} file - path of the SVG file
  * @returns {{open: string, inner: string}} Opening tag and inner lines
@@ -51,17 +42,16 @@ const SPECIAL = {
 	"$:/core/images/save-button-dynamic": () => {
 		const clean = readParts(path.join(LUCIDE_DIR, "icons", "circle-check-big.svg"));
 		const dirty = readParts(path.join(LUCIDE_DIR, "icons", "circle.svg"));
-		const indent = (inner) => inner.replace(/^/gm, "  ");
 		return clean.open + "\n" +
-			'  <g class="tc-image-save-button-dynamic-clean">\n' + indent(clean.inner) + "\n  </g>\n" +
-			'  <g class="tc-image-save-button-dynamic-dirty">\n' + indent(dirty.inner) + '\n    <circle cx="12" cy="12" r="4" fill="currentColor" />\n  </g>\n' +
+			'<g class="tc-image-save-button-dynamic-clean">\n' + clean.inner + "\n</g>\n" +
+			'<g class="tc-image-save-button-dynamic-dirty">\n' + dirty.inner + '\n<circle cx="12" cy="12" r="4" fill="currentColor" />\n</g>\n' +
 			"</svg>\n";
 	},
 	// The only image with wikitext: it shows the current day, like the core icon
 	"$:/core/images/new-journal-button": () => {
 		const calendar = readParts(path.join(CUSTOM_DIR, "new-journal.svg"));
 		return '<$parameters day=<<now "DD">>>\n' + calendar.open + "\n" + calendar.inner + "\n" +
-			'  <text x="10.5" y="18" fill="currentColor" stroke="none" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle"><$text text=<<day>>/></text>\n' +
+			'<text x="10.5" y="18" fill="currentColor" stroke="none" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle"><$text text=<<day>>/></text>\n' +
 			"</svg>\n</$parameters>\n";
 	}
 };
@@ -86,8 +76,7 @@ function buildImages() {
 		const classes = value.classes.map((cls) => cls.replace("$(title)$", shortName)).join(" ");
 		const tags = value.customDir ? "$:/tags/Image $:/tags/Image/custom" : "$:/tags/Image";
 		const svg = SPECIAL[title] ? SPECIAL[title]() : fs.readFileSync(source, "utf8");
-		// A trailing newline would render as extra space between icon and button text
-		const text = `title: ${title}\ntags: ${tags}\ntype: text/vnd.tiddlywiki\n\n` + addClass(svg, classes).trimEnd();
+		const text = `title: ${title}\ntags: ${tags}\ntype: text/vnd.tiddlywiki\n\n` + compactSvg(svg, classes);
 		fs.writeFileSync(path.join(IMAGES_DIR, titleToFile(title)), text, "utf8");
 		written++;
 	});

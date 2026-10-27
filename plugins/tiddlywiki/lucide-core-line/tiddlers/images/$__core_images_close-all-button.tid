@@ -2,23 +2,6 @@ title: $:/core/images/close-all-button
 tags: $:/tags/Image $:/tags/Image/custom
 type: text/vnd.tiddlywiki
 
-<svg
-  class="tc-image-close-all-button tc-image-button"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m10 3-7 7" />
-  <path d="m3 3 7 7" />
-  <path d="m21 3-7 7" />
-  <path d="m14 3 7 7" />
-  <path d="m21 14-7 7" />
-  <path d="m14 14 7 7" />
-  <path d="m10 14-7 7" />
-  <path d="m3 14 7 7" />
+<svg class="tc-image-close-all-button tc-image-button" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="m10 3-7 7" /><path d="m3 3 7 7" /><path d="m21 3-7 7" /><path d="m14 3 7 7" /><path d="m21 14-7 7" /><path d="m14 14 7 7" /><path d="m10 14-7 7" /><path d="m3 14 7 7" />
 </svg>

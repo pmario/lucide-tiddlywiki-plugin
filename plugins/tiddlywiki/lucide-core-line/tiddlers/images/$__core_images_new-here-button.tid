@@ -2,19 +2,6 @@ title: $:/core/images/new-here-button
 tags: $:/tags/Image $:/tags/Image/custom
 type: text/vnd.tiddlywiki
 
-<svg
-  class="tc-image-new-here-button tc-image-button"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="m13 3-.403-.403a2 2 0 0 0-1.414-.586H4.011a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704c.946.94 2.474.94 3.42 0l6.58-6.58c.94-.946.94-2.474 0-3.42L21 11" />
-  <circle cx="7.5" cy="7.5" r=".5" />
-  <path d="M13 7h8" />
-  <path d="M17 3v8" />
+<svg class="tc-image-new-here-button tc-image-button" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="m13 3-.403-.403a2 2 0 0 0-1.414-.586H4.011a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704c.946.94 2.474.94 3.42 0l6.58-6.58c.94-.946.94-2.474 0-3.42L21 11" /><circle cx="7.5" cy="7.5" r=".5" /><path d="M13 7h8" /><path d="M17 3v8" />
 </svg>
