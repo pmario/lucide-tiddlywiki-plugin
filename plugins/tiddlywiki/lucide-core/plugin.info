@@ -6,6 +6,7 @@
 	"author": "pmario",
 	"list": "readme license",
 	"stability": "STABILITY_1_EXPERIMENTAL",
+	"plugin-priority": "10",
 	"lucide-version": "1.62.0",
 	"version": "5.4.1-rc-01"
 }
