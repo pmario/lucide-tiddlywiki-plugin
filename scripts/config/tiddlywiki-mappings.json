@@ -74,7 +74,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/delete-button": {
-		"lucide": "trash-2.svg.tid",
+		"lucide": "trash.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/discord": {
@@ -145,6 +145,7 @@
 	},
 	"$:/core/images/github": {
 		"lucide": "github.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/gitter": {
@@ -181,7 +182,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/help": {
-		"lucide": "circle-help.svg.tid",
+		"lucide": "circle-question-mark.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/home-button": {
@@ -531,6 +532,7 @@
 	},
 	"$:/core/images/video": {
 		"lucide": "youtube.svg.tid",
+		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/warning": {
