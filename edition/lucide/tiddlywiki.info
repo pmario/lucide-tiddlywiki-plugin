@@ -14,7 +14,8 @@
 	],
 	"build": {
 		"index": [
-			"--render","$:/core/save/all","index.html","text/plain"
+			"--render","$:/core/save/all","index.html","text/plain","",
+			"publishFilter","-[[$:/Import]] -[[$:/config/OriginalTiddlerPaths]]"
 		],
 		"favicon": [
 			"--savetiddler","$:/favicon.ico","favicon.ico",

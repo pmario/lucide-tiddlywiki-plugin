@@ -14,7 +14,8 @@
 	],
 	"build": {
 		"index": [
-			"--render","$:/core/save/all","lucide-core-line.html","text/plain"
+			"--render","$:/core/save/all","lucide-core-line.html","text/plain","",
+			"publishFilter","-[[$:/Import]] -[[$:/config/OriginalTiddlerPaths]]"
 		],
 		"favicon": [
 			"--savetiddler","$:/favicon.ico","favicon.ico",

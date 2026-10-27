@@ -19,7 +19,8 @@
 	],
 	"build": {
 		"lucide-all": [
-			"--render","$:/core/save/all","lucide-all.html","text/plain"
+			"--render","$:/core/save/all","lucide-all.html","text/plain","",
+			"publishFilter","-[prefix[$:/plugins/lucideicons/]!prefix[$:/plugins/lucideicons/template]] -[prefix[_:/config/icon-set/]!match[_:/config/icon-set/itemTemplate]] -[[$:/Import]] -[[import.bundle]] -[[$:/plugins/wikilabs/info-tagmap]] -[[$:/config/OriginalTiddlerPaths]]"
 		],
 		"favicon": [
 			"--savetiddler","$:/favicon.ico","favicon.ico",
