@@ -3,195 +3,131 @@ tags: $:/tags/Stylesheet
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
 
-html button[stroke="currentColor"] { stroke: <<colour button-foreground>>; }
-html button svg[stroke="currentColor"] { stroke: <<colour button-foreground>>; }
+svg[stroke="currentColor"] { stroke: inherit; }
 
-button:disabled svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-button:disabled svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+html button { stroke: <<colour button-foreground>>; }
 
-body.tc-body[stroke="currentColor"] { stroke: <<colour foreground>>; }
-body.tc-body svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
+button:disabled svg { stroke: <<colour muted-foreground>>; }
 
-.tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+body.tc-body { stroke: <<colour foreground>>; }
 
-.tc-btn-invisible[stroke="currentColor"] { stroke: <<colour foreground>>; }
-.tc-btn-invisible svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
+.tc-sidebar-tab-open .tc-btn-invisible.tc-btn-mini svg { stroke: <<colour muted-foreground>>; }
 
-html body.tc-body .tc-btn-boxed:hover svg[stroke="currentColor"] { stroke: <<colour background>>; }
-html body.tc-body .tc-btn-boxed:hover svg svg[stroke="currentColor"] { stroke: <<colour background>>; }
+.tc-btn-invisible { stroke: <<colour foreground>>; }
 
-html body.tc-body .tc-btn-rounded svg[stroke="currentColor"] { stroke: <<colour background>>; }
-html body.tc-body .tc-btn-rounded svg svg[stroke="currentColor"] { stroke: <<colour background>>; }
+html body.tc-body .tc-btn-boxed:hover svg { stroke: <<colour background>>; }
 
-html body.tc-body .tc-btn-rounded:hover svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-html body.tc-body .tc-btn-rounded:hover svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+html body.tc-body .tc-btn-rounded svg { stroke: <<colour background>>; }
 
-.tc-btn-icon svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-btn-icon svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+html body.tc-body .tc-btn-rounded:hover svg { stroke: <<colour muted-foreground>>; }
 
-.tc-btn-big-green[stroke="currentColor"] { stroke: <<colour download-foreground>>; }
-.tc-btn-big-green svg[stroke="currentColor"] { stroke: <<colour download-foreground>>; }
+.tc-btn-icon svg { stroke: <<colour muted-foreground>>; }
 
-.tc-btn-big-green svg[stroke="currentColor"] { stroke: <<colour download-foreground>>; }
-.tc-btn-big-green svg svg[stroke="currentColor"] { stroke: <<colour download-foreground>>; }
-.tc-btn-big-green img[stroke="currentColor"] { stroke: <<colour download-foreground>>; }
-.tc-btn-big-green img svg[stroke="currentColor"] { stroke: <<colour download-foreground>>; }
+.tc-btn-big-green { stroke: <<colour download-foreground>>; }
 
-.tc-sidebar-lists button[stroke="currentColor"] { stroke: <<colour sidebar-button-foreground>>; }
-.tc-sidebar-lists button svg[stroke="currentColor"] { stroke: <<colour sidebar-button-foreground>>; }
+.tc-btn-big-green svg,
+.tc-btn-big-green img { stroke: <<colour download-foreground>>; }
 
-.tc-unfold-banner svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-unfold-banner svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-fold-banner svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-fold-banner svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
+.tc-sidebar-lists button { stroke: <<colour sidebar-button-foreground>>; }
 
-.tc-unfold-banner:hover svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-unfold-banner:hover svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-fold-banner:hover svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-fold-banner:hover svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
+.tc-unfold-banner svg,
+.tc-fold-banner svg { stroke: <<colour tiddler-controls-foreground>>; }
 
-.tc-topbar svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-topbar svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+.tc-unfold-banner:hover svg,
+.tc-fold-banner:hover svg { stroke: <<colour tiddler-controls-foreground-hover>>; }
 
-.tc-topbar button:hover svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
-.tc-topbar button:hover svg svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
+.tc-topbar svg { stroke: <<colour muted-foreground>>; }
 
-.tc-sidebar-header[stroke="currentColor"] { stroke: <<colour sidebar-foreground>>; }
-.tc-sidebar-header svg[stroke="currentColor"] { stroke: <<colour sidebar-foreground>>; }
+.tc-topbar button:hover svg { stroke: <<colour foreground>>; }
 
-.tc-page-controls svg[stroke="currentColor"] { stroke: <<colour sidebar-controls-foreground>>; }
-.tc-page-controls svg svg[stroke="currentColor"] { stroke: <<colour sidebar-controls-foreground>>; }
+.tc-sidebar-header { stroke: <<colour sidebar-foreground>>; }
 
-.tc-page-controls button:hover svg[stroke="currentColor"] { stroke: <<colour sidebar-controls-foreground-hover>>; }
-.tc-page-controls button:hover svg svg[stroke="currentColor"] { stroke: <<colour sidebar-controls-foreground-hover>>; }
-.tc-page-controls a:hover svg[stroke="currentColor"] { stroke: <<colour sidebar-controls-foreground-hover>>; }
-.tc-page-controls a:hover svg svg[stroke="currentColor"] { stroke: <<colour sidebar-controls-foreground-hover>>; }
+.tc-page-controls svg { stroke: <<colour sidebar-controls-foreground>>; }
 
-.tc-tiddler-controls button svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-tiddler-controls button svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-tiddler-controls button img[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-tiddler-controls button img svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-search button svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-search button svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-search a svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-search a svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
+.tc-page-controls button:hover svg,
+.tc-page-controls a:hover svg { stroke: <<colour sidebar-controls-foreground-hover>>; }
 
-.tc-tiddler-controls button.tc-selected svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-selected>>; }
-.tc-tiddler-controls button.tc-selected svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-selected>>; }
-.tc-page-controls button.tc-selected svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-selected>>; }
-.tc-page-controls button.tc-selected svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-selected>>; }
+.tc-tiddler-controls button svg,
+.tc-tiddler-controls button img,
+.tc-search button svg,
+.tc-search a svg { stroke: <<colour tiddler-controls-foreground>>; }
 
-.tc-tiddler-controls button.tc-btn-invisible:hover svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-tiddler-controls button.tc-btn-invisible:hover svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-search button:hover svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-search button:hover svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-search a:hover svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
-.tc-search a:hover svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-hover>>; }
+.tc-tiddler-controls button.tc-selected svg,
+.tc-page-controls button.tc-selected svg { stroke: <<colour tiddler-controls-foreground-selected>>; }
 
-.tc-editor-toolbar button[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-selected>>; }
-.tc-editor-toolbar button svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground-selected>>; }
+.tc-tiddler-controls button.tc-btn-invisible:hover svg,
+.tc-search button:hover svg,
+.tc-search a:hover svg { stroke: <<colour tiddler-controls-foreground-hover>>; }
 
-.tc-editor-toolbar button:hover[stroke="currentColor"] { stroke: <<colour background>>; }
-.tc-editor-toolbar button:hover svg[stroke="currentColor"] { stroke: <<colour background>>; }
+.tc-editor-toolbar button { stroke: <<colour tiddler-controls-foreground-selected>>; }
 
-.tc-page-controls svg.tc-image-new-button[stroke="currentColor"] { stroke: <<colour toolbar-new-button>>; }
-.tc-page-controls svg.tc-image-new-button svg[stroke="currentColor"] { stroke: <<colour toolbar-new-button>>; }
+.tc-editor-toolbar button:hover { stroke: <<colour background>>; }
 
-.tc-page-controls svg.tc-image-options-button[stroke="currentColor"] { stroke: <<colour toolbar-options-button>>; }
-.tc-page-controls svg.tc-image-options-button svg[stroke="currentColor"] { stroke: <<colour toolbar-options-button>>; }
+.tc-page-controls svg.tc-image-new-button { stroke: <<colour toolbar-new-button>>; }
 
-.tc-page-controls svg.tc-image-save-button[stroke="currentColor"] { stroke: <<colour toolbar-save-button>>; }
-.tc-page-controls svg.tc-image-save-button svg[stroke="currentColor"] { stroke: <<colour toolbar-save-button>>; }
+.tc-page-controls svg.tc-image-options-button { stroke: <<colour toolbar-options-button>>; }
 
-.tc-tiddler-controls button svg.tc-image-info-button[stroke="currentColor"] { stroke: <<colour toolbar-info-button>>; }
-.tc-tiddler-controls button svg.tc-image-info-button svg[stroke="currentColor"] { stroke: <<colour toolbar-info-button>>; }
+.tc-page-controls svg.tc-image-save-button { stroke: <<colour toolbar-save-button>>; }
 
-.tc-tiddler-controls button svg.tc-image-edit-button[stroke="currentColor"] { stroke: <<colour toolbar-edit-button>>; }
-.tc-tiddler-controls button svg.tc-image-edit-button svg[stroke="currentColor"] { stroke: <<colour toolbar-edit-button>>; }
+.tc-tiddler-controls button svg.tc-image-info-button { stroke: <<colour toolbar-info-button>>; }
 
-.tc-tiddler-controls button svg.tc-image-close-button[stroke="currentColor"] { stroke: <<colour toolbar-close-button>>; }
-.tc-tiddler-controls button svg.tc-image-close-button svg[stroke="currentColor"] { stroke: <<colour toolbar-close-button>>; }
+.tc-tiddler-controls button svg.tc-image-edit-button { stroke: <<colour toolbar-edit-button>>; }
 
-.tc-tiddler-controls button svg.tc-image-delete-button[stroke="currentColor"] { stroke: <<colour toolbar-delete-button>>; }
-.tc-tiddler-controls button svg.tc-image-delete-button svg[stroke="currentColor"] { stroke: <<colour toolbar-delete-button>>; }
+.tc-tiddler-controls button svg.tc-image-close-button { stroke: <<colour toolbar-close-button>>; }
 
-.tc-tiddler-controls button svg.tc-image-cancel-button[stroke="currentColor"] { stroke: <<colour toolbar-cancel-button>>; }
-.tc-tiddler-controls button svg.tc-image-cancel-button svg[stroke="currentColor"] { stroke: <<colour toolbar-cancel-button>>; }
+.tc-tiddler-controls button svg.tc-image-delete-button { stroke: <<colour toolbar-delete-button>>; }
 
-.tc-tiddler-controls button svg.tc-image-done-button[stroke="currentColor"] { stroke: <<colour toolbar-done-button>>; }
-.tc-tiddler-controls button svg.tc-image-done-button svg[stroke="currentColor"] { stroke: <<colour toolbar-done-button>>; }
+.tc-tiddler-controls button svg.tc-image-cancel-button { stroke: <<colour toolbar-cancel-button>>; }
 
-.tc-page-controls svg.tc-image-layout-button[stroke="currentColor"] { stroke: <<colour toolbar-options-button>>; }
-.tc-page-controls svg.tc-image-layout-button svg[stroke="currentColor"] { stroke: <<colour toolbar-options-button>>; }
+.tc-tiddler-controls button svg.tc-image-done-button { stroke: <<colour toolbar-done-button>>; }
 
-.tc-edit-field-remove svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-edit-field-remove svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+.tc-page-controls svg.tc-image-layout-button { stroke: <<colour toolbar-options-button>>; }
 
-.tc-btn-dropdown svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-btn-dropdown svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-btn-dropdown img[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-btn-dropdown img svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+.tc-edit-field-remove svg { stroke: <<colour muted-foreground>>; }
 
-.tc-drop-down button svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
-.tc-drop-down button svg svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
-.tc-drop-down a svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
-.tc-drop-down a svg svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
+.tc-btn-dropdown svg,
+.tc-btn-dropdown img { stroke: <<colour muted-foreground>>; }
 
-.tc-drop-down button:disabled svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-drop-down button:disabled svg svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+.tc-drop-down button svg,
+.tc-drop-down a svg { stroke: <<colour foreground>>; }
 
-.tc-drop-down button.tc-btn-invisible:hover svg[stroke="currentColor"] { stroke: <<colour background>>; }
-.tc-drop-down button.tc-btn-invisible:hover svg svg[stroke="currentColor"] { stroke: <<colour background>>; }
+.tc-drop-down button:disabled svg { stroke: <<colour muted-foreground>>; }
 
-.tc-manager-list-item-heading-selected[stroke="currentColor"] { stroke: <<colour background>>; }
-.tc-manager-list-item-heading-selected svg[stroke="currentColor"] { stroke: <<colour background>>; }
+.tc-drop-down button.tc-btn-invisible:hover svg { stroke: <<colour background>>; }
 
-.tc-alert-toolbar svg[stroke="currentColor"] { stroke: <<colour alert-muted-foreground>>; }
-.tc-alert-toolbar svg svg[stroke="currentColor"] { stroke: <<colour alert-muted-foreground>>; }
+.tc-manager-list-item-heading-selected { stroke: <<colour background>>; }
 
-.tc-drafts-list a[stroke="currentColor"] { stroke: <<colour background>>; }
-.tc-drafts-list a svg[stroke="currentColor"] { stroke: <<colour background>>; }
+.tc-alert-toolbar svg { stroke: <<colour alert-muted-foreground>>; }
 
-.tc-drafts-list a:hover[stroke="currentColor"] { stroke: <<colour background>>; }
-.tc-drafts-list a:hover svg[stroke="currentColor"] { stroke: <<colour background>>; }
+.tc-drafts-list a { stroke: <<colour background>>; }
 
-.tc-plugin-info[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
-.tc-plugin-info svg[stroke="currentColor"] { stroke: <<colour muted-foreground>>; }
+.tc-drafts-list a:hover { stroke: <<colour background>>; }
 
-a.tc-tiddlylink.tc-plugin-info:hover[stroke="currentColor"] { stroke: <<colour foreground>>; }
-a.tc-tiddlylink.tc-plugin-info:hover svg[stroke="currentColor"] { stroke: <<colour foreground>>; }
+.tc-plugin-info { stroke: <<colour muted-foreground>>; }
 
-a.tc-tiddlylink.tc-plugin-info:hover > .tc-plugin-info-chunk > svg[stroke="currentColor"] { stroke: <<colour background>>; }
-a.tc-tiddlylink.tc-plugin-info:hover > .tc-plugin-info-chunk > svg svg[stroke="currentColor"] { stroke: <<colour background>>; }
+a.tc-tiddlylink.tc-plugin-info:hover { stroke: <<colour foreground>>; }
 
-.tc-install-plugin[stroke="currentColor"] { stroke: white; }
-.tc-install-plugin svg[stroke="currentColor"] { stroke: white; }
+a.tc-tiddlylink.tc-plugin-info:hover > .tc-plugin-info-chunk > svg { stroke: <<colour background>>; }
 
-.tc-table-of-contents svg[stroke="currentColor"] { stroke: <<colour sidebar-foreground>>; }
-.tc-table-of-contents svg svg[stroke="currentColor"] { stroke: <<colour sidebar-foreground>>; }
+.tc-install-plugin { stroke: white; }
 
-html body.tc-dirty span.tc-dirty-indicator[stroke="currentColor"] { stroke: <<colour dirty-indicator>>; }
-html body.tc-dirty span.tc-dirty-indicator svg[stroke="currentColor"] { stroke: <<colour dirty-indicator>>; }
-html body.tc-dirty span.tc-dirty-indicator svg[stroke="currentColor"] { stroke: <<colour dirty-indicator>>; }
-html body.tc-dirty span.tc-dirty-indicator svg svg[stroke="currentColor"] { stroke: <<colour dirty-indicator>>; }
+.tc-table-of-contents svg { stroke: <<colour sidebar-foreground>>; }
 
-.tc-thumbnail-wrapper:hover .tc-thumbnail-icon svg[stroke="currentColor"] { stroke: #fff; }
-.tc-thumbnail-wrapper:hover .tc-thumbnail-icon svg svg[stroke="currentColor"] { stroke: #fff; }
-.tc-thumbnail-wrapper:hover .tc-thumbnail-icon img[stroke="currentColor"] { stroke: #fff; }
-.tc-thumbnail-wrapper:hover .tc-thumbnail-icon img svg[stroke="currentColor"] { stroke: #fff; }
+html body.tc-dirty span.tc-dirty-indicator,
+html body.tc-dirty span.tc-dirty-indicator svg { stroke: <<colour dirty-indicator>>; }
 
-.tc-tree svg[stroke="currentColor"] { stroke: #acacac; }
-.tc-tree svg svg[stroke="currentColor"] { stroke: #acacac; }
+.tc-thumbnail-wrapper:hover .tc-thumbnail-icon svg,
+.tc-thumbnail-wrapper:hover .tc-thumbnail-icon img { stroke: #fff; }
 
-.tc-fill-background[stroke="currentColor"] { stroke: <<colour background>>; }
-.tc-fill-background svg[stroke="currentColor"] { stroke: <<colour background>>; }
+.tc-tree svg { stroke: #acacac; }
 
-.tc-network-activity-background[stroke="currentColor"] { stroke: <<colour network-activity-foreground>>; }
-.tc-network-activity-background svg[stroke="currentColor"] { stroke: <<colour network-activity-foreground>>; }
+.tc-fill-background { stroke: <<colour background>>; }
 
-.tc-test-case-result-icon[stroke="currentColor"] { stroke: #fff; }
-.tc-test-case-result-icon svg[stroke="currentColor"] { stroke: #fff; }
+.tc-network-activity-background { stroke: <<colour network-activity-foreground>>; }
 
-.tc-test-case-toolbar svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
-.tc-test-case-toolbar svg svg[stroke="currentColor"] { stroke: <<colour tiddler-controls-foreground>>; }
+.tc-test-case-result-icon { stroke: #fff; }
+
+.tc-test-case-toolbar svg { stroke: <<colour tiddler-controls-foreground>>; }
+
+html body.tc-body .tc-tag-label,
+html body.tc-body .tc-thumbnail-icon { stroke: currentColor; }

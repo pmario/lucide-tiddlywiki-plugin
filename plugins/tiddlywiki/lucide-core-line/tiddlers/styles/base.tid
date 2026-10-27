@@ -12,7 +12,7 @@ svg[stroke="currentColor"] {
 	stroke-width: {{$:/config/lucide-line/stroke-width}};
 }
 
-/* Busy network activity, the stroke version of vanilla's fill rule */
-svg[stroke="currentColor"] .tc-network-activity-background {
-	stroke: <<colour network-activity-foreground>>;
+/* Title icons take the colour of the "$:/" prefix */
+.tc-tiddler-title-icon {
+	stroke: <<colour muted-foreground>>;
 }

@@ -14,6 +14,9 @@ const MAPPINGS = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), "scripts
 // Lucide line icons carry this attribute, so the generated rules only hit them
 const LINE_SVG = '[stroke="currentColor"]';
 
+// The core colours these with an inline fill and the same inline color, which beat every stylesheet rule
+const INLINE_FILL = ["html body.tc-body .tc-tag-label", "html body.tc-body .tc-thumbnail-icon"];
+
 /**
  * Turn a tiddler title into a file name, e.g. "$:/core/images/help" to "$__core_images_help.tid".
  * @param {string} title - tiddler title
@@ -143,13 +146,14 @@ function collectFillRules(css) {
 function buildStrokeStyles() {
 	const css = fs.readFileSync(VANILLA_BASE, "utf8");
 	const rulesPragma = (/^\\rules[^\n]*/m.exec(css) || [""])[0];
-	const lines = [];
+	// The svg takes the inherited stroke instead of its own attribute; first, so equally specific svg rules win
+	const lines = [`svg${LINE_SVG} { stroke: inherit; }`];
 	collectFillRules(css).forEach(({ media, selectors, value }) => {
-		// A rule on the svg itself maps to the svg, a rule on a parent to the svg inside it
-		const targets = selectors.flatMap((s) => [`${s}${LINE_SVG}`, `${s} svg${LINE_SVG}`]);
-		const rule = targets.map((t) => `${t} { stroke: ${value}; }`).join("\n");
+		// stroke inherits like fill, so the same selectors cascade the same way, and a blank colour is dropped the same way
+		const rule = `${selectors.join(",\n")} { stroke: ${value}; }`;
 		lines.push(media ? `${media} {\n${rule}\n}` : rule);
 	});
+	lines.push(`${INLINE_FILL.join(",\n")} { stroke: currentColor; }`);
 	const header = "title: $:/plugins/tiddlywiki/lucide-core-line/styles/stroke-colours\ntags: $:/tags/Stylesheet\n\n" + rulesPragma + "\n\n";
 	fs.mkdirSync(path.join(PLUGIN_DIR, "styles"), { recursive: true });
 	fs.writeFileSync(path.join(PLUGIN_DIR, "styles", "stroke-colours.tid"), header + lines.join("\n\n") + "\n", "utf8");
