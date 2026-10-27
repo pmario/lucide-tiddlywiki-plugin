@@ -54,7 +54,7 @@ const SPECIAL = {
 	"$:/core/images/new-journal-button": () => {
 		const calendar = readParts(path.join(CUSTOM_DIR, "new-journal.svg"));
 		return '<$parameters day=<<now "DD">>>\n' + calendar.open + "\n" + calendar.inner + "\n" +
-			'<text x="10.5" y="18" fill="currentColor" stroke="none" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle"><$text text=<<day>>/></text>\n' +
+			'<text x="11" y="17" fill="currentColor" stroke="none" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle"><$text text=<<day>>/></text>\n' +
 			"</svg>\n</$parameters>\n";
 	},
 	// Like the core icon: the custom tower while idle, Lucide's radio tower with the activity colour while busy
