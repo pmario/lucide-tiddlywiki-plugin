@@ -36,6 +36,28 @@ type: text/vnd.tiddlywiki
 	border: 3px solid <<colour primary>>;
 }
 
+/* Lucide Lab marker: a red diamond, like on lucide.dev */
+.lucide-lab-marker,
+.tc-image-chooser .image-wrapper.lucide-lab::after {
+	width: 6px;
+	height: 6px;
+	background: #ef4444;
+	transform: rotate(45deg);
+}
+
+.lucide-lab-marker {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.3em;
+}
+
+.tc-image-chooser .image-wrapper.lucide-lab::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	right: 4px;
+}
+
 .tc-image-chooser .image-wrapper svg,
 .tc-image-chooser .image-wrapper img {
 	display: inline-block;

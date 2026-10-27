@@ -30,10 +30,10 @@ type: text/vnd.tiddlywiki
 	</$linkcatcher>
 </div>
 
-Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" class="tc-small-gap-left"/>
+Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" class="tc-small-gap-left"/> <<lab-checkbox>>
 
 <div class="flexboxX">
-	<$list filter="[has[categories]get[categories]enlist-input[]unique[]] :filter[search:title{$:/temp/search/category}] +[sort[]]" emptyMessage="No such category">
+	<$list filter="[has[categories]] :filter[f.visible[]] :and[get[categories]enlist-input[]unique[]] :filter[search:title{$:/temp/search/category}] +[sort[]]" emptyMessage="No such category">
 		<div class="category row">
 			<$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
 			<hr>
@@ -42,7 +42,7 @@ Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" cla
 				class="tc-image-chooser"
 			>
 				<$macrocall $name="image-picker-list"
-					filter="[contains:categories<currentTiddler>] :map[<f.makeLink>]"
+					filter="[contains:categories<currentTiddler>] :filter[f.visible[]] :map[<f.makeLink>]"
 					actions=<<eventActions>>
 				/>
 			</$eventcatcher>

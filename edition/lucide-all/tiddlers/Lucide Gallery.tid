@@ -13,9 +13,15 @@ type: text/vnd.tiddlywiki
 
 \function f.makeLink() [[$:/lucide/images/$(currentTiddler)$]substitute[]]
 
+\function f.visible() [<currentTiddler>!has[lab]] [[$:/state/lucide/show-lab]get[text]else[yes]match[yes]]
+
+\procedure lab-checkbox()
+<$checkbox tiddler="$:/state/lucide/show-lab" field="text" checked="yes" unchecked="no" default="yes" class="tc-small-gap-left"> Show Lucide Lab icons <span class="lucide-lab-marker"/></$checkbox>
+\end
+
 \procedure image-picker-thumbnail()
 \whitespace trim
-<span class="image-wrapper" title=<<imageTitle>> >
+<span class={{{ [[image-wrapper]] [<imageTitle>tag[$:/tags/Image/Lucide/Lab]then[lucide-lab]] +[join[ ]] }}} title=<<imageTitle>> >
 	<$transclude tiddler=<<imageTitle>>/>
 </span>
 \end
@@ -47,17 +53,17 @@ type: text/vnd.tiddlywiki
 
 \import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
 
-All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}} class="tc-small-gap"/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]]
+All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide]count[]] }}} class="tc-small-gap"/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]], <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Image/Lucide/Lab]count[]] }}}/> of them from [[Lucide Lab|Lucide Icons Set]]
 
 ''Tip:'' Click an icon to copy it to the ''right sidebar -> Icon Set'' tab
 
-Search: <$edit-text tag="input" tiddler="$:/temp/search/full"  class="tc-small-gap-left"/>
+Search: <$edit-text tag="input" tiddler="$:/temp/search/full"  class="tc-small-gap-left"/> <<lab-checkbox>>
 
 <$eventcatcher selector=".image-wrapper" $click=<<eventActions>>
 	tag="div"
 	class="tc-image-chooser"
 >
 	<$macrocall $name="image-picker-list"
-		filter="[has[lucide]search:title,tags,categories{$:/temp/search/full}] :map[<f.makeLink>] +[sort[]]"
+		filter="[has[lucide]search:title,tags,categories{$:/temp/search/full}] :filter[f.visible[]] :map[<f.makeLink>] +[sort[]]"
 	/>
 </$eventcatcher>
