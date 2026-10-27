@@ -1,0 +1,11 @@
+{
+	"title": "$:/plugins/tiddlywiki/lucide-line",
+	"name": "Lucide Line Icons",
+	"description": "All Lucide and Lucide Lab icons as unmodified line SVGs",
+	"repo": "https://github.com/pmario/lucide-tiddlywiki-plugin",
+	"author": "pmario",
+	"list": "readme license",
+	"stability": "STABILITY_0_EXPERIMENTAL",
+	"lucide-version": "1.62.0",
+	"version": "5.4.1-line-01"
+}

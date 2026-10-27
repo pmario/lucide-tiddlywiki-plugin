@@ -20,5 +20,7 @@ target
 $__StoryList.tid
 $__Import.tid
 /plugins/tiddlywiki/lucide-all/tiddlers/images/*.tid
+/plugins/tiddlywiki/lucide-line/tiddlers/images/*.tid
 **/_custom/plugins/
 /edition/lucide-all/tiddlers/search
+/edition/lucide-line/tiddlers/search

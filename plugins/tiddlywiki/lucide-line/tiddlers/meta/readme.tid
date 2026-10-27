@@ -1,0 +1,7 @@
+title: $:/plugins/tiddlywiki/lucide-line/readme
+
+This plugin contains all icons from https://lucide.dev/ and Lucide Lab as line icons. Every icon is the unmodified Lucide SVG, so size, stroke width and colour can be set with CSS.
+
+Icons are tagged `$:/tags/Image/Lucide/Line`. Lucide Lab icons are also tagged `$:/tags/Image/Lucide/Lab`.
+
+Lucide Version: {{$:/plugins/tiddlywiki/lucide-line!!lucide-version}} -- License Info: see tab above.
