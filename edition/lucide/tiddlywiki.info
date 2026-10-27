@@ -1,12 +1,14 @@
 {
 	"description": "Lucide Icon Set Manager",
 	"plugins": [
-		"tiddlywiki/lucide-core"
+		"tiddlywiki/lucide-core",
+		"wikilabs/new-style"
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
 		"tiddlywiki/snowwhite",
-		"tiddlywiki/readonly"
+		"tiddlywiki/readonly",
+		"wikilabs/underlinedtabs"
 	],
 	"languages": [
 	],

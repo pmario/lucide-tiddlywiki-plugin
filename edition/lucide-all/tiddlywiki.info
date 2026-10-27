@@ -6,12 +6,14 @@
 		"tiddlywiki/lucide-all",
 		"lucideicons/template",
 		"wikilabs/bundler",
-		"wikilabs/link-to-tabs"
+		"wikilabs/link-to-tabs",
+		"wikilabs/new-style"
 	],
 	"themes": [
 		"tiddlywiki/vanilla",
 		"tiddlywiki/snowwhite",
-		"tiddlywiki/readonly"
+		"tiddlywiki/readonly",
+		"wikilabs/underlinedtabs"
 	],
 	"languages": [
 	],
