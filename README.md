@@ -35,24 +35,15 @@ npm run build
 
 The build reads `../lucide/icons` and `../lucide/lab`. If the Lucide repository is somewhere else, set the `LUCIDE_DIR` environment variable to its path. Converting the "stroke" icons into outlines takes about a minute.
 
+The editions are built with the TiddlyWiki version pinned in `package.json`, which `npm install` installs locally. The npm scripts use it, even if TiddlyWiki is installed globally.
+
 Once this command is finished, you can start the lucide-all test server with:
 
 ```
-tiddlywiki .\edition\lucide-all-server\ --listen
+npm start
 ```
 
 - Open the dev-server with http://localhost:8080
-
-
-If TiddlyWiki is not installed yet, you can install it with
-
-```
-npm install -D tiddlywiki
-
-or, if you want to install TW globally 
-
-npm install -g tiddlywiki
-```
 
 have fun!<br>
 Mario
