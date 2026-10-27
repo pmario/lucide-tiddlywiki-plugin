@@ -292,6 +292,11 @@
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/core/images/network-activity": {
+		"lucide": "TODO-network-activity",
+		"customDir": "custom",
+		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
 	"$:/core/images/new-button": {
 		"lucide": "plus.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
@@ -437,7 +442,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/star-filled": {
-		"lucide": "TODO-star-filled",
+		"lucide": "star-filled.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
@@ -450,6 +455,10 @@
 		"lucide": "rows-3-pop.svg.tid",
 		"customDir": "custom",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/core/images/storyview-stacked": {
+		"lucide": "gallery-vertical-end.svg.tid",
+		"classes": ["tc-image-storyview-stack","tc-image-button"]
 	},
 	"$:/core/images/storyview-zoomin": {
 		"lucide": "rows-3-zoomin-2.svg.tid",
@@ -539,8 +548,21 @@
 		"lucide": "triangle-alert.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
+	"$:/plugins/tiddlywiki/browser-storage/icon": {
+		"lucide": "database.svg.tid",
+		"classes": ["tc-image-browser-storage","tc-image-button"]
+	},
+	"$:/plugins/tiddlywiki/markdown/images/new-markdown-button": {
+		"lucide": "markdown.svg.tid",
+		"customDir": "custom",
+		"classes": ["tc-image-new-markdown-button","tc-image-button"]
+	},
 	"$:/plugins/tiddlywiki/qrcode/icon": {
 		"lucide": "qr-code.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
+	},
+	"$:/plugins/tiddlywiki/tour/tour-button-icon": {
+		"lucide": "graduation-cap.svg.tid",
+		"classes": ["tc-image-tour-button","tc-image-button"]
 	}
 }

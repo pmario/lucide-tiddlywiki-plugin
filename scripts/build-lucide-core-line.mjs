@@ -1,4 +1,4 @@
-// Build the lucide-core-line plugin: TW core image titles filled with unmodified Lucide line SVGs
+// Build the lucide-core-line plugin: TW core and plugin image titles filled with line SVGs
 
 import fs from "fs";
 import path from "path";
@@ -53,6 +53,16 @@ const SPECIAL = {
 		return '<$parameters day=<<now "DD">>>\n' + calendar.open + "\n" + calendar.inner + "\n" +
 			'<text x="10.5" y="18" fill="currentColor" stroke="none" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle"><$text text=<<day>>/></text>\n' +
 			"</svg>\n</$parameters>\n";
+	},
+	// Like the core icon: the custom tower while idle, Lucide's radio tower with the activity colour while busy
+	"$:/core/images/network-activity": () => {
+		const busy = readParts(path.join(LUCIDE_DIR, "icons", "radio-tower.svg"));
+		const idle = readParts(path.join(CUSTOM_DIR, "tower.svg"));
+		return busy.open + "\n" +
+			"<g class={{{ [{$:/state/http-requests}match[0]then[]else[tc-network-activity-background]] }}}>\n" +
+			'<$list filter="[{$:/state/http-requests}match[0]]" variable="ignore">\n' + idle.inner + "\n</$list>\n" +
+			'<$list filter="[{$:/state/http-requests}!match[0]]" variable="ignore">\n' + busy.inner + "\n</$list>\n" +
+			"</g>\n</svg>\n";
 	}
 };
 
