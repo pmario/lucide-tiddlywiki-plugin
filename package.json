@@ -25,6 +25,11 @@
 		"premake-docs": "node ./scripts/create-search-tiddlers.mjs",
 		"make-docs": "tiddlywiki ./edition/lucide --output docs --build index && tiddlywiki ./edition/lucide-all --output docs --build lucide-all",
 
+		"build:lucide-line": "npm run build:icons && node ./scripts/build-lucide-line.mjs && node ./scripts/build-lucide-core-line.mjs && node ./scripts/create-search-tiddlers.mjs ./edition/lucide-line/tiddlers/search",
+		"make-lucide-line": "npm run build:lucide-line && tiddlywiki ./edition/lucide-line --output output/lucide-line --build index",
+		"make-docs-line": "npm run build:lucide-line && tiddlywiki ./edition/lucide-core-line --output docs --build index && tiddlywiki ./edition/lucide-line --output docs --build index",
+		"start:lucide-line":"tiddlywiki ./edition/lucide-line-server --listen port=8081",
+
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [

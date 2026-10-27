@@ -1,0 +1,29 @@
+created: 20241014154048512
+modified: 20241015151923294
+tags: 
+title: list-tags
+type: text/vnd.tiddlywiki
+
+\import [[Lucide Gallery]] [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
+
+\procedure eventActions()
+<$let imageTitle=<<dom-title>>>
+	<<copyActions>>
+</$let>
+\end
+
+Search tags: <$edit-text tag="input" tiddler="$:/temp/search/tag"/> <<lab-checkbox>>
+
+<$eventcatcher selector=".image-wrapper" $click=<<eventActions>> tag="div" class="flexbox">
+<$list filter="[has[lucide]] :filter[f.visible[]] :and[tags[]] :filter[search:title{$:/temp/search/tag}] +[sort[]]" emptyMessage="This tiddler has no tags">
+<div class="col">
+<$macrocall $name="tag-pill" tag=<<currentTiddler>> />
+<hr>
+<div class="tc-image-chooser">
+<$macrocall $name="image-picker-list"
+	filter="[all[current]tagging[]sort[title]] :filter[f.visible[]] :map[<f.makeLink>]"/>
+</div>
+</div>
+</$list>
+
+

@@ -1,0 +1,28 @@
+{
+	"description": "Lucide Line Icons",
+	"plugins": [
+		"tiddlywiki/browser-storage",
+		"tiddlywiki/lucide-core-line",
+		"tiddlywiki/lucide-line",
+		"lucideicons/template",
+		"wikilabs/bundler",
+		"wikilabs/link-to-tabs",
+		"wikilabs/new-style"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite",
+		"tiddlywiki/readonly",
+		"wikilabs/underlinedtabs"
+	],
+	"languages": [
+	],
+	"build": {
+		"index": [
+			"--render","$:/core/save/all","lucide-line.html","text/plain"
+		]
+	},
+	"config": {
+		"retain-original-tiddler-path": true
+	}
+}

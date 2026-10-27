@@ -1,0 +1,22 @@
+created: 20240318181759000
+modified: 20241003181256939
+title: GettingStarted
+type: text/vnd.tiddlywiki
+
+! TiddlyWiki Core Icon Replacement
+
+!! Installation
+
+You can ''drag & drop this'' <big><big>[[Lucide Core Line Plugin|$:/plugins/tiddlywiki/lucide-core-line]] link</big></big> into your own wiki. ''No restart required''. So you can easily test it at https://tiddlywiki.com
+
+!! All 1900++ Lucide Icons
+
+An overview of all icons can be found at: 
+
+*<big>https://pmario.github.io/lucide-tiddlywiki-plugin/lucide-line.html</big>
+
+
+
+---
+
+{{$:/core/ui/ControlPanel/Plugins}}

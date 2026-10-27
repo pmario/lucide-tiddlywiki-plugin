@@ -7,5 +7,5 @@ title: $:/plugins/lucideicons/template/readme
 Lucide Version: v{{!!lucide-version}} -- This plugin contains the following icons:
 
 <div class="tc-image-chooser">
-<$macrocall $name="image-picker-list" filter="[<currentTiddler>plugintiddlers[]prefix[$:/lucide/images/]]" actions=<<copyActions>>/>
+<$macrocall $name="image-picker-list" filter="[<currentTiddler>plugintiddlers[]prefix[$:/lucide/]]" actions=<<copyActions>>/>
 </div>

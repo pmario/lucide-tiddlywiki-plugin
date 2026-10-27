@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || '../lucide');
-const OUTPUT_DIR = './edition/lucide-all/tiddlers/search';
+const OUTPUT_DIR = process.argv[2] || './edition/lucide-all/tiddlers/search';
 
 /**
  * Write a search tiddler for every Lucide icon .json file in a directory.

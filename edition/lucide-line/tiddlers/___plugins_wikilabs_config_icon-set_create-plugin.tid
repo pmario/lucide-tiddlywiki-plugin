@@ -1,0 +1,91 @@
+created: 20241008121941949
+modified: 20241009141844029
+title: _:/plugins/wikilabs/config/icon-set/create-plugin
+type: text/vnd.tiddlywiki
+
+\define logVerify() $:/temp/bundle-plugin-verify
+\define template() $:/plugins/lucideicons/template
+
+\function f.plugin-name() [[$:/plugins/lucideicons]] [<f.active-set>get[name]] +[join[/]]
+\function f.plugin-name-prefix() [<f.plugin-name>addsuffix[/]]
+
+\function f.auto-increment-patch() [[$:/state/bundler/auto-increment-patch]get[text]trim[]] :else[[yes]]
+
+\function f.active-set() [{$:/state/bundler/icon-set}]
+
+\function f.included()
+	[{$:/state/bundler/icon-set}get[list]enlist-input[]format:titlelist[]]
+	[prefix<f.plugin-name-prefix>]
+	[<f.active-set>format:titlelist[]]
+	+[join[ ]]
+\end
+
+\function f.remove()
+	[{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]]
+	[<template>addsuffix[/readme]]
+	[<template>addsuffix[/license]]
+	+[join[ ]]
+\end
+
+\function excluded() [{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]] +[join[ ]]
+
+\function getVersion() [<f.active-set>get[version]] [<f.active-set>get[id]] +[join[-]]
+
+\procedure bundlePluginActions()
+	<%if [<f.plugin-name>!is[tiddler]] %>
+		<$action-createtiddler $basetitle=<<f.plugin-name>> $template=<<template>> $overwrite="yes"/>
+
+		<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]] }}} $overwrite="yes"/>
+		<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]] }}} $overwrite="yes"/>
+	<%endif%>
+
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="version" $value=<<getVersion>> />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="name" $value={{{ [<f.active-set>get[name]] }}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="description" $value={{{ [<f.active-set>get[description]] }}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="lucide-version" $value={{$:/plugins/tiddlywiki/lucide-line!!lucide-version}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="id" $value={{{ [<f.active-set>get[id-full]] }}} />
+
+	<$action-bundleplugin $plugin=<<f.plugin-name>>
+		$include=<<f.included>>
+		$remove=<<f.remove>>
+		$config=<<f.active-set>>
+		$mode=<<mode>>
+		$incrementPatch=<<f.auto-increment-patch>>
+	/>
+
+	<%if [<mode>match[dangerous]] %>
+<!-- TODO <$action-navigate $to=<<f.plugin-name>> /> -->
+		<$action-deletetiddler $tiddler=<<logVerify>>/>
+		<$action-sendmessage $message="tm-close-tiddler" $param=<<logVerify>>/>
+	<%endif%>
+\end
+
+\procedure cancelPluginActions()
+<$action-deletetiddler $tiddler=<<logVerify>>/>
+<$action-sendmessage $message="tm-close-tiddler" $param=<<logVerify>>/>
+\end
+
+\function getPluginName() [<pluginPrefix>addsuffix<randomname>]
+
+<%if [<logVerify>!is[tiddler]] %>
+	<%if [<f.plugin-name>is[tiddler]] %>
+		<$button actions=<<bundlePluginActions>> disabled={{{ [<f.active-set>!is[tiddler]then[yes]] }}}>
+			<$action-setfield $tiddler=<<f.active-set>> $field="version" $value={{{ [<f.plugin-name>get[version]split[-]first[]] }}} />
+
+			Verify Settings
+		</$button>
+	<%else%>
+		<$button actions=<<bundlePluginActions>> >
+			Verify Settings
+		</$button>
+	<%endif%>
+<%elseif [<logVerify>is[tiddler]]%>
+	<$let mode="dangerous">
+		<$button actions=<<bundlePluginActions>> >
+			Create Plugin
+		</$button>
+		<$button actions=<<cancelPluginActions>> >
+			Not yet
+		</$button>
+	</$let>
+<%endif%>
