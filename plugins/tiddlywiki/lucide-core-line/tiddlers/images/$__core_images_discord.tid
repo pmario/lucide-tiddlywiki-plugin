@@ -1,0 +1,19 @@
+title: $:/core/images/discord
+tags: $:/tags/Image $:/tags/Image/custom
+type: text/vnd.tiddlywiki
+
+<svg
+  class="tc-image-discord tc-image-button"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 17c.829-5.206-1.835-9.726-3-11-.986-.458-1.983-.694-3-1 0 0-.619.48-1 2-1-.375-4.741-.56-6 0-.464-1.237-1-2-1-2-1.017.306-2.014.542-3 1-.94.929-3.615 4.94-3 11 .961 1.13 3.16 2.042 5 2 0 0 .67-.722 1.023-1.93 1.834.516 6.144.482 7.977-.07.493 1.184 1 2 1 2 2.218-.305 4.393-1.002 5-2" />
+  <circle cx="8" cy="12" r="1" />
+  <circle cx="16" cy="12" r="1" />
+</svg>

@@ -1,0 +1,20 @@
+title: $:/core/images/stop-watch-pause
+tags: $:/tags/Image $:/tags/Image/custom
+type: text/vnd.tiddlywiki
+
+<svg
+  class="tc-image-stop-watch-pause tc-image-button"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="12" cy="14" r="8" />
+  <path d="M10 10.75v6.5" />
+  <path d="M14.039 2H9.96" />
+  <path d="M14 10.75v6.5" />
+</svg>

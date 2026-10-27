@@ -1,0 +1,24 @@
+title: $:/core/images/new-journal-button
+tags: $:/tags/Image $:/tags/Image/custom
+type: text/vnd.tiddlywiki
+
+<$parameters day=<<now "DD">>>
+<svg
+  class="tc-image-new-journal-button tc-image-button"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 2v4" />
+  <path d="M16 2v4" />
+  <path d="M21 14.004V6c0-1.105-.945-2-2.111-2H4.11C2.945 4 2 4.895 2 6v14c0 1.105.945 2 2.111 2h9.895" />
+  <path d="M17.92 20h4.16" />
+  <path d="M20 17.957v4.086" />
+  <text x="10.5" y="18" fill="currentColor" stroke="none" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle"><$text text=<<day>>/></text>
+</svg>
+</$parameters>

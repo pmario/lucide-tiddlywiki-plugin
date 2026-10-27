@@ -1,0 +1,13 @@
+title: $:/plugins/tiddlywiki/lucide-core-line/styles/base
+tags: $:/tags/Stylesheet
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
+
+/* Vanilla colours icons with fill on the svg, so line elements switch it off unless they set their own */
+svg[stroke="currentColor"] :not([fill]) {
+	fill: none;
+}
+
+svg[stroke="currentColor"] {
+	stroke-width: {{$:/config/lucide-line/stroke-width}};
+}

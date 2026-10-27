@@ -1,0 +1,19 @@
+title: $:/core/images/storyview-pop
+tags: $:/tags/Image $:/tags/Image/custom
+type: text/vnd.tiddlywiki
+
+<svg
+  class="tc-image-storyview-pop tc-image-button"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M20.999 19v1.484c0 .837-.898 1.515-2.005 1.515H5.006c-1.107 0-2.004-.678-2.004-1.515V19" />
+  <path d="M21.018 6V3.568c0-.863-.897-1.563-2.004-1.563H5.034c-1.106 0-2.003.7-2.003 1.563V6" />
+  <rect width="20" height="5" x="2" y="10" rx="6.5" ry="0" />
+</svg>

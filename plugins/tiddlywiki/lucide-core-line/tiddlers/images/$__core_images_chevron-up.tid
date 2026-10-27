@@ -1,0 +1,18 @@
+title: $:/core/images/chevron-up
+tags: $:/tags/Image $:/tags/Image/custom
+type: text/vnd.tiddlywiki
+
+<svg
+  class="tc-image-chevron-up tc-image-button"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="m21 12-9-8-9 8" />
+  <path d="m21 20-9-8-9 8" />
+</svg>

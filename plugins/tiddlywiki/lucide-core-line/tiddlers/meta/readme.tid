@@ -1,0 +1,7 @@
+title: $:/plugins/tiddlywiki/lucide-core-line/readme
+
+This plugin replaces the TiddlyWiki core icons with Lucide line icons. Each icon is the Lucide SVG with a TiddlyWiki class added, so size, stroke width and colour come from CSS.
+
+The stroke width of all line icons is set in [[$:/config/lucide-line/stroke-width]].
+
+Lucide Version: {{$:/plugins/tiddlywiki/lucide-core-line!!lucide-version}} -- License Info: see tab above.

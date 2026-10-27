@@ -1,0 +1,11 @@
+{
+	"title": "$:/plugins/tiddlywiki/lucide-core-line",
+	"name": "Lucide Core Line",
+	"description": "Lucide line icons for the TiddlyWiki core",
+	"repo": "https://github.com/pmario/lucide-tiddlywiki-plugin",
+	"author": "pmario",
+	"list": "readme license",
+	"stability": "STABILITY_0_EXPERIMENTAL",
+	"lucide-version": "1.62.0",
+	"version": "5.4.1-line-01"
+}

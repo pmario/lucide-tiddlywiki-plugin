@@ -1,0 +1,19 @@
+title: $:/core/images/line-width
+tags: $:/tags/Image $:/tags/Image/custom
+type: text/vnd.tiddlywiki
+
+<svg
+  class="tc-image-line-width tc-image-button"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 3h18" />
+  <rect width="18" height="4" x="3" y="7" rx="6.5" ry="0" />
+  <rect width="18" height="6" x="3" y="15.038" rx="0" ry="3" />
+</svg>

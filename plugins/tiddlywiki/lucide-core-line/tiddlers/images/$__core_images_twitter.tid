@@ -1,0 +1,20 @@
+title: $:/core/images/twitter
+tags: $:/tags/Image $:/tags/Image/custom
+type: text/vnd.tiddlywiki
+
+<svg
+  class="tc-image-twitter tc-image-button"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <g>
+    <path d="m4 4 11.733 16H20L8.267 4Z" />
+    <path d="m4 20 6.768-6.768m2.46-2.46L20 4" />
+  </g>
+</svg>
