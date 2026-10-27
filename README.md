@@ -15,44 +15,25 @@ With TW v5.3.0 the internal icon structure has been changed, so the initial plug
 
 ## To "compile" the TW plugins yourself
 
-The following steps are needed:
+The "lucide-all" plugin contains all Lucide icons plus the [Lucide Lab](https://github.com/lucide-icons/lucide/tree/main/lab) icons. Lab icons are tagged `$:/tags/Image/Lucide/Lab` in addition to `$:/tags/Image/Lucide`.
 
-- Clone this repository and install dev-dependencies:
-
-```
-cd /your/project/path
-clone https://github.com/pmario/lucide-tiddlywiki-plugin.git
-cd lucide-tiddlywiki-plugin
-npm install
-```
-
-- Clone the Lucide.dev repository and install dev-dependencies
+- Clone this repository and the Lucide repository side by side. The Lucide repository only provides the SVG source files, it needs no `npm install`.
 
 ```
 cd /your/project/path
-clone https://github.com/lucide-icons/lucide.git
-cd lucide
+git clone https://github.com/pmario/lucide-tiddlywiki-plugin.git lucide-svg-plugin
+git clone https://github.com/lucide-icons/lucide.git
+```
+
+- Install the dev-dependencies and build
+
+```
+cd lucide-svg-plugin
 npm install
-```
-
-- Run the command to convert "stroke" based icons to outlines
-  - pnpm is only needed, if you did not install it globally yet
-- This command should populate the directory `outlined` with 1500++ svg files
-
-```
-npm install -D pnpm
-npm run build:outline-icons
-```
-
-- On Windows **copy** the "outlined" directory over to `..\lucide-svg-plugin\outlined`
-- On linux based OS you can create a "symlink" to `../lucide-svg-plugin/outlined`
-
-- Change directory to `lucide-svg-plugin`
-
-```
-cd ../lucide-svg-plugin
 npm run build
 ```
+
+The build reads `../lucide/icons` and `../lucide/lab`. If the Lucide repository is somewhere else, set the `LUCIDE_DIR` environment variable to its path. Converting the "stroke" icons into outlines takes about a minute.
 
 Once this command is finished, you can start the lucide-all test server with:
 

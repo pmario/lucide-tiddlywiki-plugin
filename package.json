@@ -8,10 +8,11 @@
 		"index": "tiddlywiki ./edition/lucide-server --listen",
 
 		"build": "npm run build-tw-plugin && npm run build:edition-lucide-all && npm run make-docs",
-		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run optimize:outlined-tw && npm run optimize:outlined-lucide && npm run build:plugin",
+		"build-tw-plugin": "npm run build:icons && npm run build:outlined && npm run build:outlined-lucide && npm run optimize:outlined-tw && npm run optimize:outlined-lucide && npm run build:plugin",
 
 		"build:icons": "node ./scripts/build-icons-from-origin.mjs",
 		"build:outlined": "node ./scripts/build-outlines-from-icons.mjs",
+		"build:outlined-lucide": "node ./scripts/build-outlines-from-lucide.mjs",
 
 		"prepare:outlined-tw": "npm run build:icons && npm run build:outlined",
 		"optimize:outlined-tw": "node ./scripts/optimize-tw-outlined.mjs",
