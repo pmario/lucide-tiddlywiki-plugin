@@ -9,3 +9,5 @@ Lucide Version: v{{!!lucide-version}} -- This plugin contains the following icon
 <div class="tc-image-chooser">
 <$macrocall $name="image-picker-list" filter="[<currentTiddler>plugintiddlers[]prefix[$:/lucide/]]" actions=<<copyActions>>/>
 </div>
+
+Lucide contributors: <$text text={{{ [<currentTiddler>get[contributors]enlist-input[]join[, ]] }}}/>

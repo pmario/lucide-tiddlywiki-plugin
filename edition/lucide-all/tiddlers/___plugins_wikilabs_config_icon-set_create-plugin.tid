@@ -27,6 +27,8 @@ type: text/vnd.tiddlywiki
 	+[join[ ]]
 \end
 
+\function f.contributors() [<f.active-set>get[list]enlist-input[]prefix[$:/lucide/]] :map[split[/]last[]] :and[get[contributors]enlist-input[]] -[[undefined]] +[unique[]sort[]join[ ]]
+
 \function excluded() [{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]] +[join[ ]]
 
 \function getVersion() [<f.active-set>get[version]] [<f.active-set>get[id]] +[join[-]]
@@ -34,16 +36,18 @@ type: text/vnd.tiddlywiki
 \procedure bundlePluginActions()
 	<%if [<f.plugin-name>!is[tiddler]] %>
 		<$action-createtiddler $basetitle=<<f.plugin-name>> $template=<<template>> $overwrite="yes"/>
-
-		<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]] }}} $overwrite="yes"/>
-		<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]] }}} $overwrite="yes"/>
 	<%endif%>
+
+	<!-- Refresh readme and license on every build, so template changes reach existing plugins -->
+	<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/readme]] }}} $template={{{ [<template>addsuffix[/readme]] }}} $overwrite="yes"/>
+	<$action-createtiddler $basetitle={{{ [<f.plugin-name>addsuffix[/license]] }}} $template={{{ [<template>addsuffix[/license]] }}} $overwrite="yes"/>
 
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="version" $value=<<getVersion>> />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="name" $value={{{ [<f.active-set>get[name]] }}} />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="description" $value={{{ [<f.active-set>get[description]] }}} />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="lucide-version" $value={{$:/plugins/tiddlywiki/lucide-all!!lucide-version}} />
 	<$action-setfield $tiddler=<<f.plugin-name>> $field="id" $value={{{ [<f.active-set>get[id-full]] }}} />
+	<$action-setfield $tiddler=<<f.plugin-name>> $field="contributors" $value=<<f.contributors>> />
 
 	<$action-bundleplugin $plugin=<<f.plugin-name>>
 		$include=<<f.included>>
@@ -51,6 +55,7 @@ type: text/vnd.tiddlywiki
 		$config=<<f.active-set>>
 		$mode=<<mode>>
 		$incrementPatch=<<f.auto-increment-patch>>
+		$removeFields="contributors"
 	/>
 
 	<%if [<mode>match[dangerous]] %>
