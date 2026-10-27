@@ -11,5 +11,7 @@ export function compactSvg(svg, classes) {
 		const list = attributes.replace(/\s*xmlns="http:\/\/www\.w3\.org\/2000\/svg"/, "").replace(/\s+/g, " ").trim();
 		return "<svg" + (classes ? ` class="${classes}"` : "") + (list ? " " + list : "") + ">";
 	});
-	return withTag.replace(/\s*\n\s*/g, "").trim().replace(/(<svg\b[^>]*>)([\s\S]*)(<\/svg>)/, "$1\n$2\n$3");
+	// A line break between tags goes away, one inside a tag separates attributes
+	const oneLine = withTag.replace(/>\s*\n\s*</g, "><").replace(/\s*\n\s*/g, " ").trim();
+	return oneLine.replace(/(<svg\b[^>]*>)([\s\S]*)(<\/svg>)/, "$1\n$2\n$3");
 }

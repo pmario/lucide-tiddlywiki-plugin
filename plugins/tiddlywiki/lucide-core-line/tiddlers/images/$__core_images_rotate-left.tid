@@ -3,5 +3,5 @@ tags: $:/tags/Image $:/tags/Image/custom
 type: text/vnd.tiddlywiki
 
 <svg class="tc-image-rotate-left tc-image-button" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<rect width="5" height="12" x="2" y="2" rx="1" ry="1" /><rectwidth="5"height="12"x="17"y="-21.988"rx="1"ry="1"transform="rotate(90)"/><pathd="M47.79 19.746v-2a2 2 0 0 0-2-2h-6"transform="translate(-27.79 -8.746)"/><path d="m42.79 12.746-3 3 3 3" transform="translate(-27.79 -8.746)" />
+<rect width="5" height="12" x="2" y="2" rx="1" ry="1" /><rect width="5" height="12" x="17" y="-21.988" rx="1" ry="1" transform="rotate(90)" /><path d="M47.79 19.746v-2a2 2 0 0 0-2-2h-6" transform="translate(-27.79 -8.746)" /><path d="m42.79 12.746-3 3 3 3" transform="translate(-27.79 -8.746)" />
 </svg>
