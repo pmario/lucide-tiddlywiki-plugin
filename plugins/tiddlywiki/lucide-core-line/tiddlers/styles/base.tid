@@ -12,6 +12,17 @@ svg[stroke="currentColor"] {
 	stroke-width: {{$:/config/lucide-line/stroke-width}};
 }
 
+/* Icons next to a caption: drawing as big as a core icon (Lucide pads 2 of 24 units), centred on the capitals */
+.tc-icon-wrapper > svg[stroke="currentColor"] {
+	width: 1.2em;
+	height: 1.2em;
+	vertical-align: -0.25em;
+}
+
+.tc-draggable > .tc-checkbox > input[type="checkbox"] {
+	vertical-align: -0.125em;
+}
+
 /* Title icons take the colour of the "$:/" prefix */
 .tc-tiddler-title-icon {
 	stroke: <<colour muted-foreground>>;
