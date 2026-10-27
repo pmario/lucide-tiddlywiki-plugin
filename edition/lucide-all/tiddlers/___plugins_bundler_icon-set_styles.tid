@@ -76,3 +76,15 @@ type: text/vnd.tiddlywiki
 .category.row {
 	margin-bottom: 1.5em;
 }
+
+/* Tags view: 3 columns */
+.flexbox {
+	display: flex;
+	flex-flow: row wrap;
+	overflow: hidden;
+}
+
+.flexbox .col {
+	flex: 1 1 33%;
+	margin-bottom: 1em;
+}
