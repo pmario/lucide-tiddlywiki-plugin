@@ -38,17 +38,7 @@ type: text/vnd.tiddlywiki
 <$action-setfield $tiddler=<<target>> $field="id-full" $value=<<calcID-full>> />
 \end
 
-<style>
-.x {
-	color: <<colour foreground>>;
-	fill: <<colour foreground>>;
-}
-.icon-list {
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
-</style>
-<div class="x">
+<div class="icon-set-panel">
 
 !! Listed
 
@@ -63,7 +53,7 @@ type: text/vnd.tiddlywiki
 		</$link>
 	</$list>
 </$linkcatcher>
-<div>
+</div>
 
 !! Standby
 

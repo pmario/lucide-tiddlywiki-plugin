@@ -4,6 +4,18 @@ tags: $:/tags/Stylesheet
 title: _:/plugins/bundler/icon-set/styles
 type: text/vnd.tiddlywiki
 
+/* Icon-set panel: text and both icon kinds in the foreground colour */
+.icon-set-panel {
+	color: <<colour foreground>>;
+	fill: <<colour foreground>>;
+	stroke: <<colour foreground>>;
+}
+
+.icon-set-panel .icon-list {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 .multi-columns {
 	display: block;
 	column-count: 6;
