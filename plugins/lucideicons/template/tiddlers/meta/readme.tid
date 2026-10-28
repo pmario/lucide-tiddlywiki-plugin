@@ -2,6 +2,10 @@ title: $:/plugins/lucideicons/template/readme
 
 \procedure copyActions() <$action-sendmessage $message="tm-copy-to-clipboard" $param=<<imageTitle>>/>
 
+<%if [<currentTiddler>plugintiddlers[]prefix[$:/lucide/line/]limit[1]] %>
+''Requires:'' the [[lucide-core-line|$:/plugins/tiddlywiki/lucide-core-line]] plugin, which gives line icons their line style and colours. Without it, the theme fills them.
+<%endif%>
+
 ''Tip:'' Click an icon to copy the title to the clipboard
 
 Lucide Version: v{{!!lucide-version}} -- This plugin contains the following icons:
