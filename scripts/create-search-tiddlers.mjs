@@ -5,6 +5,16 @@ const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || '../luc
 const OUTPUT_DIR = process.argv[2] || './edition/lucide-all/tiddlers/search';
 
 /**
+ * Format a list field line, or nothing when the icon metadata has no such list.
+ * @param {string} name - field name
+ * @param {string[]|undefined} list - values from the icon .json
+ * @returns {string} Field line or empty string
+ */
+function listField(name, list) {
+	return list && list.length ? `${name}: ${list.join(' ')}\n` : '';
+}
+
+/**
  * Write a search tiddler for every Lucide icon .json file in a directory.
  * @param {string} directory - Lucide icon folder
  * @param {string} output - target folder for the .tid files
@@ -18,15 +28,15 @@ function processFiles(directory, output, lab) {
 		const name = path.basename(file, '.json');
 		const { tags, categories, contributors } = JSON.parse(fs.readFileSync(path.join(directory, file), 'utf8'));
 
-		// Format tags with spaces
-		const formattedTags = tags.map(tag => tag.includes(' ') ? `[[${tag}]]` : tag).join(' ');
+		// Tags with spaces need brackets
+		const formattedTags = (tags || []).map(tag => tag.includes(' ') ? `[[${tag}]]` : tag);
 
 		const content = `title: ${name}\n` +
-			`tags: ${formattedTags}\n` +
-			`categories: ${categories?.join(' ')}\n` +
+			listField('tags', formattedTags) +
+			listField('categories', categories) +
 			`lucide: yes\n` +
 			(lab ? `lab: yes\n` : '') +
-			`contributors: ${contributors?.join(' ')}\n`;
+			listField('contributors', contributors);
 
 		fs.writeFileSync(path.join(output, `${name}.tid`), content, 'utf8');
 	});

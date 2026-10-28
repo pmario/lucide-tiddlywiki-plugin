@@ -27,7 +27,7 @@ type: text/vnd.tiddlywiki
 	+[join[ ]]
 \end
 
-\function f.contributors() [<f.active-set>get[list]enlist-input[]prefix[$:/lucide/]] :map[split[/]last[]] :and[get[contributors]enlist-input[]] -[[undefined]] +[unique[]sort[]join[ ]]
+\function f.contributors() [<f.active-set>get[list]enlist-input[]prefix[$:/lucide/]] :map[split[/]last[]] :and[get[contributors]enlist-input[]] +[unique[]sort[]join[ ]]
 
 \function excluded() [{$:/state/bundler/icon-set}get[standby]enlist-input[]format:titlelist[]] +[join[ ]]
 
