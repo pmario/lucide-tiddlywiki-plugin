@@ -8,7 +8,18 @@ const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || "../luc
 const CUSTOM_DIR = path.resolve(process.cwd(), "build", "icons");
 const PLUGIN_DIR = path.resolve(process.cwd(), "plugins", "tiddlywiki", "lucide-core-line", "tiddlers");
 const IMAGES_DIR = path.join(PLUGIN_DIR, "images");
-const VANILLA_BASE = path.resolve(process.cwd(), "node_modules", "tiddlywiki", "themes", "tiddlywiki", "vanilla", "base.tid");
+const TW_DIR = path.resolve(process.cwd(), "node_modules", "tiddlywiki");
+const VANILLA_BASE = path.join(TW_DIR, "themes", "tiddlywiki", "vanilla", "base.tid");
+const twPluginStyles = (name) => path.join(TW_DIR, "plugins", "tiddlywiki", name, "styles.tid");
+// TW plugins that colour their icons with fill; tiddlyweb's rules colour its own filled icons
+const PLUGIN_STYLES = ["text-slicer", "upgrade"].map((name) => ({ name, file: twPluginStyles(name) }));
+// Each gets its own stylesheet, which applies only while its source stylesheet exists
+const OWN_STYLES = [
+	{ name: "seamless", file: path.join(TW_DIR, "themes", "tiddlywiki", "seamless", "base.tid"), note: "Seamless recolours icons with fill while it is the active theme" },
+	{ name: "comments", file: twPluginStyles("comments"), note: "The comments plugin colours its icons with fill while it is installed" },
+	{ name: "menubar", file: twPluginStyles("menubar"), note: "The menubar plugin colours its icons with fill while it is installed" },
+	{ name: "tour", file: twPluginStyles("tour"), note: "The tour plugin colours its icons with fill while it is installed" }
+];
 const MAPPINGS = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), "scripts", "config", "tiddlywiki-mappings.json"), "utf8"));
 
 // Lucide line icons carry this attribute, so the generated rules only hit them
@@ -16,6 +27,12 @@ const LINE_SVG = '[stroke="currentColor"]';
 
 // The core colours these with an inline fill and the same inline color, which beat every stylesheet rule
 const INLINE_FILL = ["html body.tc-body .tc-tag-label", "html body.tc-body .tc-thumbnail-icon"];
+
+// The remove button of a tag has the inline fill of its tag but the color of .tc-btn-invisible, and currentColor inherits as a keyword
+const INLINE_FILL_INHERIT = ["html body.tc-body .tc-tag-label .tc-remove-tag-button"];
+
+// Empty list-after puts the stylesheets after those of the themes, so equal specificity wins
+const STYLE_FIELDS = "tags: $:/tags/Stylesheet\nlist-after: \n";
 
 /**
  * Turn a tiddler title into a file name, e.g. "$:/core/images/help" to "$__core_images_help.tid".
@@ -97,9 +114,9 @@ function buildImages() {
 }
 
 /**
- * Collect the vanilla rules that colour icons with fill, keeping their @media wrappers.
- * @param {string} css - vanilla base stylesheet text
- * @returns {{media: string, selectors: string[], value: string}[]} Fill rules
+ * Collect the rules of a stylesheet tiddler that colour icons with fill, keeping their @media wrappers.
+ * @param {string} css - stylesheet tiddler text
+ * @returns {{media: string, selectors: string[], values: string[]}[]} Fill rules, values in source order
  */
 function collectFillRules(css) {
 	// Hide transclusions, whose braces would break the block scan
@@ -127,11 +144,12 @@ function collectFillRules(css) {
 				scan(body, restore(head));
 				continue;
 			}
-			const fill = /(?:^|[;\s])fill\s*:\s*([^;]+)/.exec(body);
-			if(fill) {
+			// Several fill lines are a fallback: a blank later colour is dropped and the earlier one stays
+			const values = [...body.matchAll(/(?:^|[;\s])fill\s*:\s*([^;]+)/g)].map((fill) => restore(fill[1].trim()));
+			if(values.length) {
 				const selectors = restore(head.split("\n").filter((line) => !line.trim().startsWith("\\")).join(" "))
 					.split(",").map((s) => s.trim()).filter((s) => s && !s.includes("::"));
-				rules.push({ media, selectors, value: restore(fill[1].trim()) });
+				rules.push({ media, selectors, values });
 			}
 		}
 	};
@@ -149,34 +167,77 @@ function subject(selector) {
 }
 
 /**
- * Build the stylesheet that gives line icons the stroke colour vanilla gives fill icons.
+ * Restrict every svg compound of a selector to line icons, e.g. ".a svg .b" to ".a svg[stroke=...] .b".
+ * @param {string} selector - CSS selector
+ * @returns {string} Qualified selector
+ */
+function qualifySvg(selector) {
+	return selector.split(/(\s*[>+~]\s*|\s+)/).map((part) => (/^svg\b/.test(part) ? part + LINE_SVG : part)).join("");
+}
+
+/**
+ * Turn the fill rules of one stylesheet tiddler into stroke rules for line icons.
+ * @param {string} file - path of the stylesheet tiddler
+ * @returns {string[]} Stroke rules
+ */
+function strokeRules(file) {
+	return collectFillRules(fs.readFileSync(file, "utf8")).map(({ media, selectors, values }) => {
+		const targets = selectors.filter((s) => !/^img\b/.test(subject(s))).map(qualifySvg);
+		if(!targets.length) {
+			return "";
+		}
+		if(media.includes("<<")) {
+			throw new Error(`Media query uses a macro of ${file}: ${media}`);
+		}
+		// stroke inherits like fill, so the same selectors cascade the same way, and a blank colour is dropped the same way
+		const rule = `${targets.join(",\n")} { ${values.map((value) => `stroke: ${value};`).join(" ")} }`;
+		return media ? `${media} {\n${rule}\n}` : rule;
+	}).filter(Boolean);
+}
+
+/**
+ * Write a generated stylesheet tiddler of the plugin.
+ * @param {string} name - tiddler name below styles/
+ * @param {string} pragma - \rules pragma line
+ * @param {string} sources - names of the source stylesheets, for the header comment
+ * @param {string} body - CSS text
+ * @returns {void}
+ */
+function writeStyles(name, pragma, sources, body) {
+	const text = `title: $:/plugins/tiddlywiki/lucide-core-line/styles/${name}\n${STYLE_FIELDS}\n${pragma}\n\n` +
+		`/* Generated by scripts/build-lucide-core-line.mjs from ${sources}: DO NOT EDIT */\n\n${body}\n`;
+	fs.mkdirSync(path.join(PLUGIN_DIR, "styles"), { recursive: true });
+	fs.writeFileSync(path.join(PLUGIN_DIR, "styles", `${name}.tid`), text, "utf8");
+}
+
+/**
+ * Build the stylesheets that give line icons the stroke colours vanilla, TW plugins and themes give fill icons.
  * @returns {number} Number of generated rules
  */
 function buildStrokeStyles() {
-	const css = fs.readFileSync(VANILLA_BASE, "utf8");
-	const rulesPragma = (/^\\rules[^\n]*/m.exec(css) || [""])[0];
-	const lines = [
-		// Other svgs keep their default of no stroke instead of inheriting the colours below
-		"svg:not([stroke]) { stroke: none; }",
-		`svg${LINE_SVG} { stroke: inherit; }`
+	const pragma = (/^\\rules[^\n]*/m.exec(fs.readFileSync(VANILLA_BASE, "utf8")) || [""])[0];
+	const vanilla = strokeRules(VANILLA_BASE);
+	const sections = [
+		"/* Other svgs keep their default of no stroke instead of inheriting the colours below */\nsvg:not([stroke]) { stroke: none; }",
+		`/* Line icons take the stroke colour of the rules below instead of their stroke attribute */\nsvg${LINE_SVG} { stroke: inherit; }`,
+		"/* Vanilla colours core icons with fill: the same selectors give line icons the same colours */\n" + vanilla.join("\n\n"),
+		...PLUGIN_STYLES.map(({ name, file }) => `/* The ${name} plugin colours its icons with fill */\n` + strokeRules(file).join("\n\n")),
+		`/* Tag pills and thumbnails colour icons with an inline fill and the same inline color */\n${INLINE_FILL.join(",\n")} { stroke: currentColor; }`,
+		"/* The remove-tag button has the inline fill of its tag but the color of .tc-btn-invisible, and currentColor inherits as a keyword */\n" +
+			`${INLINE_FILL_INHERIT.join(",\n")} { color: inherit; stroke: inherit; }`
 	];
-	collectFillRules(css).forEach(({ media, selectors, value }) => {
-		// stroke inherits like fill, so the same selectors cascade the same way, and a blank colour is dropped the same way
-		const targets = selectors.filter((s) => !/^img\b/.test(subject(s))).map((s) => (/^svg\b/.test(subject(s)) ? s + LINE_SVG : s));
-		if(!targets.length) {
-			return;
-		}
-		const rule = `${targets.join(",\n")} { stroke: ${value}; }`;
-		lines.push(media ? `${media} {\n${rule}\n}` : rule);
+	writeStyles("stroke-colours", pragma, "vanilla's base.tid and TW plugin styles", sections.join("\n\n"));
+	let count = (sections.join("\n").match(/\{ (?:stroke|color)/g) || []).length;
+	OWN_STYLES.forEach(({ name, file, note }) => {
+		const rules = strokeRules(file);
+		const title = /^title: (.+)$/m.exec(fs.readFileSync(file, "utf8"))[1].trim();
+		writeStyles(`stroke-colours-${name}`, pragma + " conditional", title,
+			`/* ${note} */\n<%if [[${title}]is[shadow]] %>\n\n${rules.join("\n\n")}\n\n<%endif%>`);
+		count += rules.length;
 	});
-	lines.push(`${INLINE_FILL.join(",\n")} { stroke: currentColor; }`);
-	const header = "title: $:/plugins/tiddlywiki/lucide-core-line/styles/stroke-colours\ntags: $:/tags/Stylesheet\n\n" + rulesPragma + "\n\n" +
-		"/* Generated by scripts/build-lucide-core-line.mjs from vanilla's base.tid: do not edit */\n\n";
-	fs.mkdirSync(path.join(PLUGIN_DIR, "styles"), { recursive: true });
-	fs.writeFileSync(path.join(PLUGIN_DIR, "styles", "stroke-colours.tid"), header + lines.join("\n\n") + "\n", "utf8");
-	return lines.length;
+	return count;
 }
 
 const { written, skipped } = buildImages();
 console.log(`lucide-core-line: ${written} core images, no source for: ${skipped.join(" ")}`);
-console.log(`lucide-core-line: ${buildStrokeStyles()} stroke colour rules from ${VANILLA_BASE}`);
+console.log(`lucide-core-line: ${buildStrokeStyles()} stroke colour rules from ${TW_DIR}`);

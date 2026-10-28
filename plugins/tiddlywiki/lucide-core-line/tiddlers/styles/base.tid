@@ -1,5 +1,6 @@
 title: $:/plugins/tiddlywiki/lucide-core-line/styles/base
 tags: $:/tags/Stylesheet
+list-after:
 
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
 
@@ -21,6 +22,11 @@ svg[stroke="currentColor"] {
 
 .tc-draggable > .tc-checkbox > input[type="checkbox"] {
 	vertical-align: -0.125em;
+}
+
+/* Snow White and Seamless fade the fill on hover; icons change at once, as line icons do */
+.tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {
+	transition: none;
 }
 
 /* Title icons take the colour of the "$:/" prefix */
