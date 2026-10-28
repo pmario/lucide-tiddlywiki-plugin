@@ -1,0 +1,14 @@
+title: $:/plugins/tiddlywiki/lucide-core-line/styles/title-icon-colours
+tags: $:/tags/Stylesheet
+list-after:
+
+\rules only html conditional macrocallinline filteredtranscludeinline
+
+/* The core colours title icons with an inline fill only, so open tiddlers get their colour from the same cascade as stroke */
+<$list filter="[list[$:/StoryList]]">
+<$let iconColour={{{ [<currentTiddler>] :cascade[all[shadows+tiddlers]tag[$:/tags/TiddlerColourFilter]!is[draft]get[text]] }}}>
+<%if [<iconColour>!is[blank]] %>
+[data-tiddler-title="<$text text={{{ [<currentTiddler>escapecss[]] }}}/>"] .tc-tiddler-title-icon { stroke: <<iconColour>>; }
+<%endif%>
+</$let>
+</$list>
