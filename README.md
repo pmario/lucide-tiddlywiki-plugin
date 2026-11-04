@@ -21,11 +21,12 @@ The "lucide-core" and "lucide-all" plugins contain Lucide icons converted into f
 
 - "lucide-core-line" replaces the TW core icons with line icons. Its stylesheets give them the colours the core icons get from the Vanilla, Snow White and Seamless themes and from the TW plugins. The line width is set in `$:/config/lucide-line/stroke-width` (default 2).
 - "lucide-line" contains all Lucide and Lucide Lab icons as `$:/lucide/line/<name>`.
+- Line icons take the same parameters as the filled icons: `size` (default 24), `stroke` (default `currentColor`) and `stroke-width` (default 2). A non-default `stroke` or `stroke-width` overrides the theme colours and the stroke width setting.
 
 Things to know:
 
 - Icon-set plugins made from line icons need "lucide-core-line" installed. Without it, the theme fills the icons.
-- The stroke width rule applies to every `svg[stroke="currentColor"]`, so it also hits Tabler icons from other plugins. Tabler icons are similar, but they do not follow all of Lucide's rules.
+- The stroke width rule applies to every `svg[fill="none"][stroke-width="2"]`, so it also hits Tabler icons from other plugins. Tabler icons are similar, but they do not follow all of Lucide's rules.
 - Custom CSS or third-party themes that colour icons with `fill` need the same rule with `stroke` for line icons.
 
 ## To "compile" the TW plugins yourself

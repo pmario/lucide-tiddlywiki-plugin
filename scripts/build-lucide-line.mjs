@@ -1,8 +1,8 @@
-// Turn the unmodified Lucide and Lucide Lab SVGs into .tid files for the lucide-line plugin
+// Turn the Lucide and Lucide Lab SVGs into parameterised .tid files for the lucide-line plugin
 
 import fs from "fs";
 import path from "path";
-import { compactSvg } from "./svg-format.mjs";
+import { compactSvg, withParameters } from "./svg-format.mjs";
 
 const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || "../lucide");
 const TARGET_DIR = path.resolve(process.cwd(), "plugins", "tiddlywiki", "lucide-line", "tiddlers", "images");
@@ -22,7 +22,7 @@ function toList(list) {
 }
 
 /**
- * Build the .tid text for one icon: TW fields from the Lucide .json, then the SVG as is.
+ * Build the .tid text for one icon: TW fields from the Lucide .json, then the parameterised SVG.
  * @param {string} name - icon name, e.g. "house"
  * @param {string} svg - SVG file content
  * @param {object} meta - parsed Lucide .json metadata
@@ -39,7 +39,7 @@ function makeTid(name, svg, meta, set) {
 		["contributors", toList(meta.contributors)],
 		["lab", set.lab ? "yes" : ""]
 	];
-	return fields.filter(([, value]) => value).map(([key, value]) => `${key}: ${value}\n`).join("") + "\n" + svg;
+	return fields.filter(([, value]) => value).map(([key, value]) => `${key}: ${value}\n`).join("") + "\n" + withParameters(svg);
 }
 
 if (!fs.existsSync(path.join(LUCIDE_DIR, "lab"))) {

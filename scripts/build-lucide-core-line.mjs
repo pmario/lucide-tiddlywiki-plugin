@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import { compactSvg } from "./svg-format.mjs";
+import { compactSvg, withParameters } from "./svg-format.mjs";
 
 const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || "../lucide");
 const CUSTOM_DIR = path.resolve(process.cwd(), "build", "icons");
@@ -106,7 +106,7 @@ function buildImages() {
 		const classes = value.classes.map((cls) => cls.replace("$(title)$", shortName)).join(" ");
 		const tags = value.customDir ? "$:/tags/Image $:/tags/Image/custom" : "$:/tags/Image";
 		const svg = SPECIAL[title] ? SPECIAL[title]() : fs.readFileSync(source, "utf8");
-		const text = `title: ${title}\ntags: ${tags}\ntype: text/vnd.tiddlywiki\n\n` + compactSvg(svg, classes);
+		const text = `title: ${title}\ntags: ${tags}\ntype: text/vnd.tiddlywiki\n\n` + withParameters(compactSvg(svg, classes));
 		fs.writeFileSync(path.join(IMAGES_DIR, titleToFile(title)), text, "utf8");
 		written++;
 	});
