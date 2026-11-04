@@ -8,8 +8,8 @@ const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || "../luc
 const TARGET_DIR = path.resolve(process.cwd(), "plugins", "tiddlywiki", "lucide-line", "tiddlers", "images");
 
 const ICON_SETS = [
-	{ dir: "icons", tags: "$:/tags/Image/Lucide/Line" },
-	{ dir: "lab", tags: "$:/tags/Image/Lucide/Line $:/tags/Image/Lucide/Lab", lab: true }
+	{ dir: "icons", tags: "$:/tags/Lucide/Line" },
+	{ dir: "lab", tags: "$:/tags/Lucide/Line $:/tags/LLab", lab: true }
 ];
 
 /**

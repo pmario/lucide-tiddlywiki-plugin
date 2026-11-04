@@ -30,7 +30,7 @@ Things to know:
 
 ## To "compile" the TW plugins yourself
 
-The "lucide-all" plugin contains all Lucide icons plus the [Lucide Lab](https://github.com/lucide-icons/lucide/tree/main/lab) icons. Lab icons are tagged `$:/tags/Image/Lucide/Lab` in addition to `$:/tags/Image/Lucide`.
+The "lucide-all" plugin contains all Lucide icons plus the [Lucide Lab](https://github.com/lucide-icons/lucide/tree/main/lab) icons. Lab icons are tagged `$:/tags/LLab` in addition to `$:/tags/Lucide`.
 
 - Clone this repository and the Lucide repository side by side. The Lucide repository only provides the SVG source files, it needs no `npm install`.
 
