@@ -106,7 +106,7 @@ function buildImages() {
 		const classes = value.classes.map((cls) => cls.replace("$(title)$", shortName)).join(" ");
 		const tags = value.customDir ? "$:/tags/Image $:/tags/Image/custom" : "$:/tags/Image";
 		const svg = SPECIAL[title] ? SPECIAL[title]() : fs.readFileSync(source, "utf8");
-		const text = `title: ${title}\ntags: ${tags}\ntype: text/vnd.tiddlywiki\n\n` + withParameters(compactSvg(svg, classes));
+		const text = `title: ${title}\ntags: ${tags}\n\n` + withParameters(compactSvg(svg, classes));
 		fs.writeFileSync(path.join(IMAGES_DIR, titleToFile(title)), text, "utf8");
 		written++;
 	});

@@ -33,7 +33,6 @@ function makeTid(name, svg, meta, set) {
 	const fields = [
 		["title", "$:/lucide/line/" + name],
 		["tags", set.tags],
-		["type", "text/vnd.tiddlywiki"],
 		["lucide-tags", toList(meta.tags)],
 		["categories", toList(meta.categories)],
 		["contributors", toList(meta.contributors)],
