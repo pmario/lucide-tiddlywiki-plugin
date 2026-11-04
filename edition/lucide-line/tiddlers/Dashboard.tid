@@ -29,6 +29,14 @@ You can use the following overviews to add icons to your icon set
 * [[Categories|list-categories]] ... Icons sorted by ~50 categories. Icons can be listed multiple times. Filter searches categories
 * [[Tags|list-tags]] (slow) ... Icons sorted by ~2800 tags. Icons can be listed multiple times. Filter searches tags
 
+!! Stroke Width
+
+All line icons, in the page toolbar as well as in the gallery, use the stroke width set here.
+
+<$range tiddler="$:/config/lucide-line/stroke-width" min="0.5" max="3" increment="0.25" default="2"/> <$text text={{{ [{$:/config/lucide-line/stroke-width}else[2]] }}}/>
+
+<$button set="$:/config/lucide-line/stroke-width" setTo="2">Reset to 2</$button>
+
 !! Custom Plugins
 
 <$list filter="[!has[draft.of]plugin-type[plugin]prefix[$:/plugins/lucideicons/]!prefix[$:/plugins/lucideicons/template]sort[name]]"
