@@ -6,6 +6,6 @@
 	"author": "pmario",
 	"list": "readme license",
 	"stability": "STABILITY_1_EXPERIMENTAL",
-	"lucide-version": "1.62.0",
-	"version": "5.4.1-rc-01"
+	"lucide-version": "1.68.0",
+	"version": "5.4.1-drop-in-68"
 }
