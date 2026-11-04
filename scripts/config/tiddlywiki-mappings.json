@@ -23,7 +23,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/bold": {
-		"lucide": "bold.svg.tid",
+		"lucide": "letter-b.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/cancel-button": {
@@ -545,7 +545,7 @@
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/core/images/warning": {
-		"lucide": "triangle-alert.svg.tid",
+		"lucide": "triangle-exclamation-point.svg.tid",
 		"classes": ["tc-image-$(title)$","tc-image-button"]
 	},
 	"$:/plugins/tiddlywiki/browser-storage/icon": {
@@ -564,5 +564,17 @@
 	"$:/plugins/tiddlywiki/tour/tour-button-icon": {
 		"lucide": "graduation-cap.svg.tid",
 		"classes": ["tc-image-tour-button","tc-image-button"]
+	},
+	"$:/tiddlywiki/community/icons/person": {
+		"lucide": "user-round.svg.tid",
+		"classes": ["tc-image-user-round","tc-image-button"]
+	},
+	"$:/tiddlywiki/community/icons/project-team": {
+		"lucide": "folder-users.svg.tid",
+		"classes": ["tc-image-folder-user","tc-image-button"]
+	},
+	"$:/tiddlywiki/community/icons/team": {
+		"lucide": "user-round-group.svg.tid",
+		"classes": ["tc-image-user-round-group","tc-image-button"]
 	}
 }

@@ -1,0 +1,5 @@
+title: $:/tiddlywiki/community/icons/person
+tags: $:/tags/Image
+
+\parameters (size:"22pt", stroke:"none", stroke-width:"0")
+<svg width=<<size>> height=<<size>> class="lucide lucide-user-round tc-image-user-round tc-image-button" viewBox="0 0 24 24" stroke=<<stroke>> stroke-width=<<stroke-width>>><path fill-rule="evenodd" d="M11.2 2.06a6 6 0 0 0-3.44 1.7 5.98 5.98 0 0 0 .43 8.87l.16.14-.34.17a9 9 0 0 0-4.45 4.96 9 9 0 0 0-.53 2.4c-.05.6-.03.92.07 1.12a1 1 0 0 0 1.58.3c.25-.24.3-.4.33-.96.05-.83.15-1.38.38-2.05a7 7 0 0 1 5.79-4.65 7 7 0 0 1 4.67 1.1c.47.31.6.42 1.02.83s.65.69.97 1.16a7 7 0 0 1 1.15 3.61c.03.56.08.72.33.96a1 1 0 0 0 1.58-.3c.08-.16.08-.17.08-.7a8.9 8.9 0 0 0-5.1-7.84l-.23-.1.16-.15q1.22-1.03 1.78-2.46a6 6 0 0 0 .29-3.37 6 6 0 0 0-4.44-4.62 7 7 0 0 0-2.24-.12m1.38 2a4 4 0 0 1 3.17 5.33 4 4 0 0 1-3.18 2.57A4 4 0 0 1 9.38 11a4 4 0 0 1-1.3-2.19 5 5 0 0 1-.03-1.43A4 4 0 0 1 9.1 5.25a3.97 3.97 0 0 1 3.48-1.2"/></svg>
