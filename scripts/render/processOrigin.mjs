@@ -25,6 +25,8 @@ async function optimizeSvg(svg, path) {
         name: 'removeAttrs',
         params: {
           attrs: '(fill|stroke.*|style)',
+          // Elements with fill="currentColor" stay filled, e.g. star-filled
+          preserveCurrentColor: true,
         },
       },
     ],

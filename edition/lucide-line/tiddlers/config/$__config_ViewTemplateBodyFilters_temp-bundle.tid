@@ -1,0 +1,8 @@
+created: 20241012151714053
+list-before: $:/config/ViewTemplateBodyFilters/system
+modified: 20241012151850721
+tags: $:/tags/ViewTemplateBodyFilter
+title: $:/config/ViewTemplateBodyFilters/temp-bundle
+type: text/vnd.tiddlywiki
+
+[prefix[$:/temp/bundle]] [[$:/core/ui/ViewTemplate/body/default]]

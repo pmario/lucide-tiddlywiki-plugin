@@ -2,4 +2,6 @@ title: $:/plugins/tiddlywiki/lucide-core/license
 
 Lucide License: ISC License - https://lucide.dev/license | Version: v{{$:/plugins/tiddlywiki/lucide-core!!lucide-version}}
 
+Tabler Icons License (markdown, star-filled): MIT License - https://github.com/tabler/tabler-icons/blob/main/LICENSE
+
 TiddlyWiki License: BSD-3-Clause - https://github.com/Jermolene/TiddlyWiki5/blob/master/license

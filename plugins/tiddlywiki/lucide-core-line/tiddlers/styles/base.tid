@@ -1,0 +1,36 @@
+title: $:/plugins/tiddlywiki/lucide-core-line/styles/base
+tags: $:/tags/Stylesheet
+list-after:
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
+
+/* Vanilla colours icons with fill on the svg, so line elements switch it off unless they set their own; fill="none" marks line icons whatever their stroke parameter */
+svg[fill="none"] :not([fill]) {
+	fill: none;
+}
+
+/* Only icons left at the default stroke-width parameter, so an explicit one wins */
+svg[fill="none"][stroke-width="2"] {
+	stroke-width: {{$:/config/lucide-line/stroke-width}};
+}
+
+/* Icons next to a caption: drawing as big as a core icon (Lucide pads 2 of 24 units), centred on the capitals */
+.tc-icon-wrapper > svg[fill="none"] {
+	width: 1.2em;
+	height: 1.2em;
+	vertical-align: -0.25em;
+}
+
+.tc-draggable > .tc-checkbox > input[type="checkbox"] {
+	vertical-align: -0.125em;
+}
+
+/* Snow White and Seamless fade the fill on hover; icons change at once, as line icons do */
+.tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {
+	transition: none;
+}
+
+/* Title icons take the colour of the "$:/" prefix */
+.tc-tiddler-title-icon {
+	stroke: <<colour muted-foreground>>;
+}

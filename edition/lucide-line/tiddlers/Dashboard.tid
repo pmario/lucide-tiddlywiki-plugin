@@ -1,0 +1,78 @@
+created: 20241011150018876
+modified: 20241107162737986
+tags: 
+title: Dashboard
+type: text/vnd.tiddlywiki
+
+\import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
+
+\define sidebar() _:/plugins/wikilabs/bundler/ui/sidbar/icon-set
+
+\procedure actions()
+<$action-setfield $tiddler=<<stateIconSet>> $field="text" $value=<<currentTiddler>>/>
+<$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
+\end
+
+\procedure deleteStoredActions()
+<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+\end
+
+\procedure clearStateActions()
+<$action-deletetiddler $filter="[prefix[$:/state]]"/>
+\end
+
+\procedure activateSet()
+<$button actions=<<actions>>
+	disabled={{{ [<stateIconSet>get[text]match<currentTiddler>then[yes]] }}}
+>
+Activate
+</$button>
+\end
+
+!! Getting Started
+
+You can use the following overviews to add icons to your icon set
+
+* [[Lucide Gallery]] ... All icons alphabetically sorted by name. Every icon is listed only once. Filter searches by title, tag and category
+* [[Categories|list-categories]] ... Icons sorted by ~50 categories. Icons can be listed multiple times. Filter searches categories
+* [[Tags|list-tags]] ... Icons sorted by ~5400 tags. Icons can be listed multiple times. Filter searches tags
+
+!! Stroke Width
+
+All line icons, in the page toolbar as well as in the gallery, use the stroke width set here.
+
+<$range tiddler="$:/config/lucide-line/stroke-width" min="0.5" max="3" increment="0.25" default="2"/> <$text text={{{ [{$:/config/lucide-line/stroke-width}else[2]] }}}/>
+
+<$button set="$:/config/lucide-line/stroke-width" setTo="2">Reset to 2</$button>
+
+!! Custom Plugins
+
+<$list filter="[!has[draft.of]plugin-type[plugin]prefix[$:/plugins/lucideicons/]!prefix[$:/plugins/lucideicons/template]sort[name]]"
+	template="$:/core/ui/ViewTemplate/body/plugin"
+	emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}
+/>
+
+
+!! Current Available Configurations
+
+<$let tv-enable-drag-and-drop="no">
+<ul>
+<$list filter="[all[shadows+tiddlers]tag[icon-set]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}>
+<li><$link >{{!!name}} -- {{!!description}}</$link><%if [<stateIconSet>get[text]match<currentTiddler>] %> - is active<%endif%> <<activateSet>></li>
+</$list>
+</ul>
+</$let>
+
+!! Browser Storage
+
+The following list shows all tiddlers loaded from your local browser storage. ''No'' data left your system:
+
+<$list filter="[enlist{$:/temp/BrowserStorage/Log}sort[]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}>
+<$link/><$button class="tc-btn-invisible tc-small-gap-left" disabled={{{ [all[current]is[missing]] }}} actions=<<deleteStoredActions>>>{{$:/core/images/delete-button}}</$button><br>
+</$list>
+
+!! State Tiddlers
+
+<$let tv-wikilinks="no">
+<$button actions=<<clearStateActions>>>Clear all tiddlers prefixed: ''$:/state/''</$button> -- Reload needed, to see the result
+</$let>

@@ -1,0 +1,47 @@
+created: 20241014154048512
+modified: 20241015151923294
+tags: 
+title: list-tags
+type: text/vnd.tiddlywiki
+
+\import [[Lucide Gallery]] [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
+
+\procedure eventActions()
+<$let imageTitle=<<dom-title>>>
+	<<copyActions>>
+</$let>
+\end
+
+\procedure clickActions()
+<%if [<dom-class>split[ ]match[lucide-tag]] %>
+	<$action-setfield $tiddler="$:/temp/volatile/search/tag" text=<<dom-data-tag>>/>
+	<$action-sendmessage $message="tm-scroll" selector=".lucide-tag-search"/>
+<%else%>
+	<<eventActions>>
+<%endif%>
+\end
+
+Search tags: <$edit-text tag="input" tiddler="$:/temp/volatile/search/tag" class="lucide-tag-search"/><%if [{$:/temp/volatile/search/tag}!match[]] %><$button class="tc-btn-invisible tc-small-gap-left" set="$:/temp/volatile/search/tag" setTo="" tooltip="Clear search">{{$:/core/images/close-button}}</$button><%endif%>
+
+<<lab-checkbox>>
+
+<!-- One catcher for both: an icon click copies the icon, a tag label click searches for that tag -->
+<$eventcatcher selector=".image-wrapper,.lucide-tag" $click=<<clickActions>> tag="div" class="flexbox">
+<!-- Expanded tags are the literal tags plus the group tags, so the tag names need no expansion -->
+<$list filter="[has[lucide]] :filter[f.visible[]] :and[tags[]] [all[tiddlers]prefix[g:]tags[]] +[!prefix[e:]!prefix[g:]unique[]] :filter[search:title{$:/temp/volatile/search/tag}] +[sort[]]" emptyMessage="No such tag">
+<div class="col">
+<!-- Plain spans that look like tag pills, so thousands of tags stay cheap -->
+<span class="tc-tag-label lucide-tag" data-tag=<<currentTiddler>>><$text text=<<currentTiddler>>/></span>
+<!-- The icons render two screen heights before the row scrolls into view, without refreshing the rest of the page -->
+<$viewportobserver lazy="yes" rootMargin="200% 0px" tag="div">
+<hr>
+<div class="tc-image-chooser">
+<$macrocall $name="image-picker-list"
+	filter="[lucide.tagged<currentTiddler>sort[title]] :filter[f.visible[]] :map[<f.makeLink>]"/>
+</div>
+</$viewportobserver>
+</div>
+</$list>
+</$eventcatcher>
+
+

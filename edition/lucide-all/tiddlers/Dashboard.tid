@@ -13,6 +13,14 @@ type: text/vnd.tiddlywiki
 <$action-setfield $tiddler="$:/state/tab/sidebar--595412856" $field="text" $value=<<sidebar>> />
 \end
 
+\procedure deleteStoredActions()
+<$action-deletetiddler $tiddler=<<currentTiddler>>/>
+\end
+
+\procedure clearStateActions()
+<$action-deletetiddler $filter="[prefix[$:/state]]"/>
+\end
+
 \procedure activateSet()
 <$button actions=<<actions>>
 	disabled={{{ [<stateIconSet>get[text]match<currentTiddler>then[yes]] }}}
@@ -27,7 +35,7 @@ You can use the following overviews to add icons to your icon set
 
 * [[Lucide Gallery]] ... All icons alphabetically sorted by name. Every icon is listed only once. Filter searches by title, tag and category
 * [[Categories|list-categories]] ... Icons sorted by ~50 categories. Icons can be listed multiple times. Filter searches categories
-* [[Tags|list-tags]] (slow) ... Icons sorted by ~2800 tags. Icons can be listed multiple times. Filter searches tags
+* [[Tags|list-tags]] ... Icons sorted by ~5400 tags. Icons can be listed multiple times. Filter searches tags
 
 !! Custom Plugins
 
@@ -52,11 +60,11 @@ You can use the following overviews to add icons to your icon set
 The following list shows all tiddlers loaded from your local browser storage. ''No'' data left your system:
 
 <$list filter="[enlist{$:/temp/BrowserStorage/Log}sort[]]" emptyMessage={{$:/language/ControlPanel/Plugins/Empty/Hint}}>
-<$link/><$button class="tc-btn-invisible tc-small-gap-left" disabled={{{ [all[current]is[missing]] }}} actions="""<$action-deletetiddler $tiddler=<<currentTiddler>>/>""">{{$:/core/images/delete-button}}</$button><br>
+<$link/><$button class="tc-btn-invisible tc-small-gap-left" disabled={{{ [all[current]is[missing]] }}} actions=<<deleteStoredActions>>>{{$:/core/images/delete-button}}</$button><br>
 </$list>
 
 !! State Tiddlers
 
 <$let tv-wikilinks="no">
-<$button actions="""<$action-deletetiddler $filter="[prefix[$:/state]]"/>""">Clear all tiddlers prefixed: ''$:/state/''</$button> -- Reload needed, to see the result
+<$button actions=<<clearStateActions>>>Clear all tiddlers prefixed: ''$:/state/''</$button> -- Reload needed, to see the result
 </$let>

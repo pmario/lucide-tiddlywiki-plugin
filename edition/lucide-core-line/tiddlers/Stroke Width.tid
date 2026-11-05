@@ -1,0 +1,7 @@
+title: Stroke Width
+
+All line icons, in the page toolbar as well as in the gallery, use the stroke width set here.
+
+<$range tiddler="$:/config/lucide-line/stroke-width" min="0.5" max="3" increment="0.25" default="2"/> <$text text={{{ [{$:/config/lucide-line/stroke-width}else[2]] }}}/>
+
+<$button set="$:/config/lucide-line/stroke-width" setTo="2">Reset to 2</$button>

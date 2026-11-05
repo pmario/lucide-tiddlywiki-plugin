@@ -1,0 +1,25 @@
+{
+	"description": "Lucide Line Icon Set Manager",
+	"plugins": [
+		"tiddlywiki/tiddlyweb",
+		"tiddlywiki/filesystem",
+		"tiddlywiki/browser-sniff",
+		"tiddlywiki/internals",
+		"wikilabs/bundler"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite",
+		"tiddlywiki/readonly"
+	],
+	"languages": [
+	],
+	"includeWikis": [
+		"../lucide-line"
+	],
+	"config": {
+		"default-tiddler-location": "../lucide-line/tiddlers"
+	},
+	"build": {
+	}
+}
