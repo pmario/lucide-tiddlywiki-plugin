@@ -17,6 +17,10 @@ type: text/vnd.tiddlywiki
 \function calcID() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[7]]
 \function calcID-full() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[64]]
 
+\procedure openConfigActions()
+<$action-navigate $to={{$:/state/bundler/icon-set}}/>
+\end
+
 \procedure copyActions()
 <%if [<modifier>match[shift]] %>
 	<$action-sendmessage $message="tm-copy-to-clipboard" $param=<<navigateTo>>/>
@@ -89,7 +93,7 @@ type: text/vnd.tiddlywiki
 
 {{_:/plugins/wikilabs/config/icon-set/create-plugin}}
 
-<$button actions="""<$action-navigate $to={{$:/state/bundler/icon-set}} />"""
+<$button actions=<<openConfigActions>>
 	disabled={{{ [<f.active-set>!is[tiddler]then[yes]] }}}
 >
 Open Current Configuration
