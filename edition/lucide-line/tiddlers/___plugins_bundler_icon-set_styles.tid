@@ -4,6 +4,12 @@ tags: $:/tags/Stylesheet
 title: _:/plugins/bundler/icon-set/styles
 type: text/vnd.tiddlywiki
 
+/* Tag labels on the tags page look like tag pills, with the text colour the core tag-pill macro computes; a click searches for the tag */
+span.tc-tag-label.lucide-tag {
+	color: <$macrocall $name="contrastcolour" target=<<colour tag-background>> fallbackTarget=<<colour tag-background>> colourA=<<colour foreground>> colourB=<<colour background>>/>;
+	cursor: pointer;
+}
+
 /* Icon-set panel: text and both icon kinds in the foreground colour */
 .icon-set-panel {
 	color: <<colour foreground>>;
