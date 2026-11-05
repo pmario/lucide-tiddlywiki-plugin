@@ -3,13 +3,14 @@
 import fs from "fs";
 import path from "path";
 import { compactSvg, withParameters } from "./svg-format.mjs";
+import { shortenMarkers } from "./lucide-markers.mjs";
 
 const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || "../lucide");
 const TARGET_DIR = path.resolve(process.cwd(), "plugins", "tiddlywiki", "lucide-line", "tiddlers", "images");
 
 const ICON_SETS = [
-	{ dir: "icons", tags: "$:/tags/Lucide/Line" },
-	{ dir: "lab", tags: "$:/tags/Lucide/Line $:/tags/LLab", lab: true }
+	{ dir: "icons", tags: "$:/tags/Lucide" },
+	{ dir: "lab", tags: "$:/tags/LLab", lab: true }
 ];
 
 /**
@@ -33,9 +34,9 @@ function makeTid(name, svg, meta, set) {
 	const fields = [
 		["title", "$:/lucide/line/" + name],
 		["tags", set.tags],
-		["lucide-tags", toList(meta.tags)],
-		["categories", toList(meta.categories)],
-		["contributors", toList(meta.contributors)],
+		["lucide-tags", toList(shortenMarkers(meta.tags))],
+		["categories", toList(shortenMarkers(meta.categories))],
+		["contributors", toList(shortenMarkers(meta.contributors))],
 		["lab", set.lab ? "yes" : ""]
 	];
 	return fields.filter(([, value]) => value).map(([key, value]) => `${key}: ${value}\n`).join("") + "\n" + withParameters(svg);

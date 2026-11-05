@@ -10,7 +10,7 @@ const LEGACY_IMAGES_DIR = path.join(BUILD_DIR, "legacy");
 
 const ICON_SETS = [
 	{ dir: "icons", tags: "$:/tags/Lucide" },
-	{ dir: "lab", tags: "$:/tags/Lucide $:/tags/LLab" }
+	{ dir: "lab", tags: "$:/tags/LLab" }
 ];
 
 const PARAMETERS = '\\parameters (size:"22pt", stroke:"none", stroke-width:"0")\n';
