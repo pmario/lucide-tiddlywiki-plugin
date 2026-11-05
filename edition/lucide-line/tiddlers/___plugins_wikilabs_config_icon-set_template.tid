@@ -6,7 +6,14 @@ type: text/vnd.tiddlywiki
 
 \import [[_:/plugins/wikilabs/config/icon-set/create-plugin]]
 
-\function iconsSize() [<currentTiddler>get[list]enlist-input[]] :map[<currentTiddler>get[text]length[]] +[sum[]]
+\procedure iconsSize()
+<!-- The icons as indented JSON, escaped like the plugin text in a JSON export -->
+<$let filter={{{ [<currentTiddler>get[list]enlist-input[]format:titlelist[]join[ ]] }}}>
+<$wikify name="json" text="""<$macrocall $name="jsontiddlers" filter=<<filter>> spaces="4" $output="text/raw"/>""">
+<$text text={{{ [<json>jsonstringify[]length[]] }}}/>
+</$wikify>
+</$let>
+\end
 \function calcID() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[7]]
 \function calcID-full() [<currentTiddler>get[list]enlist-input[]sort[]join[]sha256[64]]
 
