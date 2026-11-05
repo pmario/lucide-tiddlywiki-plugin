@@ -7,7 +7,7 @@ type: text/vnd.tiddlywiki
 \whitespace trim
 
 \procedure categoryActions()
-<$action-setfield $tiddler="$:/temp/search/category" $field="text" $value=<<navigateTo>>/>
+<$action-setfield $tiddler="$:/temp/volatile/search/category" $field="text" $value=<<navigateTo>>/>
 \end
 
 \procedure eventActions()
@@ -23,17 +23,19 @@ type: text/vnd.tiddlywiki
 <div class="multi-columns">
 	<$linkcatcher actions=<<categoryActions>> >
 		<ol>
-		<$list filter="[has[categories]get[categories]enlist-input[]unique[]sort[]]" >
+		<$list filter="[has[lucide]] :map:flat[lucide.expand[categories]] +[unique[]sort[]]" >
 			<li><$link $to=<<currentTiddler>>><<currentTiddler>></$link></li>
 		</$list>
 		</ol>
 	</$linkcatcher>
 </div>
 
-Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" class="tc-small-gap-left"/> <<lab-checkbox>>
+Filter Categories: <$edit-text tag="input" tiddler="$:/temp/volatile/search/category" class="tc-small-gap-left"/><%if [{$:/temp/volatile/search/category}!match[]] %><$button class="tc-btn-invisible tc-small-gap-left" set="$:/temp/volatile/search/category" setTo="" tooltip="Clear search">{{$:/core/images/close-button}}</$button><%endif%>
+
+<<lab-checkbox>>
 
 <div class="flexboxX">
-	<$list filter="[has[categories]] :filter[f.visible[]] :and[get[categories]enlist-input[]unique[]] :filter[search:title{$:/temp/search/category}] +[sort[]]" emptyMessage="No such category">
+	<$list filter="[has[lucide]] :filter[f.visible[]] :map:flat[lucide.expand[categories]] +[unique[]] :filter[search:title{$:/temp/volatile/search/category}] +[sort[]]" emptyMessage="No such category">
 		<div class="category row">
 			<$macrocall $name="tag-pill" tag=<<currentTiddler>>/>
 			<hr>
@@ -42,7 +44,7 @@ Filter Categories: <$edit-text tag="input" tiddler="$:/temp/search/category" cla
 				class="tc-image-chooser"
 			>
 				<$macrocall $name="image-picker-list"
-					filter="[contains:categories<currentTiddler>] :filter[f.visible[]] :map[<f.makeLink>]"
+					filter="[lucide.categorised<currentTiddler>] :filter[f.visible[]] :map[<f.makeLink>]"
 					actions=<<eventActions>>
 				/>
 			</$eventcatcher>

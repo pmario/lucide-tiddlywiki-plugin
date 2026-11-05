@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { shortenMarkers } from './lucide-markers.mjs';
 
 const LUCIDE_DIR = path.resolve(process.cwd(), process.env.LUCIDE_DIR || '../lucide');
 const OUTPUT_DIR = process.argv[2] || './edition/lucide-all/tiddlers/search';
@@ -29,16 +30,34 @@ function processFiles(directory, output, lab) {
 		const { tags, categories, contributors } = JSON.parse(fs.readFileSync(path.join(directory, file), 'utf8'));
 
 		// Tags with spaces need brackets
-		const formattedTags = (tags || []).map(tag => tag.includes(' ') ? `[[${tag}]]` : tag);
+		const formattedTags = shortenMarkers(tags).map(tag => tag.includes(' ') ? `[[${tag}]]` : tag);
 
 		const content = `title: ${name}\n` +
 			listField('tags', formattedTags) +
-			listField('categories', categories) +
+			listField('categories', shortenMarkers(categories)) +
 			`lucide: yes\n` +
 			(lab ? `lab: yes\n` : '') +
-			listField('contributors', contributors);
+			listField('contributors', shortenMarkers(contributors));
 
 		fs.writeFileSync(path.join(output, `${name}.tid`), content, 'utf8');
+	});
+	return files.length;
+}
+
+/**
+ * Write a g:<name> tiddler for every Lucide tag group, whose tags the g: markers of the icons stand for.
+ * @param {string} directory - Lucide groups folder
+ * @param {string} output - target folder for the .tid files
+ * @returns {number} Number of written tiddlers
+ */
+function processGroups(directory, output) {
+	const files = fs.readdirSync(directory).filter((file) => path.extname(file) === '.json');
+
+	files.forEach((file) => {
+		const name = path.basename(file, '.json');
+		const { tags } = JSON.parse(fs.readFileSync(path.join(directory, file), 'utf8'));
+		const formattedTags = (tags || []).map(tag => tag.includes(' ') ? `[[${tag}]]` : tag);
+		fs.writeFileSync(path.join(output, `g_${name}.tid`), `title: g:${name}\n` + listField('tags', formattedTags), 'utf8');
 	});
 	return files.length;
 }
@@ -49,4 +68,5 @@ fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
 const icons = processFiles(path.join(LUCIDE_DIR, 'icons'), OUTPUT_DIR, false);
 const lab = processFiles(path.join(LUCIDE_DIR, 'lab'), OUTPUT_DIR, true);
-console.log(`Search tiddlers written: ${icons} icons, ${lab} lab icons`);
+const groups = processGroups(path.join(LUCIDE_DIR, 'groups'), OUTPUT_DIR);
+console.log(`Search tiddlers written: ${icons} icons, ${lab} lab icons, ${groups} groups`);

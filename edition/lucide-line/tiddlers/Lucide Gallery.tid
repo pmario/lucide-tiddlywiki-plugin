@@ -53,17 +53,26 @@ type: text/vnd.tiddlywiki
 
 \import [[_:/plugins/wikilabs/bundler/ui/sidbar/icon-set]]
 
-All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Lucide/Line]count[]] }}} class="tc-small-gap"/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]], <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/LLab]count[]] }}}/> of them from [[Lucide Lab|Lucide Icons Set]]
+All <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/Lucide]count[]] }}} class="tc-small-gap"/> Icons included in the [[Lucide Icons Set|Lucide Icons Set]], <$text text={{{ [all[shadows+tiddlers]tag[$:/tags/LLab]count[]] }}}/> of them from [[Lucide Lab|Lucide Icons Set]]
 
 ''Tip:'' Click an icon to copy it to the ''right sidebar -> Icon Set'' tab
 
-Search: <$edit-text tag="input" tiddler="$:/temp/search/full"  class="tc-small-gap-left"/> <<lab-checkbox>>
+Search: <$edit-text tag="input" tiddler="$:/temp/volatile/search/full" class="tc-small-gap-left"/><%if [{$:/temp/volatile/search/full}!match[]] %><$button class="tc-btn-invisible tc-small-gap-left" set="$:/temp/volatile/search/full" setTo="" tooltip="Clear search">{{$:/core/images/close-button}}</$button><%endif%>
+
+<<lab-checkbox>>
 
 <$eventcatcher selector=".image-wrapper" $click=<<eventActions>>
 	tag="div"
 	class="tc-image-chooser"
 >
-	<$macrocall $name="image-picker-list"
-		filter="[has[lucide]search:title,tags,categories{$:/temp/search/full}] :filter[f.visible[]] :map[<f.makeLink>] +[sort[]]"
-	/>
+	<!-- Expanding the e: and g: markers is slow, so only a search does it -->
+	<%if [{$:/temp/volatile/search/full}trim[]!is[blank]] %>
+		<$macrocall $name="image-picker-list"
+			filter="[has[lucide]] :filter[lucide.searchtext[]search:title{$:/temp/volatile/search/full}] :filter[f.visible[]] :map[<f.makeLink>] +[sort[]]"
+		/>
+	<%else%>
+		<$macrocall $name="image-picker-list"
+			filter="[has[lucide]] :filter[f.visible[]] :map[<f.makeLink>] +[sort[]]"
+		/>
+	<%endif%>
 </$eventcatcher>

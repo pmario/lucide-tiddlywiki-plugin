@@ -1,0 +1,22 @@
+title: $:/edition/lucide/search-functions
+tags: $:/tags/Global
+
+\whitespace trim
+
+<!-- e:<icon> stands for the list of that icon, g:<group> for the tags of the g:<group> tiddler, see scripts/lucide-markers.mjs -->
+
+<!-- Forward: the list of a search tiddler with every marker replaced by what it stands for -->
+\function lucide.target() [<currentTiddler>removeprefix[e:]] [<currentTiddler>prefix[g:]]
+\function lucide.expand.item(field) [lucide.target[]] :map:flat[lucide.expand<field>] [<currentTiddler>!prefix[e:]!prefix[g:]]
+\function lucide.expand(field) [get<field>enlist-input[]] :map:flat[lucide.expand.item<field>] +[unique[]]
+\function lucide.searchtext() [<currentTiddler>] [<currentTiddler>lucide.expand[tags]] [<currentTiddler>lucide.expand[categories]] +[join[ ]]
+
+<!-- Backward: the search tiddlers whose expanded list holds a value -->
+\function lucide.tag.ref() [<currentTiddler>prefix[g:]] :else[<currentTiddler>addprefix[e:]]
+\function lucide.tag.step() [lucide.tag.ref[]] :map:flat[lucide.holders.tags<currentTiddler>] [<currentTiddler>]
+\function lucide.holders.tags(value) [<value>tagging[]] :map:flat[lucide.tag.step[]] +[unique[]]
+\function lucide.tagged(value) [lucide.holders.tags<value>has[lucide]]
+
+\function lucide.category.step() [<currentTiddler>addprefix[e:]] :map:flat[lucide.holders.categories<currentTiddler>] [<currentTiddler>]
+\function lucide.holders.categories(value) [<value>listed[categories]] :map:flat[lucide.category.step[]] +[unique[]]
+\function lucide.categorised(value) [lucide.holders.categories<value>has[lucide]]
